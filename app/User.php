@@ -10,13 +10,17 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function specializations(){
+        return $this->belongsToMany('App\Specialization');
+    }
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'surname', 'slug', 'description', 'address','email', 'password',
     ];
 
     /**
