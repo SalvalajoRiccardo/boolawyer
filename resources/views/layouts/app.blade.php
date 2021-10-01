@@ -72,9 +72,79 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+        {{-- start Content-page --}}
+        <div class="container-fluid"> 
+            <div class="row flex-nowrap">
+
+                <!-- start SIDEBAR -->
+                @auth
+                    <div class="col-auto col-md-3 col-xl-2 px-0 my_sidebar min-vh-100">
+                        <div  class="d-flex align-items-center justify-content-center bg-secondary text-white">
+                            <span class="d-none d-sm-inline py-3">Dashboard</span>
+                        </div>
+                        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 bg-dark min-vh-100">
+                            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                                <li>  
+                                    <a href="{{route('admin.users.index')}}" class="nav-link align-middle px-0 ">
+                                        <i class="bi-house" style="font-size:1.1rem;"></i> 
+                                        <h6 class="ms-2 d-none d-sm-inline">Profilo</h6>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle dropdown-toggle">
+                                        <i class="bi bi-card-list" style="font-size:1.1rem;"></i>
+                                        <h6 class="ms-2 d-none d-sm-inline">Posts</h6> 
+                                    </a>
+                                    <ul class="collapse nav flex-column ms-1" id="submenu3" >
+                                        <li class=" w-100 px-3">
+                                            <a href="#" class="nav-link px-0"> 
+                                                <i class="bi bi-card-image" style="font-size:1.1rem;"></i>
+                                                <span class="d-none d-sm-inline">All Posts</span>
+                                            </a>
+                                        </li>
+                                        <li class="w-100 px-3 ">
+                                            <a href="#" class="nav-link px-0"> 
+                                                <i class="bi bi-plus-square" style="font-size:1.1rem;"></i>
+                                                <span class="d-none d-sm-inline">Add Post</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0 align-middle">
+                                        <i class="bi-people" style="font-size:1.1rem"></i> 
+                                        <h6 class="ms-1 d-none d-sm-inline">Users</h6> 
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0 align-middle">
+                                        <i class="bi bi-grid" style="font-size:1.1rem"></i> 
+                                        <h6 class="ms-2 d-none d-sm-inline">Categories</h6>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{route('admin.index')}}" class="nav-link px-0 align-middle">
+                                        <i class="bi bi-tag-fill" style="font-size:1.1rem"></i> 
+                                        <h6 class="ms-2 d-none d-sm-inline">Statistiche</h6>
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr>
+                            
+                        </div>
+                    </div>
+                              
+                @endauth
+                <!-- end SIDEBAR -->
+
+                <div class="col py-4">
+                    <main>
+                        @yield('content')
+                    </main>
+                </div>
+            </div>
+        </div>
+        {{-- end Content-page --}}
     </div>
 </body>
 </html>
