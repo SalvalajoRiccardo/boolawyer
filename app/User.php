@@ -25,6 +25,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Review');
     }
 
+    // Relation 1 to many with MESSAGES
+    public function messages(){
+        return $this->hasMany('App\Message');
+    }
+
     /**
      * The attributes that are mass assignable.
      *
