@@ -19,7 +19,7 @@ class AddFieldsToUsersTable extends Migration
             $table->string('phone')->nullable();
             $table->string('photo')->nullable();
             $table->string('cv')->nullable();
-            $table->text('description')->nullable();
+            $table->text('services')->nullable();
             $table->string('reviews')->nullable();
             $table->string('messages')->nullable();
             $table->string('slug')->unique();
@@ -39,7 +39,7 @@ class AddFieldsToUsersTable extends Migration
             $table->dropColumn('phone');
             $table->dropColumn('photo');
             $table->dropColumn('cv');
-            $table->dropColumn('description');
+            $table->dropColumn('services');
             $table->dropColumn('reviews');
             $table->dropColumn('messages');
             $table->dropColumn('slug');

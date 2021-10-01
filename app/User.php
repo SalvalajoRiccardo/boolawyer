@@ -10,8 +10,19 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    // Relation Many to many with SPECIALIZATION
     public function specializations(){
         return $this->belongsToMany('App\Specialization');
+    }
+
+    // Relation Many to many with SPONSORS
+    public function sponsors(){
+        return $this->belongsToMany('App\Sponsor');
+    }
+
+    // Relation 1 to many with REVIEWS
+    public function reviews(){
+        return $this->hasMany('App\Review');
     }
 
     /**
@@ -20,7 +31,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'surname', 'slug', 'description', 'address','email', 'password',
+        'name', 'surname', 'slug', 'services', 'address','email', 'password',
     ];
 
     /**
