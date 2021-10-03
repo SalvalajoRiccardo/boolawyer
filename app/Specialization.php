@@ -11,6 +11,6 @@ class Specialization extends Model
     }
 
     protected $fillable = [
-        'specializations'
+        'name'
     ];
 }

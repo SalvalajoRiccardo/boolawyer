@@ -83,7 +83,7 @@ class RegisterController extends Controller
             'slug' => Str::slug($fullName, '-'),
         ]);
 
-        $specialization = Specialization::select('id')->first();
+        $specialization = Specialization::select('id')->where('id',$data['specializations'])->first();
         $user->specializations()->attach($specialization);
 
         return $user;
