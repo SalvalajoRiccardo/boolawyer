@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use App\User;
+use App\Specialization;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -63,8 +65,9 @@ class UserController extends Controller
     public function edit($id)
     {
         // $id = Auth::id();
+        $specs = Specialization::all();
         $user = User::find($id);
-        return view('admin.users.edit', compact('user'));
+        return view('admin.users.edit', compact('user','specs'));
     }
 
     /**
@@ -76,16 +79,16 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        // !!!! accanto a Request abbiao aggiunto User $user !!!!!!
+        // !!!! accanto a Request abbiamo aggiunto User $user !!!!!!
         ;
         // Validazione dati
         $request->validate([
             'name' => 'required|max:100',
             'surname' => 'required|max:100',
             'address' => 'required|max:100',
-            'specializations' =>  'required',
+            'specializations' => 'required',
             'email' => 'required|email|max:100',
-            'password' => 'required|min:8|confirmed',
+            // 'password' => 'required|min:8|confirmed',
             'photo' => 'nullable|image',
             'cv' => 'nullable|mimes:pdf|max:10000',
             'phone' => 'nullable|min:10',
@@ -94,55 +97,66 @@ class UserController extends Controller
         
         $data = $request->all();
 
-        dd($data);
+        if ($data['surname'] != $user->surname || $data['name'] != $user->name ) {
 
-        // if ($data['surname'] != $user->surname || $data['name'] != $user->name ) {
+            // Calcolo lo slug
+            $slug = Str::slug($data['name'].' '.$data['surname'], '-');
 
-        //     // Calcolo lo slug
-        //     $slug = Str::slug($data['name'].' '.$data['surname'], '-');
+            // salvo lo slug in una variabile temporanea
+            $slug_base = $slug;
 
-        //     // salvo lo slug in una variabile temporanea
-        //     $slug_base = $slug;
-
-        //     // verifico se lo slug è gia presente
-        //     $slug_ismatching= User::where('slug', $slug)->first();
+            // verifico se lo slug è gia presente
+            $slug_ismatching= User::where('slug', $slug)->first();
             
-        //     // dichiaro una variabile contatore
-        //     $counter=1;
+            // dichiaro una variabile contatore
+            $counter=1;
 
-        //     // fintanto che lo slug è già presente($slug_ismatching == true)...//
-        //     while ($slug_ismatching) {
+            // fintanto che lo slug è già presente($slug_ismatching == true)...//
+            while ($slug_ismatching) {
 
-        //         // aggiungo allo slug di un trattino e il contatore
-        //         $slug = $slug_base.'-'.$counter;
+                // aggiungo allo slug di un trattino e il contatore
+                $slug = $slug_base.'-'.$counter;
 
-        //         // verifico nuovamente se lo slug è gia presente
-        //         $slug_ismatching= User::where('slug', $slug)->first();
+                // verifico nuovamente se lo slug è gia presente
+                $slug_ismatching= User::where('slug', $slug)->first();
 
-        //         // Incremento il contatore
-        //         $counter++;
-        //     }
+                // Incremento il contatore
+                $counter++;
+            }
 
-        //     //in ogni caso assegniamo allo slug il valore ottenuto
-        //     $data['slug'] =$slug;
-        // }
+            //in ogni caso assegniamo allo slug il valore ottenuto
+            $data['slug'] =$slug;
+        }
 
-        // if(array_key_exists('image',$data)){
-        //     //salviamo la nostra immagine e recuperiamo il path
-        //     $cover_path = Storage::put('covers', $data['image']);
+        if(array_key_exists('photo',$data)){
+            //salviamo la nostra immagine e recuperiamo il path
+            $photo_path = Storage::put('photo', $data['photo']);
 
-        //     Storage::delete($post->cover);
+            Storage::delete($user->photo);
 
-        //     //salviamo nella colonna della tabella posts l'immagine con il suo percorso
-        //     $data['cover'] = $cover_path;
-        // }
+            //salviamo nella colonna della tabella posts l'immagine con il suo percorso
+            $data['photo'] = $photo_path;
+        }
+
+        if(array_key_exists('cv',$data)){
+            //salviamo la nostra immagine e recuperiamo il path
+            $cv_path = Storage::put('cv', $data['cv']);
+
+            Storage::delete($user->cv);
+
+            //salviamo nella colonna della tabella posts l'immagine con il suo percorso
+            $data['cv'] = $cv_path;
+        }
 
         $user->update($data);
 
-         // salvo i dati nella tabella ponte
-        // if (array_key_exists('tags', $data)) {
-        //     $post->tags()->sync($data['tags']);
+        // salvo i dati nella tabella ponte
+        // if (array_key_exists('specializations', $data)) {
+        //     $user->specializations()->sync($data['specializations']);
         // }
+        if(isset($data['specializations'])){
+            $user->specializations()->sync($data['specializations']);
+        }
 
         return redirect()->route('admin.users.index');
         // ->with('edit','Post n. ' . $post->id . ' has been updated.');
