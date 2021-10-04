@@ -16,15 +16,17 @@ class UserSeeder extends Seeder
     {
         for ($i=0; $i < 25 ; $i++) { 
 
+            $name =$faker->firstName();
+            $surname = $faker->lastName();
             
             User::create([
-                'name' => $faker->firstName(),
-                'surname' => $faker->lastName(),
+                'name' => $name,
+                'surname' => $surname,
                 'address' => $faker->address(),
                 'email' => $faker->email(),
                 'phone' => $faker->phoneNumber(),
                 'password' => bcrypt('password'),
-                'slug' => Str::slug($faker->firstName().' '.$faker->firstName(), '-'),
+                'slug' => Str::slug($name.' '.$surname, '-'),
                 'remember_token' => Str::random(10),
                 'email_verified_at' => now(),
             ]);

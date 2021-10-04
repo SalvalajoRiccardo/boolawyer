@@ -41,11 +41,16 @@
                             </div>
                         </div>
 
-                        <select name="specializations" >
-                            @foreach($data as $spec)
-                                <option value="{{$spec->id}}">{{$spec->name}}</option>
-                            @endforeach
-                        </select>
+                        {{-- SPECIALIZATIONS --}}
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label text-md-right">{{ __('Specializations') }}</label>
+
+                            <select name="specializations">
+                                @foreach($data as $spec)
+                                    <option value="{{$spec->id}}">{{$spec->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
 
                         {{-- ADDRESS --}}
                         <div class="form-group row">
@@ -101,6 +106,8 @@
                             </div>
                         </div>
 
+                      
+                        
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -109,6 +116,17 @@
                             </div>
                         </div>
                     </form>
+
+                    @if($errors->any()){
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{$error}}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    }
+                    @endif
                 </div>
             </div>
         </div>

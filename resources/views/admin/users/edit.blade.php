@@ -6,6 +6,8 @@
 
   <div class="col-xl-8 order-xl-1">
     <div class="card bg-light shadow">
+
+      {{-- header --}}
       <div class="card-header bg-white border-0">
         <div class="row align-items-center">
           <div class="col-8">
@@ -16,40 +18,47 @@
           </div>
         </div>
       </div>
+
+
+      {{-- body --}}
       <div class="card-body">
-        <form>
+        <form action="{{ route('admin.users.update', $user->id) }}" method="post" enctype="multipart/form-data">
+          @csrf
+          @method('PUT')
+
           <h6 class="heading-small text-muted mb-4">User information</h6>
           <div class="pl-lg-4">
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-group focused">
                   <label class="form-control-label" for="input-username">Username</label>
-                  <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="{{$user->slug}}">
+                  <input name="slug" type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="{{$user->slug}}">
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="form-group">
-                  <label class="form-control-label" for="input-email">Email address</label>
-                  <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="{{$user->email}}">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value="{{$user->email}}">
+                
                 </div>
-              </div>
             </div>
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-group focused">
                   <label class="form-control-label" for="input-first-name">First name</label>
-                  <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="{{$user->name}}">
+                  <input name="name" type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="{{$user->name}}">
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="form-group focused">
                   <label class="form-control-label" for="input-last-name">Last name</label>
-                  <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value="{{$user->surname}}">
+                  <input name="surname" type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value="{{$user->surname}}">
                 </div>
               </div>
             </div>
           </div>
           <hr class="my-4">
+
           <!-- Address -->
           <h6 class="heading-small text-muted mb-4">Contact information</h6>
           <div class="pl-lg-4">
@@ -57,25 +66,25 @@
               <div class="col-md-12">
                 <div class="form-group focused">
                   <label class="form-control-label" for="input-address">Address</label>
-                  <input id="input-address" class="form-control form-control-alternative" placeholder="Home Address" value="{{$user->address}}" type="text">
+                  <input name="address" id="input-address" class="form-control form-control-alternative" placeholder="Home Address" value="{{$user->address}}" type="text">
                 </div>
               </div>
               <div class="col-md-12">
                 <div class="form-group focused">
                   <label class="form-control-label" for="input-phone">Phone</label>
-                  <input id="input-phone" class="form-control form-control-alternative" placeholder="Insert Phone" value="{{$user->phone}}" type="text">
+                  <input name="phone" id="input-phone" class="form-control form-control-alternative" placeholder="Insert Phone" value="{{$user->phone}}" type="text">
                 </div>
               </div>
               <div class="col-md-12">
                 <div class="form-group focused">
                   <label class="form-control-label" for="input-phone">Photo</label>
-                  <input id="input-phone" class="form-control form-control-alternative" placeholder="Insert Photo" value="{{$user->photo}}" type="text">
+                  <input  name="photo" id="input-phone" class="form-control form-control-alternative" value="{{$user->photo}}" type="file">
                 </div>
               </div>
               <div class="col-md-12">
                 <div class="form-group focused">
                   <label class="form-control-label" for="input-phone">CV</label>
-                  <input id="input-cv" class="form-control form-control-alternative" placeholder="Insert cv" value="{{$user->cv}}" type="text">
+                  <input name="cv" id="input-cv" class="form-control form-control-alternative" placeholder="Insert cv" value="{{$user->cv}}" type="text">
                 </div>
               </div>
             </div>
@@ -86,15 +95,17 @@
           <div class="pl-lg-4">
             <div class="form-group focused">
               <label>Services</label>
-              <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">{{$user->services}}</textarea>
+              <textarea name="services" rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">{{$user->services}}</textarea>
             </div>
           </div>
+
+          <button type="submit" class="btn btn-primary">Update</button>
         </form>
       </div>
+
     </div>
   </div>
-
-  <a href="{{route('admin.users.edit', $user->id )}}" class="btn btn-warning">Edit</a>
+      
 
          
 </div>
