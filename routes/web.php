@@ -30,3 +30,6 @@ Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')->
 
     Route::resource('/users', 'UserController');
 });
+
+// Rotte per front-end Vue
+Route::get('/{any?}', 'HomeController@index')->where('any', '.*');

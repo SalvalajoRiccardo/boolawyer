@@ -18,8 +18,9 @@ class UserSeeder extends Seeder
 
             $name =$faker->firstName();
             $surname = $faker->lastName();
+            $array_specializations = config('specializations');
             
-            User::create([
+            $user = User::create([
                 'name' => $name,
                 'surname' => $surname,
                 'address' => $faker->address(),
@@ -27,11 +28,16 @@ class UserSeeder extends Seeder
                 'phone' => $faker->phoneNumber(),
                 'password' => bcrypt('password'),
                 'slug' => Str::slug($name.' '.$surname, '-'),
+                'services' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam praesentium voluptatum molestias unde repellat repudiandae, tempora iste, perferendis non reiciendis dolor, quaerat dolores corporis iusto quod accusantium omnis eum. Vero.',
                 'remember_token' => Str::random(10),
                 'email_verified_at' => now(),
-            ]);
-          
 
+            ]);
+            
+            $specialization = Specialization::select('id')->where('id', rand($array_specializations))->first();
+            $user->specializations()->attach($specialization);
+
+            return $user;
         }
     }
 }
