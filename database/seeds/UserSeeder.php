@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 use App\User;
+use App\Specialization;
 
 class UserSeeder extends Seeder
 {
@@ -18,9 +19,8 @@ class UserSeeder extends Seeder
 
             $name =$faker->firstName();
             $surname = $faker->lastName();
-            $array_specializations = config('specializations');
             
-            $user = User::create([
+            User::create([
                 'name' => $name,
                 'surname' => $surname,
                 'address' => $faker->address(),
@@ -34,10 +34,7 @@ class UserSeeder extends Seeder
 
             ]);
             
-            $specialization = Specialization::select('id')->where('id', rand($array_specializations))->first();
-            $user->specializations()->attach($specialization);
-
-            return $user;
+          
         }
     }
 }
