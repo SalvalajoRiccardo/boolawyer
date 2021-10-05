@@ -14,6 +14,30 @@
         </div>
       </div>
     </div>
+
+    
+    <!-- NAVIGATION POSTS -->
+    <div class="container d-flex justify-content-center">
+        <nav aria-label="page-navigation-example" class="navigation_posts">
+            <ul class="pagination my-4">
+                <li class="page-item" :class="{'disabled' : currentPage==1}">
+                    <button class="page-link "  @click="getUsers(currentPage-1)">Previous</button>
+                </li>
+                <li class="page-item" 
+                    v-for="i in lastPage" :key="i" 
+                    :class="{'active': currentPage==i }"
+                    @click="getUsers(i)"
+                >
+                    <span class="page-link ">{{i}}</span>
+                </li>
+                
+                <li class="page-item" :class="{'disabled': currentPage == lastPage}" >
+                    <button class="page-link " @click="getUsers(currentPage + 1)">Next</button>
+                </li>
+            </ul>
+        </nav>
+        
+    </div>
   </div>
 </template>
 
@@ -34,6 +58,7 @@ export default {
   },
 
   methods:{
+    // Get all the lawyers from the PI
     getUsers(PageUser){
       axios
       .get(this.url, {params:{
@@ -49,6 +74,7 @@ export default {
       })
     },
 
+    // truncate the services paragraph
     truncate(text,maxlength){
       if(text.length > maxlength) {
         return text.substr(0, maxlength) + '...';

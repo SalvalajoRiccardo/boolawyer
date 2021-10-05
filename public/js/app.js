@@ -2321,6 +2321,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'LawyersList',
   data: function data() {
@@ -2335,6 +2359,7 @@ __webpack_require__.r(__webpack_exports__);
     this.getUsers(1);
   },
   methods: {
+    // Get all the lawyers from the PI
     getUsers: function getUsers(PageUser) {
       var _this = this;
 
@@ -2351,6 +2376,7 @@ __webpack_require__.r(__webpack_exports__);
         console.log(response.data.results.last_page);
       });
     },
+    // truncate the services paragraph
     truncate: function truncate(text, maxlength) {
       if (text.length > maxlength) {
         return text.substr(0, maxlength) + '...';
@@ -38338,7 +38364,90 @@ var render = function() {
         ])
       }),
       0
-    )
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "container d-flex justify-content-center" }, [
+      _c(
+        "nav",
+        {
+          staticClass: "navigation_posts",
+          attrs: { "aria-label": "page-navigation-example" }
+        },
+        [
+          _c(
+            "ul",
+            { staticClass: "pagination my-4" },
+            [
+              _c(
+                "li",
+                {
+                  staticClass: "page-item",
+                  class: { disabled: _vm.currentPage == 1 }
+                },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "page-link ",
+                      on: {
+                        click: function($event) {
+                          return _vm.getUsers(_vm.currentPage - 1)
+                        }
+                      }
+                    },
+                    [_vm._v("Previous")]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _vm._l(_vm.lastPage, function(i) {
+                return _c(
+                  "li",
+                  {
+                    key: i,
+                    staticClass: "page-item",
+                    class: { active: _vm.currentPage == i },
+                    on: {
+                      click: function($event) {
+                        return _vm.getUsers(i)
+                      }
+                    }
+                  },
+                  [
+                    _c("span", { staticClass: "page-link " }, [
+                      _vm._v(_vm._s(i))
+                    ])
+                  ]
+                )
+              }),
+              _vm._v(" "),
+              _c(
+                "li",
+                {
+                  staticClass: "page-item",
+                  class: { disabled: _vm.currentPage == _vm.lastPage }
+                },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "page-link ",
+                      on: {
+                        click: function($event) {
+                          return _vm.getUsers(_vm.currentPage + 1)
+                        }
+                      }
+                    },
+                    [_vm._v("Next")]
+                  )
+                ]
+              )
+            ],
+            2
+          )
+        ]
+      )
+    ])
   ])
 }
 var staticRenderFns = []
