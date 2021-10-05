@@ -1,100 +1,140 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="row">
+<div class="container">
+  <div class="row gutters-sm">
 
+    {{-- LEFT COLUMN --}}
+    <div class="col-md-4 mb-3">
 
-  <div class="col-xl-8 order-xl-1">
-    <div class="card bg-light shadow">
-      <div class="card-header bg-white border-0">
-        <div class="row align-items-center">
-          <div class="col-8">
-            <h3 class="mb-0">My account</h3>
-          </div>
-          <div class="col-4 text-right">
-            <a href="#!" class="btn btn-sm btn-primary">Settings</a>
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex flex-column align-items-center text-center">
+            {{-- IMAGE --}}
+            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+
+            <div class="mt-3">
+              <h4>{{$user->name}} {{$user->surname}}</h4>
+
+              <a href="{{route('admin.users.edit', $user->id )}}" class="btn btn-secondary d-block">Edit Info</a>
+              <a href="{{route('change.password')}}" class="btn btn-primary d-block my-3">Change password</a>
+              <a href="#" class="btn btn-danger d-block">Delete Profile</a>
+              
+            </div>
           </div>
         </div>
       </div>
-      <div class="card-body">
-        <form>
-          <h6 class="heading-small text-muted mb-4">User information</h6>
-          <div class="pl-lg-4">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="form-group focused">
-                  <label class="form-control-label" for="input-username">Username</label>
-                  <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="{{$user->slug}}">
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <label class="form-control-label" for="input-email">Email address</label>
-                  <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="{{$user->email}}">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="form-group focused">
-                  <label class="form-control-label" for="input-first-name">First name</label>
-                  <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="{{$user->name}}">
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group focused">
-                  <label class="form-control-label" for="input-last-name">Last name</label>
-                  <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value="{{$user->surname}}">
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr class="my-4">
-          <!-- Address -->
-          <h6 class="heading-small text-muted mb-4">Contact information</h6>
-          <div class="pl-lg-4">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="form-group focused">
-                  <label class="form-control-label" for="input-address">Address</label>
-                  <input id="input-address" class="form-control form-control-alternative" placeholder="Home Address" value="{{$user->address}}" type="text">
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="form-group focused">
-                  <label class="form-control-label" for="input-phone">Phone</label>
-                  <input id="input-phone" class="form-control form-control-alternative" placeholder="Insert Phone" value="{{$user->phone}}" type="text">
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="form-group focused">
-                  <label class="form-control-label" for="input-phone">Photo</label>
-                  <input id="input-phone" class="form-control form-control-alternative" placeholder="Insert Photo" value="{{$user->photo}}" type="text">
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="form-group focused">
-                  <label class="form-control-label" for="input-phone">CV</label>
-                  <input id="input-cv" class="form-control form-control-alternative" placeholder="Insert cv" value="{{$user->cv}}" type="text">
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr class="my-4">
-          <!-- Description -->
-          <h6 class="heading-small text-muted mb-4">About me</h6>
-          <div class="pl-lg-4">
-            <div class="form-group focused">
-              <label>Services</label>
-              <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">{{$user->services}}</textarea>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
 
-  <a href="{{route('admin.users.edit', $user->id )}}" class="btn btn-warning">Edit</a>
+    </div>
+
+    {{-- RIGTH COLUMN --}}
+    <div class="col-md-8">
+
+      <div class="card mb-3">
+        {{-- start Card Body --}}
+        <div class="card-body">
+
+          {{-- Name --}}
+          <div class="row">
+            <div class="col-sm-3">
+              <h6 class="mb-0">Name</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">
+              {{$user->name}}
+            </div>
+          </div>
+          <hr>
+
+          {{-- Surname --}}
+          <div class="row">
+            <div class="col-sm-3">
+              <h6 class="mb-0">Surname</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">
+              {{$user->surname}}
+            </div>
+          </div>
+          <hr>
+
+          {{-- EMAIL --}}
+          <div class="row">
+              <div class="col-sm-3">
+                  <h6 class="mb-0">Email</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                  {{$user->email}}
+              </div>
+          </div>
+          <hr>
+
+          {{-- Phone --}}
+          <div class="row">
+            <div class="col-sm-3">
+              <h6 class="mb-0">Phone</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">
+              {{$user->phone}}
+            </div>
+          </div>
+          <hr>
+
+          {{-- CV --}}
+          <div class="row">
+            <div class="col-sm-3">
+              <h6 class="mb-0">CV</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">
+            Here goes the Cv
+            </div>
+          </div>
+          <hr>
+
+          {{-- Address --}}
+          <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Address</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{$user->address}}
+              </div>
+          </div>
+          <hr>
+
+          {{-- Specializations --}}
+          <div class="row">
+            <div class="col-sm-3">
+              <h6 class="mb-0">Specializations</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">
+              @foreach ($user->specializations as $specialization)    
+                <span span class="text-secondary mb-1 badge bg-info text-dark">{{$specialization->name}}</span>
+              @endforeach
+            </div>
+          </div>
+          <hr>
+
+          {{-- Services --}}
+          <div class="row">
+            <div class="col-sm-3">
+              <h6 class="mb-0">Services</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">
+              <p>{{$user->services}}</p>
+            </div>
+          </div>
+
+          
+
+        </div>
+        {{-- end Card Body --}}
+      </div>
+
+    </div>
+
+</div>
+</div>
+
+  
 
          
 </div>

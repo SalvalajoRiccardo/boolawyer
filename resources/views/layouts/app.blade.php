@@ -16,6 +16,9 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -86,45 +89,31 @@
                             <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                                 <li>  
                                     <a href="{{route('admin.users.index')}}" class="nav-link align-middle px-0 ">
-                                        <i class="bi-house" style="font-size:1.1rem;"></i> 
+                                        <i class="bi bi-person-circle" style="font-size:1.1rem;"></i>
                                         <h6 class="ms-2 d-none d-sm-inline">Profilo</h6>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle dropdown-toggle">
-                                        <i class="bi bi-card-list" style="font-size:1.1rem;"></i>
-                                        <h6 class="ms-2 d-none d-sm-inline">Posts</h6> 
-                                    </a>
-                                    <ul class="collapse nav flex-column ms-1" id="submenu3" >
-                                        <li class=" w-100 px-3">
-                                            <a href="#" class="nav-link px-0"> 
-                                                <i class="bi bi-card-image" style="font-size:1.1rem;"></i>
-                                                <span class="d-none d-sm-inline">All Posts</span>
-                                            </a>
-                                        </li>
-                                        <li class="w-100 px-3 ">
-                                            <a href="#" class="nav-link px-0"> 
-                                                <i class="bi bi-plus-square" style="font-size:1.1rem;"></i>
-                                                <span class="d-none d-sm-inline">Add Post</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#" class="nav-link px-0 align-middle">
-                                        <i class="bi-people" style="font-size:1.1rem"></i> 
-                                        <h6 class="ms-1 d-none d-sm-inline">Users</h6> 
+                                    <a href="#" class="nav-link align-middle px-0 ">
+                                        <i class="bi bi-chat-dots-fill" style="font-size:1.1rem"></i>
+                                        <h6 class="ms-2 d-none d-sm-inline">Messaggi ricevuti</h6>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" class="nav-link px-0 align-middle">
-                                        <i class="bi bi-grid" style="font-size:1.1rem"></i> 
-                                        <h6 class="ms-2 d-none d-sm-inline">Categories</h6>
+                                        <i class="bi bi-pencil" style="font-size:1.1rem"></i>
+                                        <h6 class="ms-1 d-none d-sm-inline">Recensioni ricevute</h6> 
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0 align-middle">
+                                        <i class="bi bi-star-fill" style="font-size:1.1rem"></i> 
+                                        <h6 class="ms-2 d-none d-sm-inline">Sponsorizzazione</h6>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="{{route('admin.index')}}" class="nav-link px-0 align-middle">
-                                        <i class="bi bi-tag-fill" style="font-size:1.1rem"></i> 
+                                        <i class="bi bi-bar-chart-line-fill" style="font-size:1.1rem"></i>
                                         <h6 class="ms-2 d-none d-sm-inline">Statistiche</h6>
                                     </a>
                                 </li>

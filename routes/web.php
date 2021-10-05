@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('guest.welcome');
 });
 
+
+// Change Password
+Route::get('change-password', 'ChangePasswordController@index');
+Route::post('change-password', 'ChangePasswordController@changePassword')->name('change.password');
+
 Auth::routes();
 
 Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')->group(function() {

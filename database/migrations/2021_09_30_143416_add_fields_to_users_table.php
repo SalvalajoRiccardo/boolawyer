@@ -35,7 +35,7 @@ class AddFieldsToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('surname');
-            $table->dropColumn('adress');
+            $table->dropColumn('address');
             $table->dropColumn('phone');
             $table->dropColumn('photo');
             $table->dropColumn('cv');
