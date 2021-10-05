@@ -2318,14 +2318,96 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Search',
+  props: {},
   data: function data() {
     return {
-      inputText: ''
+      url: 'http://localhost:8000/api/specializations',
+      expand: false,
+      specializationsArray: []
     };
   },
-  methods: {}
+  created: function created() {
+    this.getSpecs();
+  },
+  methods: {
+    // Get all the lawyers from the PI
+    getSpecs: function getSpecs() {
+      var _this = this;
+
+      axios.get(this.url).then(function (response) {
+        _this.specializationsArray = response.data.results;
+        console.log(_this.specializationsArray);
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -39095,7 +39177,59 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("div", { staticClass: "bg-dark" }, [
+    _vm.expand
+      ? _c("div", [
+          _c(
+            "div",
+            { staticClass: "types" },
+            _vm._l(_vm.specializationsArray, function(item, index) {
+              return _c("button", { key: "a" + index, class: item }, [
+                _c("input", {
+                  attrs: { type: "radio", id: "a" + index },
+                  domProps: { value: item }
+                }),
+                _vm._v(" "),
+                _c("label", { attrs: { for: "a" + index } }, [
+                  _vm._v(_vm._s(item.name))
+                ])
+              ])
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "all-fiters" })
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _c("div", { staticClass: "expand" }, [
+      _c("div", { staticClass: "btn-container" }, [
+        !_vm.expand
+          ? _c(
+              "button",
+              {
+                on: {
+                  click: function($event) {
+                    _vm.expand = true
+                  }
+                }
+              },
+              [_vm._v("Ricerca avanzata")]
+            )
+          : _c(
+              "button",
+              {
+                on: {
+                  click: function($event) {
+                    _vm.expand = false
+                  }
+                }
+              },
+              [_vm._v("close")]
+            )
+      ])
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

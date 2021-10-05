@@ -67,6 +67,7 @@ export default {
   },
 
   methods:{
+
     // Get all the lawyers from the PI
     getUsers(PageUser){
       axios
@@ -74,12 +75,13 @@ export default {
         page:PageUser
       }})
       .then(response=>{
-          this.lawyers = response.data.results.data;
-          this.currentPage = response.data.results.current_page;
-          this.lastPage = response.data.results.last_page;
-          console.log(this.lawyers);
-          console.log(response.data.results.current_page);
-          console.log(response.data.results.last_page);
+        this.lawyers = response.data.results.data;
+        this.currentPage = response.data.results.current_page;
+        this.lastPage = response.data.results.last_page;
+        console.log(this.lawyers);
+        console.log(response.data.results.current_page);
+        console.log(response.data.results.last_page);
+
       })
     },
 
