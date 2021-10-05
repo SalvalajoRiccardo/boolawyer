@@ -16,7 +16,7 @@
             </button>
 
             <!-- NAVBAR -->
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                          <router-link :to="{name:'home'}" class="nav-link">Home</router-link>
@@ -24,14 +24,24 @@
                     <li class="nav-item">
                         <router-link :to="{name:'lawyers'}" class="nav-link">Lawyers</router-link>
                     </li>
+                   
                 </ul>
+
+                <ul  class="navbar-nav">
+                     <li class="nav-item ">
+                        <a href="http://127.0.0.1:8000/login" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="http://127.0.0.1:8000/register" class="nav-link">Register</a>  
+                    </li>
+                </ul>
+
             </div>
         </div>
     </nav>
   
 
-    <!-- <a href="{{ route('login') }}">Login</a>
-    <a href="{{ route('register') }}">Register</a>   -->
+    
 
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="container">
+    <div class="container py-4">
       <router-view></router-view>
     </div>
   </main>
@@ -12,6 +12,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+main{
+  min-height: calc(100vh - 100px);
+}
 
 </style>
