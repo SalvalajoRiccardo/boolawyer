@@ -13,10 +13,19 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::with(['specializations'])->paginate(9);
-
+        $data = $request->all();
+        
+        // $users = User::with(['specializations'])->paginate(9);
+        if($data) {
+            $users = User::with(['specializations'])->where('name', $data)->paginate(9);
+           
+        } else {
+            $users = User::with(['specializations'])->paginate(9);
+        }
+       
+        
         foreach($users as $user){
             if($user->photo){
                 $user->photo = url('storage/' . $user->photo); 
@@ -27,6 +36,7 @@ class UserController extends Controller
             'success' => true,
             'results' => $users
         ]);
+    
     }
 
     

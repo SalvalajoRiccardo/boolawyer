@@ -23,6 +23,7 @@ Route::namespace('Api')->group(function(){
 
     // Api USER
     Route::get('/users', 'UserController@index');
+    Route::post('/users', 'UserController@index');
     Route::get('/user/{slug}', 'UserController@show');
 
     //Api SPECIALIZATION

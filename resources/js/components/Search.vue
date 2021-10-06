@@ -3,14 +3,26 @@
 
         <!-- ADVANCED-SEARCH container -->
         <div class="row" v-if="expand">
+
             
             <!-- TYPES: buttons for selecting the SPECIALIZATIONS -->
-            <div class="col-12 col-md-6">
-                <button :class="item" v-for="(item,index) in specializationsArray" :key="'a'+ index" >
-                    <input type="radio" :id="'a' + index" :value="item" >
-                    <label :for="'a' + index">{{item.name}}</label>
-                </button>
-            </div>
+            <!-- <form> -->
+
+                <div class="types">
+                    <button :class="item" v-for="(item,index) in specializationsArray" :key="'a'+ index" @change.prevent="sendForm">
+                        <input type="radio" :id="'a' + index" :value="item.name" v-model="selectedSpec" name="specializations">
+                        <label :for="'a' + index">{{item.name}}</label>
+                    </button>
+                </div>
+
+
+                <!-- <div class="col-12 col-md-6">
+                    <select class="form-select" aria-label="Default select example" v-model="selectedSpec">
+                        <option disabled selected value="">Choose a specialization</option>
+                        <option v-for="(item,index) in specializationsArray" :key="index" :value="item.name">{{item.name}}</option>
+                    </select>
+                </div> -->
+            <!-- </form> -->
 
             <!-- ALL FILTERS: 3 Buttons for different heights + 3 Buttons for different weights -->
             <div class="col-12 col-md-6">
@@ -80,7 +92,8 @@ export default {
         return {
             url:'http://localhost:8000/api/specializations',
             expand:false,
-            specializationsArray:[]
+            specializationsArray:[],
+            selectedSpec:''
         }
     },
 
@@ -90,17 +103,34 @@ export default {
     methods: {
 
         // Get all the lawyers from the PI
-    getSpecs(){
-      axios
-      .get(this.url)
-      .then(response=>{
-        this.specializationsArray = response.data.results;
-        
-        console.log(this.specializationsArray);
-        
+        getSpecs(){
+        axios
+        .get(this.url)
+        .then(response=>{
+            this.specializationsArray = response.data.results;          
+            console.log(this.specializationsArray);
+        })
+        },
 
-      })
-    },
+        sendForm(){
+      
+            axios.post('/api/users',{
+                'specialization': this.selectedSpec,
+            })
+            .then(response=>{
+                if (!response.data.success) {
+                this.errors=response.data.errors;
+                
+                } else {
+                // console.log(response.config.data);
+                //   this.selectedSpec="";
+            
+                }
+            })
+            .catch(error=>{
+                console.log(error);
+            })
+        }
         
     }
 }

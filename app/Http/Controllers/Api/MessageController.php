@@ -25,17 +25,11 @@ class MessageController extends Controller
                 'errors' => $validator->errors()
             ]);
         }
-        
-        
-        
        
         // salviamo i dati nella tabella
         $new_message = new Message();
         $new_message->fill($data);
         $new_message->save();
-
-      
-
 
         return response()->json(['success' => true ]);
     }
