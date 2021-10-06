@@ -1,11 +1,11 @@
 <template>
-<div class="bg-dark">
+    <div class="bg-secondary text-center">
 
         <!-- ADVANCED-SEARCH container -->
-        <div v-if="expand">
+        <div class="row" v-if="expand">
             
-            <!-- TYPES: buttons for selecting different pokemon typt(grass, water, fire, etc.) -->
-            <div class="types">
+            <!-- TYPES: buttons for selecting the SPECIALIZATIONS -->
+            <div class="col-12 col-md-6">
                 <button :class="item" v-for="(item,index) in specializationsArray" :key="'a'+ index" >
                     <input type="radio" :id="'a' + index" :value="item" >
                     <label :for="'a' + index">{{item.name}}</label>
@@ -13,7 +13,7 @@
             </div>
 
             <!-- ALL FILTERS: 3 Buttons for different heights + 3 Buttons for different weights -->
-            <div class="all-fiters">
+            <div class="col-12 col-md-6">
 
                 <!-- Buttons for different heights -->
                 <!-- <div class="height">
@@ -58,16 +58,14 @@
         </div> 
 
         <!-- ADVANCED-SEARCH buttons: EXPAND/CLOSE -->
-        <div class="expand">
-        <div class="btn-container">
-            <button @click="expand=true" v-if="!expand">Ricerca avanzata</button>
-            <button @click="expand=false" v-else>close</button>
-        </div>    
+        <div class="expand py-3">
+            <div class="btn-container">
+                <button class="btn btn-light" @click="expand=true" v-if="!expand">Ricerca avanzata</button>
+                <button class="btn btn-light" @click="expand=false" v-else>Close</button>
+            </div>    
         </div>
 
     </div>
-
-
 </template>
 
 <script>

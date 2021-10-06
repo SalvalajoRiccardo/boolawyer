@@ -2382,8 +2382,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Search',
   props: {},
@@ -2441,6 +2439,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Search_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Search.vue */ "./resources/js/components/Search.vue");
+//
+//
 //
 //
 //
@@ -2562,12 +2562,57 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "SingleLawyer",
   components: {},
   data: function data() {
     return {
-      lawyer: []
+      lawyer: [],
+      name: '',
+      email: '',
+      text: '',
+      errors: {},
+      sending: false,
+      success: false
     };
   },
   mounted: function mounted() {
@@ -2580,6 +2625,34 @@ __webpack_require__.r(__webpack_exports__);
     })["catch"](function (error) {
       console.log(error);
     });
+  },
+  methods: {
+    sendForm: function sendForm() {
+      var _this2 = this;
+
+      this.sending = true;
+      this.success = false;
+      axios.post('/api/messages', {
+        'name': this.name,
+        'email': this.email,
+        'text': this.text,
+        'user_id': this.lawyer.id
+      }).then(function (response) {
+        if (!response.data.success) {
+          _this2.errors = response.data.errors;
+          _this2.success = false;
+        } else {
+          _this2.success = true;
+          console.log(response);
+          _this2.sending = false;
+          _this2.name = "";
+          _this2.email = "";
+          _this2.message = "";
+        }
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    }
   }
 });
 
@@ -39152,7 +39225,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("main", [
-    _c("div", { staticClass: "container py-4" }, [_c("router-view")], 1)
+    _c("div", { staticClass: "container" }, [_c("router-view")], 1)
   ])
 }
 var staticRenderFns = []
@@ -39177,12 +39250,12 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "bg-dark" }, [
+  return _c("div", { staticClass: "bg-secondary text-center" }, [
     _vm.expand
-      ? _c("div", [
+      ? _c("div", { staticClass: "row" }, [
           _c(
             "div",
-            { staticClass: "types" },
+            { staticClass: "col-12 col-md-6" },
             _vm._l(_vm.specializationsArray, function(item, index) {
               return _c("button", { key: "a" + index, class: item }, [
                 _c("input", {
@@ -39198,16 +39271,17 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _c("div", { staticClass: "all-fiters" })
+          _c("div", { staticClass: "col-12 col-md-6" })
         ])
       : _vm._e(),
     _vm._v(" "),
-    _c("div", { staticClass: "expand" }, [
+    _c("div", { staticClass: "expand py-3" }, [
       _c("div", { staticClass: "btn-container" }, [
         !_vm.expand
           ? _c(
               "button",
               {
+                staticClass: "btn btn-light",
                 on: {
                   click: function($event) {
                     _vm.expand = true
@@ -39219,13 +39293,14 @@ var render = function() {
           : _c(
               "button",
               {
+                staticClass: "btn btn-light",
                 on: {
                   click: function($event) {
                     _vm.expand = false
                   }
                 }
               },
-              [_vm._v("close")]
+              [_vm._v("Close")]
             )
       ])
     ])
@@ -39289,19 +39364,29 @@ var render = function() {
         _vm._l(_vm.lawyers, function(lawyer) {
           return _c("div", { key: lawyer.id, staticClass: "col" }, [
             _c("div", { staticClass: "card my-3 p-3 text-center" }, [
-              lawyer.photo
-                ? _c("img", {
-                    staticClass: "card-img-top",
-                    attrs: { src: lawyer.photo, alt: lawyer.name }
-                  })
-                : _c("img", {
-                    staticClass: "rounded-circle m-auto",
-                    attrs: {
-                      src: "https://bootdey.com/img/Content/avatar/avatar7.png",
-                      alt: "Admin",
-                      width: "150"
-                    }
-                  }),
+              _c(
+                "div",
+                {
+                  staticClass: "rounded-circle overflow-hidden m-auto",
+                  staticStyle: { width: "150px", height: "150px" }
+                },
+                [
+                  lawyer.photo
+                    ? _c("img", {
+                        staticClass: "img-fluid",
+                        attrs: { src: lawyer.photo, alt: lawyer.name }
+                      })
+                    : _c("img", {
+                        staticClass: "rounded-circle m-auto",
+                        attrs: {
+                          src:
+                            "https://bootdey.com/img/Content/avatar/avatar7.png",
+                          alt: "Admin",
+                          width: "150"
+                        }
+                      })
+                ]
+              ),
               _vm._v(" "),
               _c(
                 "div",
@@ -39448,41 +39533,213 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container mt-3" }, [
-    _c("div", { staticClass: "card" }, [
-      _c("h5", { staticClass: "card-header" }, [
-        _vm._v(
-          " " + _vm._s(_vm.lawyer.name) + "  " + _vm._s(_vm.lawyer.surname)
-        )
-      ]),
-      _vm._v(" "),
-      _vm.lawyer.photo
-        ? _c("img", {
-            staticClass: "card-img-top",
-            attrs: { src: _vm.lawyer.photo, alt: _vm.lawyer.name }
-          })
-        : _vm._e(),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-body" }, [
-        _vm.lawyer.specializations
-          ? _c(
-              "div",
-              _vm._l(_vm.lawyer.specializations, function(
-                specialization,
-                index
-              ) {
-                return _c("span", { key: index }, [
-                  _vm._v(_vm._s(specialization.name))
-                ])
-              }),
-              0
-            )
-          : _vm._e(),
+    _c("div", { staticClass: "card mb-3" }, [
+      _c("div", { staticClass: "row g-0" }, [
+        _c("div", { staticClass: "col-md-4" }, [
+          _vm.lawyer.photo
+            ? _c("img", {
+                staticClass: "img-fluid rounded-start",
+                attrs: { src: _vm.lawyer.photo, alt: _vm.lawyer.name }
+              })
+            : _vm._e()
+        ]),
         _vm._v(" "),
-        _c("p", { staticClass: "card-text" }, [
-          _vm._v(" " + _vm._s(_vm.lawyer.services))
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("div", { staticClass: "card-body p-0" }, [
+            _c("h5", { staticClass: "card-title card-header" }, [
+              _vm._v(
+                " " +
+                  _vm._s(_vm.lawyer.name) +
+                  "  " +
+                  _vm._s(_vm.lawyer.surname)
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "card-text p-4" }, [
+              _vm._v(" " + _vm._s(_vm.lawyer.services))
+            ]),
+            _vm._v(" "),
+            _vm.lawyer.specializations
+              ? _c(
+                  "div",
+                  _vm._l(_vm.lawyer.specializations, function(
+                    specialization,
+                    index
+                  ) {
+                    return _c(
+                      "span",
+                      { key: index, staticClass: "badge badge-dark mx-4" },
+                      [_vm._v(_vm._s(specialization.name))]
+                    )
+                  }),
+                  0
+                )
+              : _vm._e()
+          ])
         ])
       ])
-    ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "form",
+      {
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            return _vm.sendForm.apply(null, arguments)
+          }
+        }
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "mb-3" },
+          [
+            _c(
+              "label",
+              { staticClass: "form-label", attrs: { for: "your_name" } },
+              [_vm._v("Name")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.name,
+                  expression: "name"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "text",
+                name: "name",
+                id: "your_name",
+                placeholder: "What's your name?"
+              },
+              domProps: { value: _vm.name },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.name = $event.target.value
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm._l(_vm.errors.name, function(error, index) {
+              return _c(
+                "p",
+                { key: index, staticClass: "alert alert-danger my-2" },
+                [_vm._v(_vm._s(error))]
+              )
+            })
+          ],
+          2
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "mb-3" },
+          [
+            _c(
+              "label",
+              { staticClass: "form-label", attrs: { for: "your_email" } },
+              [_vm._v("Email address")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.email,
+                  expression: "email"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "email",
+                name: "email",
+                id: "your_email",
+                placeholder: "Email..."
+              },
+              domProps: { value: _vm.email },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.email = $event.target.value
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm._l(_vm.errors.email, function(error, index) {
+              return _c(
+                "p",
+                { key: index, staticClass: "alert alert-danger my-2" },
+                [_vm._v(_vm._s(error))]
+              )
+            })
+          ],
+          2
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "mb-3" },
+          [
+            _c(
+              "label",
+              { staticClass: "form-label", attrs: { for: "your_text" } },
+              [_vm._v("Example textarea")]
+            ),
+            _vm._v(" "),
+            _c("textarea", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.text,
+                  expression: "text"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                name: "text",
+                id: "your_text",
+                rows: "3",
+                placeholder: "Write me a message..."
+              },
+              domProps: { value: _vm.text },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.text = $event.target.value
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm._l(_vm.errors.text, function(error, index) {
+              return _c(
+                "p",
+                { key: index, staticClass: "alert alert-danger my-2" },
+                [_vm._v(_vm._s(error))]
+              )
+            })
+          ],
+          2
+        ),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn", attrs: { type: "submit" } }, [
+          _vm._v(_vm._s(_vm.sending ? "invio in corso" : "Submit"))
+        ])
+      ]
+    )
   ])
 }
 var staticRenderFns = []

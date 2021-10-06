@@ -11,7 +11,13 @@
         <div class="card-body">
           <div class="d-flex flex-column align-items-center text-center">
             {{-- IMAGE --}}
+            @if ( $user->photo)
+            <img src="{{ asset('storage/' . $user->photo)}}" class="img-fluid" alt="">
+            @else
             <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+            @endif
+           
+           
 
             <div class="mt-3">
               <h4>{{$user->name}} {{$user->surname}}</h4>

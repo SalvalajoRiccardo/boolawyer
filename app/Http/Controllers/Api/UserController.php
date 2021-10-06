@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users =User::paginate(9);
+        $users = User::with(['specializations'])->paginate(9);
 
         foreach($users as $user){
             if($user->photo){

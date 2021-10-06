@@ -54,8 +54,7 @@ class RegisterController extends Controller
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
-    {
-          
+    { 
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'surname' => ['required', 'string', 'max:255'],
@@ -64,6 +63,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
+
     }
 
     /**
@@ -87,6 +87,19 @@ class RegisterController extends Controller
         $specialization = Specialization::select('id')->where('id',$data['specializations'])->first();
         $user->specializations()->attach($specialization);
 
+        
         return $user;
     }
+
+    // public function register(Request $request)
+    // {
+    //     $validation = $this->validator($request->all());
+    //     if ($validations->fails()) {
+    //         return redirect()->back()->with(['errors'=>$validation->errors()->toArray()]);
+    //     }else{
+    //         $user =$this->create($request->all());
+    //         Auth::login($user);
+    //         return redirect()->route('admin.users.index')->with(['message'=>'Account successfully created']);
+    //     }
+    // }
 }

@@ -7,8 +7,10 @@
         <div class="card my-3 p-3 text-center">
 
           <!-- Image -->
-          <img v-if="lawyer.photo" :src="lawyer.photo" :alt="lawyer.name" class="card-img-top" >
-          <img  v-else src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle m-auto" width="150">
+          <div class="rounded-circle overflow-hidden m-auto" style="width:150px; height:150px;">
+            <img v-if="lawyer.photo" :src="lawyer.photo" :alt="lawyer.name" class="img-fluid" >
+            <img  v-else src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle m-auto" width="150">
+          </div>
           
           <div class="card-body">
             <h5 class="card-title">{{ lawyer.name }} {{lawyer.surname}}</h5>

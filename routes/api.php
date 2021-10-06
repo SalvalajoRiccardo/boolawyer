@@ -18,9 +18,17 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-// Api USER
-Route::get('/users', 'Api\UserController@index');
-Route::get('/user/{slug}', 'Api\UserController@show');
 
-//Api SPECIALIZATION
-Route::get('/specializations', 'Api\SpecializationController@index');
+Route::namespace('Api')->group(function(){
+
+    // Api USER
+    Route::get('/users', 'UserController@index');
+    Route::get('/user/{slug}', 'UserController@show');
+
+    //Api SPECIALIZATION
+    Route::get('/specializations', 'SpecializationController@index');
+    
+    // Api MESSAGES
+    Route::post('/messages', 'MessageController@store');
+
+});

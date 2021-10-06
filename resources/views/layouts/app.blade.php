@@ -95,7 +95,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="nav-link align-middle px-0 ">
+                                    <a href="{{route('admin.message_page')}}" class="nav-link align-middle px-0 ">
                                         <i class="bi bi-chat-dots-fill" style="font-size:1.1rem"></i>
                                         <h6 class="ms-2 d-none d-sm-inline">Messaggi ricevuti</h6>
                                     </a>
