@@ -30,6 +30,10 @@ Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')->
 
     Route::get('/messages', 'HomeController@message')->name('message_page');
 
+    Route::get('/reviews', 'HomeController@review')->name('review_page');
+
+    
+
     Route::resource('/users', 'UserController');
 });
 

@@ -74,7 +74,7 @@ export default {
           this.sending=false;
           this.name="";
           this.email="";
-          this.message="";
+          this.text="";
         }
       })
       .catch(error=>{

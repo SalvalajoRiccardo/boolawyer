@@ -19,19 +19,26 @@
         </div>
       </div>
       <!-- end Card -->
+
+      <!-- MESSAGE FORM -->
       <MessageForm :id="lawyer.id" />
+
+      <!-- REVIEW FORM -->
+      <ReviewForm :id="lawyer.id" />
 
 
     </div>
 </template>
 
 <script>
-import MessageForm from '../components/MessageForm.vue'
+import MessageForm from '../components/MessageForm.vue';
+import ReviewForm from '../components/ReviewForm.vue'
 
 export default {
     name: "SingleLawyer",
     components: {
-      MessageForm
+      MessageForm,
+      ReviewForm
     },
     data() {
       return {

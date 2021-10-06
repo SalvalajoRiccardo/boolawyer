@@ -60,12 +60,14 @@ export default {
       url:'http://localhost:8000/api/users',
       lawyers:[],
       currentPage:1,
-      lastPage:null
+      lastPage:null,
+  
     }
   },
 
   created(){
     this.getUsers(1);
+   
   },
 
   methods:{
@@ -86,6 +88,7 @@ export default {
 
       })
     },
+
 
     // truncate the services paragraph
     truncate(text,maxlength){

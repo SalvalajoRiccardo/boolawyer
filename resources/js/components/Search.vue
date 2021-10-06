@@ -6,8 +6,7 @@
 
             
             <!-- TYPES: buttons for selecting the SPECIALIZATIONS -->
-            <!-- <form> -->
-
+            
                 <div class="types">
                     <button :class="item" v-for="(item,index) in specializationsArray" :key="'a'+ index" @change.prevent="sendForm">
                         <input type="radio" :id="'a' + index" :value="item.name" v-model="selectedSpec" name="specializations">
@@ -22,7 +21,7 @@
                         <option v-for="(item,index) in specializationsArray" :key="index" :value="item.name">{{item.name}}</option>
                     </select>
                 </div> -->
-            <!-- </form> -->
+           
 
             <!-- ALL FILTERS: 3 Buttons for different heights + 3 Buttons for different weights -->
             <div class="col-12 col-md-6">
@@ -104,12 +103,12 @@ export default {
 
         // Get all the lawyers from the PI
         getSpecs(){
-        axios
-        .get(this.url)
-        .then(response=>{
-            this.specializationsArray = response.data.results;          
-            console.log(this.specializationsArray);
-        })
+            axios
+            .get(this.url)
+            .then(response=>{
+                this.specializationsArray = response.data.results;          
+                console.log(this.specializationsArray);
+            })
         },
 
         sendForm(){

@@ -101,7 +101,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="nav-link px-0 align-middle">
+                                    <a href="{{route('admin.review_page')}}" class="nav-link px-0 align-middle">
                                         <i class="bi bi-pencil" style="font-size:1.1rem"></i>
                                         <h6 class="ms-1 d-none d-sm-inline">Recensioni ricevute</h6> 
                                     </a>

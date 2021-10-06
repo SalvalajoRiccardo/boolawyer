@@ -23,7 +23,9 @@ Route::namespace('Api')->group(function(){
 
     // Api USER
     Route::get('/users', 'UserController@index');
-    Route::post('/users', 'UserController@index');
+    // Route::post('/users', 'UserController@index');
+
+
     Route::get('/user/{slug}', 'UserController@show');
 
     //Api SPECIALIZATION
@@ -31,5 +33,10 @@ Route::namespace('Api')->group(function(){
     
     // Api MESSAGES
     Route::post('/messages', 'MessageController@store');
+
+    // Api REVIEWS
+    Route::post('/reviews', 'ReviewController@store');
+
+    
 
 });

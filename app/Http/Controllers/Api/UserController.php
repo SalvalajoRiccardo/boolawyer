@@ -13,17 +13,11 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $data = $request->all();
+      
         
-        // $users = User::with(['specializations'])->paginate(9);
-        if($data) {
-            $users = User::with(['specializations'])->where('name', $data)->paginate(9);
-           
-        } else {
-            $users = User::with(['specializations'])->paginate(9);
-        }
+        $users = User::with(['specializations'])->paginate(9);
        
         
         foreach($users as $user){

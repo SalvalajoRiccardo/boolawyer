@@ -18,6 +18,11 @@ class HomeController extends Controller
         return view('admin.messages', compact('data'));
     }
 
+    public function review(){
+        $data=Auth::user();
+        return view('admin.reviews', compact('data'));
+    }
+
     // public function tags(){
     //     $tags = Tag::all();
     //     return view('admin.tags', compact('tags'));
