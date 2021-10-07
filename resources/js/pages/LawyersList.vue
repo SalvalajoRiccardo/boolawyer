@@ -61,7 +61,7 @@ export default {
       lawyers:[],
       currentPage:1,
       lastPage:null,
-  
+      
     }
   },
 
