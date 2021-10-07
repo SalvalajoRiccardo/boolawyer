@@ -18,7 +18,7 @@ class UserController extends Controller
       
         
         $users = User::with(['specializations'])->paginate(9);
-       
+  
         
         foreach($users as $user){
             if($user->photo){
@@ -54,6 +54,24 @@ class UserController extends Controller
                 'results' => $user
             ]);
         }
+    }
+
+    public function searchData($data){
+        dd($data);
+
+        
+        // $user_query= User::with(['specializations']);
+        // if ($data) {
+        //     $user_query->whereHas('specializations', function($query) use($data){
+        //         $query->where('name',$data );
+        //     });
+        // }
+        
+        // $user= $user_query->get();
+        // return response()->json([
+        //     'success' => true,
+        //     'results' => $user
+        // ]);
     }
 
    
