@@ -2348,8 +2348,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'MessageForm',
   props: {
@@ -2362,10 +2360,22 @@ __webpack_require__.r(__webpack_exports__);
       text: '',
       errors: {},
       sending: false,
-      success: false
+      success: false // name_value: document.getElementById('your_name'),
+      // address_value: document.getElementById('your_email'),
+      // message_value: document.getElementById('your_text')
+
     };
   },
   methods: {
+    valida: function valida() {
+      if (this.name == '' || this.name.length < 2) {
+        alert('Inserisci un nome valido!');
+      } else if (!this.email.includes('@') || this.email == '') {
+        alert('Devi inserire un indirizzo mail corretto!');
+      } else if (this.text == '') {
+        alert('Inserisci un messaggio!');
+      }
+    },
     sendForm: function sendForm() {
       var _this = this;
 
@@ -2392,7 +2402,32 @@ __webpack_require__.r(__webpack_exports__);
         console.log(error);
       });
     }
-  }
+  } // valida(){
+  //   let nome = document.invio.name.value;
+  //   let mail = document.invio.email.value;
+  //   let message = document.invio.text.value;
+  //   if((isNaN(nome)) || (nome == "") || (nome == "undefined")){
+  //     alert("Devi inserire il nome!");
+  //     document.invio.name.value = "";
+  //     document.invio.name.focus();
+  //     return false;
+  //   }
+  //   let email_valid = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-]{2,})+.)+([a-zA-Z0-9]{2,})+$/;
+  //   if(!email_valid.test(mail) || (mail == "") || (mail == "undefined")){
+  //     alert("Devi inserire un indirizzo mail corretto");
+  //     document.invio.email.focus();
+  //     return false;
+  //   }
+  //   if((isNaN(message)) || (message == "") || (message == "undefined")){
+  //     alert("Devi inserire il messaggio!");
+  //     document.invio.text.value = "";
+  //     document.invio.text.focus();
+  //     return false;
+  //   }else{
+  //     this.sendForm();
+  //   }
+  // }
+
 });
 
 /***/ }),
@@ -2406,9 +2441,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
 //
 //
 //
@@ -2461,6 +2493,15 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    valida: function valida() {
+      if (this.reviewer == '' || this.reviewer.length < 2) {
+        alert('Inserisci un nome valido!');
+      } else if (this.vote < 1 || this.vote > 5 || this.vote == '') {
+        alert('Devi inserire un voto valido! Inserisci un voto tra 1 e 5');
+      } else if (this.text == '') {
+        alert('Inserisci un messaggio!');
+      }
+    },
     // stelle(voto){
     //     return parseInt(Math.round(voto / 2))
     // },
@@ -2669,6 +2710,10 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_MessageForm_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/MessageForm.vue */ "./resources/js/components/MessageForm.vue");
 /* harmony import */ var _components_ReviewForm_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ReviewForm.vue */ "./resources/js/components/ReviewForm.vue");
+//
+//
+//
+//
 //
 //
 //
@@ -39341,153 +39386,118 @@ var render = function() {
         }
       },
       [
-        _c(
-          "div",
-          { staticClass: "mb-3" },
-          [
-            _c(
-              "label",
-              { staticClass: "form-label", attrs: { for: "your_name" } },
-              [_vm._v("Name")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.name,
-                  expression: "name"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "name",
-                id: "your_name",
-                placeholder: "What's your name?"
-              },
-              domProps: { value: _vm.name },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.name = $event.target.value
-                }
+        _c("div", { staticClass: "mb-3" }, [
+          _c(
+            "label",
+            { staticClass: "form-label", attrs: { for: "your_name" } },
+            [_vm._v("Name")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.name,
+                expression: "name"
               }
-            }),
-            _vm._v(" "),
-            _vm._l(_vm.errors.name, function(error, index) {
-              return _c(
-                "p",
-                { key: index, staticClass: "alert alert-danger my-2" },
-                [_vm._v(_vm._s(error))]
-              )
-            })
-          ],
-          2
-        ),
+            ],
+            staticClass: "form-control",
+            attrs: {
+              type: "text",
+              name: "name",
+              id: "your_name",
+              placeholder: "What's your name?"
+            },
+            domProps: { value: _vm.name },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.name = $event.target.value
+              }
+            }
+          })
+        ]),
         _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "mb-3" },
-          [
-            _c(
-              "label",
-              { staticClass: "form-label", attrs: { for: "your_email" } },
-              [_vm._v("Email address")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.email,
-                  expression: "email"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: {
-                type: "email",
-                name: "email",
-                id: "your_email",
-                placeholder: "Email..."
-              },
-              domProps: { value: _vm.email },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.email = $event.target.value
-                }
+        _c("div", { staticClass: "mb-3" }, [
+          _c(
+            "label",
+            { staticClass: "form-label", attrs: { for: "your_email" } },
+            [_vm._v("Email address")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.email,
+                expression: "email"
               }
-            }),
-            _vm._v(" "),
-            _vm._l(_vm.errors.email, function(error, index) {
-              return _c(
-                "p",
-                { key: index, staticClass: "alert alert-danger my-2" },
-                [_vm._v(_vm._s(error))]
-              )
-            })
-          ],
-          2
-        ),
+            ],
+            staticClass: "form-control",
+            attrs: {
+              type: "email",
+              name: "email",
+              id: "your_email",
+              placeholder: "Email..."
+            },
+            domProps: { value: _vm.email },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.email = $event.target.value
+              }
+            }
+          })
+        ]),
         _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "mb-3" },
-          [
-            _c(
-              "label",
-              { staticClass: "form-label", attrs: { for: "your_text" } },
-              [_vm._v("Your message")]
-            ),
-            _vm._v(" "),
-            _c("textarea", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.text,
-                  expression: "text"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: {
-                name: "text",
-                id: "your_text",
-                rows: "3",
-                placeholder: "Write me a message..."
-              },
-              domProps: { value: _vm.text },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.text = $event.target.value
-                }
+        _c("div", { staticClass: "mb-3" }, [
+          _c(
+            "label",
+            { staticClass: "form-label", attrs: { for: "your_text" } },
+            [_vm._v("Your message")]
+          ),
+          _vm._v(" "),
+          _c("textarea", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.text,
+                expression: "text"
               }
-            }),
-            _vm._v(" "),
-            _vm._l(_vm.errors.text, function(error, index) {
-              return _c(
-                "p",
-                { key: index, staticClass: "alert alert-danger my-2" },
-                [_vm._v(_vm._s(error))]
-              )
-            })
-          ],
-          2
-        ),
+            ],
+            staticClass: "form-control",
+            attrs: {
+              name: "text",
+              id: "your_text",
+              rows: "3",
+              placeholder: "Write me a message..."
+            },
+            domProps: { value: _vm.text },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.text = $event.target.value
+              }
+            }
+          })
+        ]),
         _vm._v(" "),
         _c(
           "button",
-          { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+          {
+            staticClass: "btn btn-primary",
+            attrs: { type: "submit" },
+            on: { click: _vm.valida }
+          },
           [_vm._v(_vm._s(_vm.sending ? "invio in corso" : "Submit"))]
         )
       ]
@@ -39536,153 +39546,118 @@ var render = function() {
         }
       },
       [
-        _c(
-          "div",
-          { staticClass: "mb-3" },
-          [
-            _c(
-              "label",
-              { staticClass: "form-label", attrs: { for: "your_reviewer" } },
-              [_vm._v("Reviewer")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.reviewer,
-                  expression: "reviewer"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "reviewer",
-                id: "your_reviewer",
-                placeholder: "What's your name?"
-              },
-              domProps: { value: _vm.reviewer },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.reviewer = $event.target.value
-                }
+        _c("div", { staticClass: "mb-3" }, [
+          _c(
+            "label",
+            { staticClass: "form-label", attrs: { for: "your_reviewer" } },
+            [_vm._v("Reviewer")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.reviewer,
+                expression: "reviewer"
               }
-            }),
-            _vm._v(" "),
-            _vm._l(_vm.errors.reviewer, function(error, index) {
-              return _c(
-                "p",
-                { key: index, staticClass: "alert alert-danger my-2" },
-                [_vm._v(_vm._s(error))]
-              )
-            })
-          ],
-          2
-        ),
+            ],
+            staticClass: "form-control",
+            attrs: {
+              type: "text",
+              name: "reviewer",
+              id: "your_reviewer",
+              placeholder: "What's your name?"
+            },
+            domProps: { value: _vm.reviewer },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.reviewer = $event.target.value
+              }
+            }
+          })
+        ]),
         _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "mb-3" },
-          [
-            _c(
-              "label",
-              { staticClass: "form-label", attrs: { for: "your_vote" } },
-              [_vm._v("Vote ")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.vote,
-                  expression: "vote"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: {
-                type: "vote",
-                name: "vote",
-                id: "your_vote",
-                placeholder: "vote..."
-              },
-              domProps: { value: _vm.vote },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.vote = $event.target.value
-                }
+        _c("div", { staticClass: "mb-3" }, [
+          _c(
+            "label",
+            { staticClass: "form-label", attrs: { for: "your_vote" } },
+            [_vm._v("Vote ")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.vote,
+                expression: "vote"
               }
-            }),
-            _vm._v(" "),
-            _vm._l(_vm.errors.vote, function(error, index) {
-              return _c(
-                "p",
-                { key: index, staticClass: "alert alert-danger my-2" },
-                [_vm._v(_vm._s(error))]
-              )
-            })
-          ],
-          2
-        ),
+            ],
+            staticClass: "form-control",
+            attrs: {
+              type: "number",
+              name: "vote",
+              id: "your_vote",
+              placeholder: "vote..."
+            },
+            domProps: { value: _vm.vote },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.vote = $event.target.value
+              }
+            }
+          })
+        ]),
         _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "mb-3" },
-          [
-            _c(
-              "label",
-              { staticClass: "form-label", attrs: { for: "your_text" } },
-              [_vm._v("Your opinion")]
-            ),
-            _vm._v(" "),
-            _c("textarea", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.text,
-                  expression: "text"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: {
-                name: "text",
-                id: "your_text",
-                rows: "3",
-                placeholder: "Write me your opinion..."
-              },
-              domProps: { value: _vm.text },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.text = $event.target.value
-                }
+        _c("div", { staticClass: "mb-3" }, [
+          _c(
+            "label",
+            { staticClass: "form-label", attrs: { for: "your_text" } },
+            [_vm._v("Your opinion")]
+          ),
+          _vm._v(" "),
+          _c("textarea", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.text,
+                expression: "text"
               }
-            }),
-            _vm._v(" "),
-            _vm._l(_vm.errors.text, function(error, index) {
-              return _c(
-                "p",
-                { key: index, staticClass: "alert alert-danger my-2" },
-                [_vm._v(_vm._s(error))]
-              )
-            })
-          ],
-          2
-        ),
+            ],
+            staticClass: "form-control",
+            attrs: {
+              name: "text",
+              id: "your_text",
+              rows: "3",
+              placeholder: "Write me your opinion..."
+            },
+            domProps: { value: _vm.text },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.text = $event.target.value
+              }
+            }
+          })
+        ]),
         _vm._v(" "),
         _c(
           "button",
-          { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+          {
+            staticClass: "btn btn-primary",
+            attrs: { type: "submit" },
+            on: { click: _vm.valida }
+          },
           [_vm._v(_vm._s(_vm.sending ? "invio in corso" : "Submit"))]
         )
       ]
@@ -39997,6 +39972,14 @@ var render = function() {
                 )
               ]),
               _vm._v(" "),
+              _c("small", { staticClass: "card-text p-4 d-block" }, [
+                _vm._v("address: " + _vm._s(_vm.lawyer.address))
+              ]),
+              _vm._v(" "),
+              _c("small", { staticClass: "card-text px-4 d-block" }, [
+                _vm._v("phone: " + _vm._s(_vm.lawyer.phone))
+              ]),
+              _vm._v(" "),
               _c("p", { staticClass: "card-text p-4" }, [
                 _vm._v(" " + _vm._s(_vm.lawyer.services))
               ]),
@@ -40016,7 +39999,9 @@ var render = function() {
                     }),
                     0
                   )
-                : _vm._e()
+                : _vm._e(),
+              _vm._v(" "),
+              _c("img", { attrs: { src: _vm.lawyer.cv } })
             ])
           ])
         ])
@@ -55452,9 +55437,24 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'; // import Vue from 'vue';
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+/**
+ * The following block of code may be used to automatically register your
+ * Vue components. It will recursively scan this directory for the Vue
+ * components and automatically register them with their "basename".
+ *
+ * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
+ */
+// const files = require.context('./', true, /\.vue$/i)
+// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 
+
+/**
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
 
 var app = new Vue({
   el: '#root',

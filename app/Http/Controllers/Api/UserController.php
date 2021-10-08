@@ -54,6 +54,12 @@ class UserController extends Controller
                 $user->photo = url('storage/' . $user->photo); 
             }
         }
+
+        foreach($users as $user){
+            if($user->cv){
+                $user->cv = url('storage/' . $user->cv); 
+            }
+        }
         
         return response()->json([
             'success' => true,
@@ -76,6 +82,10 @@ class UserController extends Controller
         if($user){
             if($user->photo){
                 $user->photo = url('storage/' .$user->photo);
+            }
+
+            if($user->cv){
+                $user->cv = url('storage/' .$user->cv);
             }
 
             return response()->json([
