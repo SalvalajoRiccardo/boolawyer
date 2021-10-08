@@ -3,8 +3,7 @@
 
 <div class="row">
 
-
-  <div class="col-xl-8 order-xl-1">
+  <div class="col-12 col-lg-8">
     <div class="card bg-light shadow">
 
       {{-- header --}}
@@ -18,7 +17,6 @@
           </div>
         </div>
       </div>
-
 
       {{-- body --}}
       <div class="card-body">
@@ -118,6 +116,7 @@
             </div>
           </div>
           <hr class="my-4">
+
           <!-- Description -->
           <h6 class="heading-small text-muted mb-4">About me</h6>
           <div class="pl-lg-4">
@@ -146,19 +145,21 @@
                     <div class="alert alert-danger">{{ $message }}</div>
             @enderror
                       
-        </div>
+          </div>
 
+          <!-- Update Button -->
           <button type="submit" class="btn btn-primary">Update</button>
+
         </form>
 
-          <a class="btn btn-secondary" href="{{route('admin.users.index', $user->id )}}">Go Back</a>
+        <!-- Go-Back Button -->
+        <a class="btn btn-secondary" href="{{route('admin.users.index', $user->id )}}">Go Back</a>
+
       </div>
 
     </div>
   </div>
-      
 
-         
 </div>
     
 @endsection

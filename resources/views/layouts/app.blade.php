@@ -82,7 +82,7 @@
 
                 <!-- start SIDEBAR -->
                 @auth
-                    <div class="col-auto col-md-3 col-xl-2 px-0 my_sidebar min-vh-100">
+                    <div class="col-auto col-md-3 col-xl-2 px-0 bg-dark">
                         <div  class="d-flex align-items-center justify-content-center bg-secondary text-white">
                             <span class="d-none d-sm-inline py-3">Dashboard</span>
                         </div>
