@@ -31,6 +31,8 @@
             <img v-if="lawyer.photo" :src="lawyer.photo" :alt="lawyer.name" class="img-fluid" >
             <img  v-else src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle m-auto" width="150">
           </div>
+
+
           
           <div class="card-body">
             <h5 class="card-title">{{ lawyer.name }} {{lawyer.surname}}</h5>
@@ -93,6 +95,7 @@ export default {
   created(){
     this.getUsers(1,this.selectedSpec, this.orderByNum, this.orderByVote);
     this. getSpecs();
+  
   },
 
 
