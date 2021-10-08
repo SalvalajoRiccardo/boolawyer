@@ -39812,7 +39812,7 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("\n order by number of reviews\n  ")]
+            [_vm._v("\n      order by number of reviews\n    ")]
           ),
           _vm._v(" "),
           _c(
@@ -39830,7 +39830,7 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("\n order by vote of reviews\n  ")]
+            [_vm._v("\n    order by vote of reviews\n    ")]
           )
         ])
       : _vm._e(),

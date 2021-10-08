@@ -19,7 +19,6 @@ class UserController extends Controller
      */
     public function index()
     {
-
         $user=Auth::user();
         return view('admin.users.index', compact('user'));
     }
@@ -62,9 +61,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    protected function edit($id)
     {
-        // $id = Auth::id();
+        $id = Auth::id();
         $specs = Specialization::all();
         $user = User::find($id);
         return view('admin.users.edit', compact('user','specs'));

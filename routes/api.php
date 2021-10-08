@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
+
 Route::namespace('Api')->group(function(){
 
     // Api USER
@@ -35,5 +36,5 @@ Route::namespace('Api')->group(function(){
 
     // Api REVIEWS
     Route::post('/reviews', 'ReviewController@store');
-    
+
 });

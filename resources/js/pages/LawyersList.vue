@@ -11,14 +11,14 @@
 
     <div v-if="selectedSpec">
       <!-- BUTTON ORDER BY NUMBER -->
-    <button class="btn btn-primary" @click="getUsers(1, selectedSpec,orderByNum==true,orderByVote)">
-   order by number of reviews
-    </button>
+      <button class="btn btn-primary" @click="getUsers(1, selectedSpec,orderByNum==true,orderByVote)">
+        order by number of reviews
+      </button>
 
     <!-- BUTTON ORDER BY VOTE -->
-    <button class="btn btn-primary" @click="getUsers(1, selectedSpec,orderByNum, orderByVote==true)">
-   order by vote of reviews
-    </button>
+      <button class="btn btn-primary" @click="getUsers(1, selectedSpec,orderByNum, orderByVote==true)">
+      order by vote of reviews
+      </button>
     </div>
    
 
