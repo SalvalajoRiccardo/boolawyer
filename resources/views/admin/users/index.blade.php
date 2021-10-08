@@ -13,30 +13,49 @@
   <div class="row gutters-sm">
 
     {{-- LEFT COLUMN --}}
-    <div class="col-md-4 mb-3">
+    <div class="col-md-4">
 
-      <div class="card">
-        <div class="card-body">
-          <div class="d-flex flex-column align-items-center text-center">
-            {{-- IMAGE --}}
-            @if ( $user->photo)
+      <div class="card h-100">
+       
+        <div class="d-flex flex-column align-items-center text-center card-body">
+          {{-- IMAGE --}}
+          @if ( $user->photo)
             <img src="{{ asset('storage/' . $user->photo)}}" class="img-fluid" alt="{{$user->name}}"  title="{{$user->name}}">
-            @else
+          @else
             <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
-            @endif
-           
-           
+          @endif
+          
+          
+          <div class="mt-3">
+            <h4>{{$user->name}} {{$user->surname}}</h4>
 
-            <div class="mt-3">
-              <h4>{{$user->name}} {{$user->surname}}</h4>
+            {{-- Messages + reviews --}}
+            <div class="my-3">
+              {{-- Messages --}}
+              <a href="{{route('admin.message_page')}}" type="button" class="btn btn-light position-relative mx-3">
+                <i class="bi bi-chat-text"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {{count($user->messages)}}+
+                </span>
+              </a>
 
-              <a href="{{route('admin.users.edit', $user->id )}}" class="btn btn-secondary d-block">Edit Info</a>
-              <a href="{{route('change.password')}}" class="btn btn-primary d-block my-3">Change password</a>
-              <a href="#" class="btn btn-danger d-block">Delete Profile</a>
-              
+              {{-- Review --}}
+              <a href="{{route('admin.review_page')}}" type="button" class="btn btn-light position-relative mx-3">
+                <i class="bi bi-card-text"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {{count($user->reviews)}}+
+                </span>
+              </a>
             </div>
+
+            <a href="{{route('admin.users.edit', $user->id )}}" class="btn btn-secondary d-block">Edit Info</a>
+            <a href="{{route('change.password')}}" class="btn btn-primary d-block my-3">Change password</a>
+            <a href="#" class="btn btn-danger d-block">Delete Profile</a>
+            
           </div>
+
         </div>
+     
       </div>
 
     </div>
@@ -44,12 +63,12 @@
     {{-- RIGTH COLUMN --}}
     <div class="col-md-8">
 
-      <div class="card mb-3">
+      <div class="card h-100">
         {{-- start Card Body --}}
         <div class="card-body">
 
           {{-- Name --}}
-          <div class="row">
+          <div class="row align-items-center">
             <div class="col-sm-3">
               <h6 class="mb-0">Name</h6>
             </div>
@@ -60,7 +79,7 @@
           <hr>
 
           {{-- Surname --}}
-          <div class="row">
+          <div class="row align-items-center">
             <div class="col-sm-3">
               <h6 class="mb-0">Surname</h6>
             </div>
@@ -71,7 +90,7 @@
           <hr>
 
           {{-- EMAIL --}}
-          <div class="row">
+          <div class="row align-items-center">
               <div class="col-sm-3">
                   <h6 class="mb-0">Email</h6>
               </div>
@@ -82,7 +101,7 @@
           <hr>
 
           {{-- Phone --}}
-          <div class="row">
+          <div class="row align-items-center">
             <div class="col-sm-3">
               <h6 class="mb-0">Phone</h6>
             </div>
@@ -91,9 +110,9 @@
               @if ($user->phone)
               {{$user->phone}}
               @else
-                    <a class="btn btn-warning" href="{{route('admin.users.edit', $user->id )}}">
-                      insert your Phone number
-                    </a>
+                <a class="btn btn-outline-primary" href="{{route('admin.users.edit', $user->id )}}">
+                  Insert your Phone number
+                </a>
               @endif
               
             </div>
@@ -101,7 +120,7 @@
           <hr>
 
           {{-- CV --}}
-          <div class="row">
+          <div class="row align-items-center">
             <div class="col-sm-3">
               <h6 class="mb-0">CV</h6>
             </div>
@@ -142,7 +161,7 @@
           <hr>
 
           {{-- Address --}}
-          <div class="row">
+          <div class="row align-items-center">
               <div class="col-sm-3">
                 <h6 class="mb-0">Address</h6>
               </div>
@@ -153,18 +172,18 @@
           <hr>
 
           {{-- Specializations --}}
-          <div class="row">
+          <div class="row align-items-center">
             <div class="col-sm-3">
               <h6 class="mb-0">Specializations</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               @foreach ($user->specializations as $specialization)    
-                <span span class="text-secondary mb-1 badge bg-info text-dark">{{$specialization->name}}</span>
+                <span span class="text-secondary mb-1 btn alert-primary">{{$specialization->name}}</span>
               @endforeach
 
               {{-- da aggiungere effetto a comparsa su hover --}}
-              <a class="btn btn-warning" href="{{route('admin.users.edit', $user->id )}}">
-                Aggiungi specializzazioni
+              <a class="btn btn-outline-primary" href="{{route('admin.users.edit', $user->id )}}">
+                Add more <i class="bi bi-plus-lg"></i>
               </a>    
             </div>
           </div>
@@ -180,14 +199,12 @@
                @if ($user->services)
                 <p>{{$user->services}}</p>
                @else
-                     <a class="btn btn-warning" href="{{route('admin.users.edit', $user->id )}}">
-                       insert your services
-                     </a>
+                <a class="btn btn-outline-primary" href="{{route('admin.users.edit', $user->id )}}">
+                  Insert your services
+                </a>
                @endif
             </div>
           </div>
-
-          
 
         </div>
         {{-- end Card Body --}}
