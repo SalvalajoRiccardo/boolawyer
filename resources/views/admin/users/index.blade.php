@@ -1,5 +1,13 @@
 @extends('layouts.app')
 @section('content')
+{{-- Messaggio di conferma dopo edit --}}
+@if (session('updated'))
+<div class="alert alert-success">
+    
+        {{session('updated')}}
+    
+</div>
+@endif
 
 <div class="container">
   <div class="row gutters-sm">
@@ -12,7 +20,7 @@
           <div class="d-flex flex-column align-items-center text-center">
             {{-- IMAGE --}}
             @if ( $user->photo)
-            <img src="{{ asset('storage/' . $user->photo)}}" class="img-fluid" alt="">
+            <img src="{{ asset('storage/' . $user->photo)}}" class="img-fluid" alt="{{$user->name}}"  title="{{$user->name}}">
             @else
             <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
             @endif
@@ -90,7 +98,37 @@
               <h6 class="mb-0">CV</h6>
             </div>
             <div class="col-sm-9 text-secondary">
-            Here goes the Cv
+            <!-- Button trigger modal -->
+              
+              @if ($user->cv)
+              <button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                Visualizza CV
+              </button>
+              @else
+                    <a class="btn btn-warning" href="{{route('admin.users.edit', $user->id )}}">
+                      Inserisci il tuo CV
+                    </a>
+              @endif
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">CV</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="{{ asset('storage/' . $user->cv)}}" class="img-fluid" alt="">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <hr>
@@ -115,6 +153,11 @@
               @foreach ($user->specializations as $specialization)    
                 <span span class="text-secondary mb-1 badge bg-info text-dark">{{$specialization->name}}</span>
               @endforeach
+
+              {{-- da aggiungere effetto a comparsa su hover --}}
+              <a class="btn btn-warning" href="{{route('admin.users.edit', $user->id )}}">
+                Aggiungi specializzazioni
+              </a>    
             </div>
           </div>
           <hr>

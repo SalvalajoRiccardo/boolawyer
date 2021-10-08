@@ -17,7 +17,32 @@
                 <div  v-if="lawyer.specializations">
                   <span v-for="(specialization,index) in lawyer.specializations" :key="index" class="badge badge-dark mx-4">{{specialization.name}}</span>
                 </div>
-                  <img :src="lawyer.cv">
+                <!-- Button trigger modal -->
+                <button v-if="lawyer.cv" type="button" class="btn btn-primary m-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Visualizza CV
+                </button>
+
+                <small v-else class="d-block m-4">L'utente non ha ancora aggiunto il suo CV, invia un messaggio per richiedere ulteriori informazioni</small>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">CV</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <img v-if="lawyer.cv" :src="lawyer.cv" class="card-img-top">
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                  
             </div>
           </div>
         </div>
