@@ -6,14 +6,18 @@
           <div class="col-md-4">
              <img v-if="lawyer.photo" :src="lawyer.photo" :alt="lawyer.name" class="img-fluid rounded-start">
           </div>
+
           <div class="col-md-8">
             <div class="card-body p-0">
               <h5 class="card-title card-header"> {{ lawyer.name }}  {{ lawyer.surname }}</h5>
+              <small class="card-text p-4 d-block">address: {{ lawyer.address }}</small>
+              <small class="card-text px-4 d-block">phone: {{ lawyer.phone }}</small>
               <p class="card-text p-4"> {{ lawyer.services }}</p>
                <!-- SPECIALIZATIONS -->
                 <div  v-if="lawyer.specializations">
                   <span v-for="(specialization,index) in lawyer.specializations" :key="index" class="badge badge-dark mx-4">{{specialization.name}}</span>
                 </div>
+                  <img :src="lawyer.cv">
             </div>
           </div>
         </div>
@@ -60,7 +64,7 @@ export default {
 
     },
     methods:{
-   
+      
   }
 
 };

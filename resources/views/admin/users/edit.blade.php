@@ -112,7 +112,7 @@
                   @error('cv')
                     <div class="alert alert-danger">{{ $message }}</div>
                   @enderror
-                  <embed src="{{ asset('storage/' . $user->cv) }}" width="100%" height="500" alt="pdf" />
+                  <img src="{{ asset('storage/' . $user->cv) }}" alt="#" />
                 </div>
               </div>
             </div>

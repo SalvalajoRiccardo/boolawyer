@@ -90,7 +90,7 @@ class UserController extends Controller
             'email' => 'required|email|max:100',
             // 'password' => 'required|min:8|confirmed',
             'photo' => 'nullable|image',
-            'cv' => 'nullable|mimes:pdf|max:10000',
+            'cv' => 'nullable|image',
             'phone' => 'nullable|min:10',
             'services' => 'nullable'
         ]);
