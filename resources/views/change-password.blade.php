@@ -59,9 +59,12 @@
                                 <button type="submit" class="btn btn-primary">
                                     Change Password
                                 </button>
+                                {{-- bottone per tornare indietro --}}
+                                <a class="btn btn-secondary" href="{{route('admin.users.index' )}}">Go Back</a>
                             </div>
                         </div>
                     </form>
+
                 </div>
             </div>
         </div>

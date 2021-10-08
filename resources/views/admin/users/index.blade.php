@@ -87,7 +87,15 @@
               <h6 class="mb-0">Phone</h6>
             </div>
             <div class="col-sm-9 text-secondary">
+              {{-- phone right part/ tasto per richiesta numero di telefono --}}
+              @if ($user->phone)
               {{$user->phone}}
+              @else
+                    <a class="btn btn-warning" href="{{route('admin.users.edit', $user->id )}}">
+                      insert your Phone number
+                    </a>
+              @endif
+              
             </div>
           </div>
           <hr>
@@ -168,7 +176,14 @@
               <h6 class="mb-0">Services</h6>
             </div>
             <div class="col-sm-9 text-secondary">
-              <p>{{$user->services}}</p>
+               {{-- services right part/ tasto per richiesta inserimento servizi --}}
+               @if ($user->services)
+                <p>{{$user->services}}</p>
+               @else
+                     <a class="btn btn-warning" href="{{route('admin.users.edit', $user->id )}}">
+                       insert your services
+                     </a>
+               @endif
             </div>
           </div>
 
