@@ -9,10 +9,17 @@
       </button>
     </div>
 
-    <!-- BUTTON ORDER BY NUMBER -->
-    <button class="btn btn-primary" @click="getUsers(1, selectedSpec,orderByNum==true)">
+    <div v-if="selectedSpec">
+      <!-- BUTTON ORDER BY NUMBER -->
+    <button class="btn btn-primary" @click="getUsers(1, selectedSpec,orderByNum==true,orderByVote)">
    order by number of reviews
     </button>
+
+    <!-- BUTTON ORDER BY VOTE -->
+    <button class="btn btn-primary" @click="getUsers(1, selectedSpec,orderByNum, orderByVote==true)">
+   order by vote of reviews
+    </button>
+    </div>
    
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -78,12 +85,13 @@ export default {
       expand:false,
       specializationsArray:[],
       selectedSpec: null,
-      orderByNum:null
+      orderByNum:null,
+      orderByVote:null
     }
   },
 
   created(){
-    this.getUsers(1,this.selectedSpec, this.orderByNum);
+    this.getUsers(1,this.selectedSpec, this.orderByNum, this.orderByVote);
     this. getSpecs();
   },
 
@@ -91,12 +99,13 @@ export default {
   methods:{
 
     // Get all the lawyers from the PI
-    getUsers(PageUser,spec,numRev){
+    getUsers(PageUser,spec,numRev,avgRev){
       axios
       .get(this.url, {params:{
         page:PageUser,
         specialization:spec,
-        numberOfReviews:numRev
+        numberOfReviews:numRev,
+        avgVoteReviews:avgRev
       }})
       .then(response=>{
         this.lawyers = response.data.results.data;

@@ -2627,6 +2627,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 // import Search from '../components/Search.vue'
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'LawyersList',
@@ -2642,23 +2649,25 @@ __webpack_require__.r(__webpack_exports__);
       expand: false,
       specializationsArray: [],
       selectedSpec: null,
-      orderByNum: null
+      orderByNum: null,
+      orderByVote: null
     };
   },
   created: function created() {
-    this.getUsers(1, this.selectedSpec, this.orderByNum);
+    this.getUsers(1, this.selectedSpec, this.orderByNum, this.orderByVote);
     this.getSpecs();
   },
   methods: {
     // Get all the lawyers from the PI
-    getUsers: function getUsers(PageUser, spec, numRev) {
+    getUsers: function getUsers(PageUser, spec, numRev, avgRev) {
       var _this = this;
 
       axios.get(this.url, {
         params: {
           page: PageUser,
           specialization: spec,
-          numberOfReviews: numRev
+          numberOfReviews: numRev,
+          avgVoteReviews: avgRev
         }
       }).then(function (response) {
         _this.lawyers = response.data.results.data;
@@ -39761,18 +39770,45 @@ var render = function() {
       0
     ),
     _vm._v(" "),
-    _c(
-      "button",
-      {
-        staticClass: "btn btn-primary",
-        on: {
-          click: function($event) {
-            return _vm.getUsers(1, _vm.selectedSpec, _vm.orderByNum == true)
-          }
-        }
-      },
-      [_vm._v("\n order by number of reviews\n  ")]
-    ),
+    _vm.selectedSpec
+      ? _c("div", [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-primary",
+              on: {
+                click: function($event) {
+                  return _vm.getUsers(
+                    1,
+                    _vm.selectedSpec,
+                    _vm.orderByNum == true,
+                    _vm.orderByVote
+                  )
+                }
+              }
+            },
+            [_vm._v("\n order by number of reviews\n  ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-primary",
+              on: {
+                click: function($event) {
+                  return _vm.getUsers(
+                    1,
+                    _vm.selectedSpec,
+                    _vm.orderByNum,
+                    _vm.orderByVote == true
+                  )
+                }
+              }
+            },
+            [_vm._v("\n order by vote of reviews\n  ")]
+          )
+        ])
+      : _vm._e(),
     _vm._v(" "),
     _c(
       "div",

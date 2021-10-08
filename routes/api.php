@@ -35,7 +35,5 @@ Route::namespace('Api')->group(function(){
 
     // Api REVIEWS
     Route::post('/reviews', 'ReviewController@store');
-
-    // Route::get('/search/{data}', 'UserController@searchData');
-
+    
 });
