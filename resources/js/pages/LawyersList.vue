@@ -9,6 +9,11 @@
       </button>
     </div>
 
+    <!-- BUTTON ORDER BY NUMBER -->
+    <button class="btn btn-primary" @click="getUsers(1, selectedSpec,orderByNum==true)">
+   order by number of reviews
+    </button>
+   
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col" v-for="lawyer in lawyers" :key='lawyer.id'>
@@ -72,32 +77,32 @@ export default {
       urlSpec:'http://localhost:8000/api/specializations',
       expand:false,
       specializationsArray:[],
-      selectedSpec: null
-      
+      selectedSpec: null,
+      orderByNum:null
     }
   },
 
   created(){
-    this.getUsers(1,this.selectedSpec);
+    this.getUsers(1,this.selectedSpec, this.orderByNum);
     this. getSpecs();
-   
   },
 
 
   methods:{
 
     // Get all the lawyers from the PI
-    getUsers(PageUser,spec){
+    getUsers(PageUser,spec,numRev){
       axios
       .get(this.url, {params:{
         page:PageUser,
-        specialization:spec
+        specialization:spec,
+        numberOfReviews:numRev
       }})
       .then(response=>{
         this.lawyers = response.data.results.data;
         this.currentPage = response.data.results.current_page;
         this.lastPage = response.data.results.last_page;
-        console.log(this.lawyers);
+        // console.log(response.data.results.data);
         // console.log(response.data.results.current_page);
         // console.log(response.data.results.last_page);
 
@@ -126,9 +131,6 @@ export default {
   
     // },
 
-
-
-
     // truncate the services paragraph
     truncate(text,maxlength){
       if(text.length > maxlength) {
@@ -137,9 +139,6 @@ export default {
       return text;
     },
   },
-
-  
-
 
 }
 </script>

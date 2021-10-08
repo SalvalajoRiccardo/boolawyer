@@ -25,7 +25,6 @@ Route::namespace('Api')->group(function(){
     Route::get('/users', 'UserController@index');
     // Route::post('/users', 'UserController@index');
 
-
     Route::get('/user/{slug}', 'UserController@show');
 
     //Api SPECIALIZATION
@@ -37,8 +36,6 @@ Route::namespace('Api')->group(function(){
     // Api REVIEWS
     Route::post('/reviews', 'ReviewController@store');
 
-    Route::get('/search/{data}', 'UserController@searchData');
-   
-
+    // Route::get('/search/{data}', 'UserController@searchData');
 
 });

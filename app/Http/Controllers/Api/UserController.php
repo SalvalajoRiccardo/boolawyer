@@ -19,22 +19,34 @@ class UserController extends Controller
     {
       
         $specs = request('specialization');
-        
+
+        $perNumber =request('numberOfReviews');
+
         if(!$specs){
             $users = User::with(['specializations'])->paginate(9);
         } else {
             // $users = User::with(['specializations'])->where('id', $specs )->paginate(9);
-            // $users = User::join('specialization_user', 'users.id', '=', 'specialization_user.user_id')->where('specialization_id',$specs)->select('users.*')->get();
-        
-        $users = DB::table('users')
-        ->join('specialization_user', 'users.id', '=', 'specialization_user.user_id')
-        ->where('specialization_id',$specs)
-        ->select('users.*')
-        ->get();
-    
-        }
+            $users = User::join('specialization_user', 'users.id', '=', 'specialization_user.user_id')->where('specialization_id',$specs)->select('users.*')->paginate(9);
 
-        
+            // $users = DB::table('users')
+            // ->join('specialization_user', 'users.id', '=', 'specialization_user.user_id')
+            // ->where('specialization_id',$specs)
+            // ->select('users.*')
+            // ->get();
+            
+        }
+        // FILTER BY NUMBER OF REVIEWS
+        if(!$perNumber){
+            $users = User::with(['specializations'])->paginate(9);
+        } else {
+            $users = User::selectRaw('users.*, count(reviews.id) as reviews_count')
+            ->leftJoin('reviews', function ($join) {
+                $join->on('reviews.user_id', '=', 'users.id');
+            })
+            ->groupBy('users.id')
+            ->orderBy('reviews_count','desc')
+            ->paginate(9);
+        }
 
         
         foreach($users as $user){
