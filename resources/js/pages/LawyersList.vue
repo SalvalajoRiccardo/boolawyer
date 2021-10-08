@@ -1,6 +1,14 @@
 <template>
   <div class="container">
-    <Search/>
+    <!-- <Search/> -->
+
+    <div class="types">
+      <button :class="item" v-for="(item,index) in specializationsArray" :key="'a'+ index" @change="getUsers(1, selectedSpec)">
+          <input type="radio" :id="'a' + index" :value="item.id" v-model="selectedSpec" name="specializations">
+          <label :for="'a' + index">{{item.name}}</label>
+      </button>
+    </div>
+
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col" v-for="lawyer in lawyers" :key='lawyer.id'>
@@ -49,11 +57,11 @@
 </template>
 
 <script>
-import Search from '../components/Search.vue'
+// import Search from '../components/Search.vue'
 export default {
   name:'LawyersList',
   components:{
-    Search
+    // Search
   },
   data(){
     return{
@@ -61,33 +69,64 @@ export default {
       lawyers:[],
       currentPage:1,
       lastPage:null,
+      urlSpec:'http://localhost:8000/api/specializations',
+      expand:false,
+      specializationsArray:[],
+      selectedSpec: null
       
     }
   },
 
   created(){
-    this.getUsers(1);
+    this.getUsers(1,this.selectedSpec);
+    this. getSpecs();
    
   },
+
 
   methods:{
 
     // Get all the lawyers from the PI
-    getUsers(PageUser){
+    getUsers(PageUser,spec){
       axios
       .get(this.url, {params:{
-        page:PageUser
+        page:PageUser,
+        specialization:spec
       }})
       .then(response=>{
         this.lawyers = response.data.results.data;
         this.currentPage = response.data.results.current_page;
         this.lastPage = response.data.results.last_page;
         console.log(this.lawyers);
-        console.log(response.data.results.current_page);
-        console.log(response.data.results.last_page);
+        // console.log(response.data.results.current_page);
+        // console.log(response.data.results.last_page);
 
       })
     },
+
+    // Get all the lawyers from the PI
+    getSpecs(){
+      axios
+      .get(this.urlSpec)
+      .then(response=>{
+        this.specializationsArray = response.data.results;          
+        // console.log(this.specializationsArray);
+      })
+    },
+
+    // searchData(val){
+    //   axios
+    //   .get('http://localhost:8000/api/search/', {params:{
+    //     specializations: val
+    //   }})
+    //   .then(response =>{
+    //     this.lawyers = response.data;
+    //     console.log(this.lawyers);
+    //   })
+  
+    // },
+
+
 
 
     // truncate the services paragraph
@@ -97,7 +136,11 @@ export default {
       }
       return text;
     },
-  }
+  },
+
+  
+
+
 }
 </script>
 
