@@ -158,7 +158,7 @@ class UserController extends Controller
             $user->specializations()->sync($data['specializations']);
         }
 
-        return redirect()->route('admin.users.index');
+        return redirect()->route('admin.users.index')->with ('updated', "Hai modificato con successo i tuoi dati");;
         // ->with('edit','Post n. ' . $post->id . ' has been updated.');
     }
 

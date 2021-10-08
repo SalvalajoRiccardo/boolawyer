@@ -100,7 +100,7 @@
                   @enderror
                   <div class="mb-3">
                     @if($user->photo)
-                        <img src="{{ asset('storage/' . $user->photo)}} " alt="">
+                        <img src="{{ asset('storage/' . $user->photo)}} " alt="{{$user->name}}" class="card-img-top" title="{{$user->name}}">
                     @endif
                   </div>
                 </div>
@@ -150,6 +150,8 @@
 
           <button type="submit" class="btn btn-primary">Update</button>
         </form>
+
+          <a class="btn btn-secondary" href="{{route('admin.users.index', $user->id )}}">Go Back</a>
       </div>
 
     </div>
