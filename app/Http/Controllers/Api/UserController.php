@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
 use App\Specialization;
+use App\Review;
 use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
@@ -25,7 +26,7 @@ class UserController extends Controller
         $perVote =request('avgVoteReviews');
 
         if(!$specs){
-            $users = User::with(['specializations'])->paginate(9);
+            $users = User::with(['specializations','reviews'])->paginate(9);
         } else {
             // $users = User::with(['specializations'])->where('id', $specs )->paginate(9);
             
@@ -87,7 +88,7 @@ class UserController extends Controller
      */
     public function show($slug)
     {
-        $user = User::where('slug', $slug)->with('specializations')->first();
+        $user = User::where('slug', $slug)->with(['specializations','reviews'])->first();
         if($user){
             if($user->photo){
                 $user->photo = url('storage/' .$user->photo);

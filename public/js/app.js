@@ -2636,11 +2636,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-// import Search from '../components/Search.vue'
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'LawyersList',
-  components: {// Search
-  },
+  components: {},
   data: function data() {
     return {
       url: 'http://localhost:8000/api/users',
@@ -2687,16 +2697,16 @@ __webpack_require__.r(__webpack_exports__);
         _this2.specializationsArray = response.data.results; // console.log(this.specializationsArray);
       });
     },
-    // searchData(val){
-    //   axios
-    //   .get('http://localhost:8000/api/search/', {params:{
-    //     specializations: val
-    //   }})
-    //   .then(response =>{
-    //     this.lawyers = response.data;
-    //     console.log(this.lawyers);
-    //   })
-    // },
+    // Get the number of all reviews
+    getNumberOfReview: function getNumberOfReview(array) {
+      var counter = 0;
+
+      for (var i = 0; i < array.length; i++) {
+        counter++;
+      }
+
+      return counter;
+    },
     // truncate the services paragraph
     truncate: function truncate(text, maxlength) {
       if (text.length > maxlength) {
@@ -2721,6 +2731,13 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_MessageForm_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/MessageForm.vue */ "./resources/js/components/MessageForm.vue");
 /* harmony import */ var _components_ReviewForm_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ReviewForm.vue */ "./resources/js/components/ReviewForm.vue");
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -39762,12 +39779,13 @@ var render = function() {
   return _c("div", { staticClass: "container" }, [
     _c(
       "div",
-      { staticClass: "types" },
+      { staticClass: "row justify-content-center my-3" },
       _vm._l(_vm.specializationsArray, function(item, index) {
         return _c(
           "button",
           {
             key: "a" + index,
+            staticClass: "btn btn-secondary mx-2",
             class: item,
             on: {
               change: function($event) {
@@ -39811,11 +39829,11 @@ var render = function() {
     ),
     _vm._v(" "),
     _vm.selectedSpec
-      ? _c("div", [
+      ? _c("div", { staticClass: "row justify-content-center my-3" }, [
           _c(
             "button",
             {
-              staticClass: "btn btn-primary",
+              staticClass: "btn btn-primary mx-2",
               on: {
                 click: function($event) {
                   return _vm.getUsers(
@@ -39833,7 +39851,7 @@ var render = function() {
           _c(
             "button",
             {
-              staticClass: "btn btn-primary",
+              staticClass: "btn btn-primary mx-2",
               on: {
                 click: function($event) {
                   return _vm.getUsers(
@@ -39845,7 +39863,7 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("\n    order by vote of reviews\n    ")]
+            [_vm._v("\n      order by vote of reviews\n    ")]
           )
         ])
       : _vm._e(),
@@ -39866,7 +39884,11 @@ var render = function() {
                 lawyer.photo
                   ? _c("img", {
                       staticClass: "img-fluid",
-                      attrs: { src: lawyer.photo, alt: lawyer.name }
+                      attrs: {
+                        src: lawyer.photo,
+                        alt: lawyer.name,
+                        title: lawyer.name
+                      }
                     })
                   : _c("img", {
                       staticClass: "rounded-circle m-auto",
@@ -39884,6 +39906,37 @@ var render = function() {
               "div",
               { staticClass: "card-body" },
               [
+                _c("div", { staticClass: "my-3" }, [
+                  lawyer.reviews
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-dark position-relative mx-3",
+                          attrs: { type: "button" }
+                        },
+                        [
+                          _vm._v("\n              Review\n              "),
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                            },
+                            [
+                              _vm._v(
+                                "\n              " +
+                                  _vm._s(
+                                    _vm.getNumberOfReview(lawyer.reviews)
+                                  ) +
+                                  "+\n              "
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    : _vm._e()
+                ]),
+                _vm._v(" "),
                 _c("h5", { staticClass: "card-title" }, [
                   _vm._v(_vm._s(lawyer.name) + " " + _vm._s(lawyer.surname))
                 ]),
@@ -40048,13 +40101,15 @@ var render = function() {
                 )
               ]),
               _vm._v(" "),
-              _c("small", { staticClass: "card-text p-4 d-block" }, [
-                _vm._v("address: " + _vm._s(_vm.lawyer.address))
+              _c("p", { staticClass: "card-text p-4 d-block" }, [
+                _c("i", { staticClass: "bi bi-house-door" }),
+                _vm._v(" : " + _vm._s(_vm.lawyer.address))
               ]),
               _vm._v(" "),
               _vm.lawyer.phone
-                ? _c("small", { staticClass: "card-text px-4 d-block" }, [
-                    _vm._v("phone: " + _vm._s(_vm.lawyer.phone))
+                ? _c("p", { staticClass: "card-text px-4 d-block" }, [
+                    _c("i", { staticClass: "bi bi-telephone" }),
+                    _vm._v(" : " + _vm._s(_vm.lawyer.phone))
                   ])
                 : _c("small", { staticClass: "d-block m-4" }, [
                     _vm._v(
@@ -40065,6 +40120,11 @@ var render = function() {
                       " invia un messaggio per richiedere ulteriori informazioni"
                     )
                   ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "card-text p-4 d-block" }, [
+                _c("i", { staticClass: "bi bi-envelope" }),
+                _vm._v(" : " + _vm._s(_vm.lawyer.email))
+              ]),
               _vm._v(" "),
               _vm.lawyer.services
                 ? _c("p", { staticClass: "card-text p-4" }, [
@@ -40088,7 +40148,7 @@ var render = function() {
                       index
                     ) {
                       return _c(
-                        "span",
+                        "h4",
                         { key: index, staticClass: "badge badge-dark mx-4" },
                         [_vm._v(_vm._s(specialization.name))]
                       )
@@ -40172,14 +40232,18 @@ var staticRenderFns = [
         [_vm._v("CV")]
       ),
       _vm._v(" "),
-      _c("button", {
-        staticClass: "btn-close",
-        attrs: {
-          type: "button",
-          "data-bs-dismiss": "modal",
-          "aria-label": "Close"
-        }
-      })
+      _c(
+        "button",
+        {
+          staticClass: "btn-close",
+          attrs: {
+            type: "button",
+            "data-bs-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_vm._v("X")]
+      )
     ])
   },
   function() {

@@ -1,40 +1,52 @@
 <template>
   <div class="container">
-    <!-- <Search/> -->
-
-    <div class="types">
-      <button :class="item" v-for="(item,index) in specializationsArray" :key="'a'+ index" @change="getUsers(1, selectedSpec)">
+    
+    <!-- BUTTONS FOR ALL THE SPECIALIZATIONS -->
+    <div class="row justify-content-center my-3">
+      <button :class="item" class="btn btn-secondary mx-2" v-for="(item,index) in specializationsArray" :key="'a'+ index" @change="getUsers(1, selectedSpec)">
           <input type="radio" :id="'a' + index" :value="item.id" v-model="selectedSpec" name="specializations">
           <label :for="'a' + index">{{item.name}}</label>
       </button>
     </div>
 
-    <div v-if="selectedSpec">
+    <!-- FILTER BOTTON PER NUMBER AVERAGE_VOTE OF REVIEWS -->
+    <div class="row justify-content-center my-3" v-if="selectedSpec">
       <!-- BUTTON ORDER BY NUMBER -->
-      <button class="btn btn-primary" @click="getUsers(1, selectedSpec,orderByNum==true,orderByVote)">
+      <button class="btn btn-primary mx-2" @click="getUsers(1, selectedSpec,orderByNum==true,orderByVote)">
         order by number of reviews
       </button>
 
     <!-- BUTTON ORDER BY VOTE -->
-      <button class="btn btn-primary" @click="getUsers(1, selectedSpec,orderByNum, orderByVote==true)">
-      order by vote of reviews
+      <button class="btn btn-primary mx-2" @click="getUsers(1, selectedSpec,orderByNum, orderByVote==true)">
+        order by vote of reviews
       </button>
     </div>
    
-
+    <!-- LAWYERS -->
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col" v-for="lawyer in lawyers" :key='lawyer.id'>
         <div class="card my-3 p-3 text-center">
 
           <!-- Image -->
           <div class="rounded-circle overflow-hidden m-auto" style="width:150px; height:150px;">
-            <img v-if="lawyer.photo" :src="lawyer.photo" :alt="lawyer.name" class="img-fluid" >
+            <img v-if="lawyer.photo" :src="lawyer.photo" :alt="lawyer.name" class="img-fluid" :title="lawyer.name">
             <img  v-else src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle m-auto" width="150">
           </div>
 
-
-          
           <div class="card-body">
+
+            <div class="my-3">
+
+              <!-- REVIEW NUMBER -->
+              <button v-if="lawyer.reviews" type="button" class="btn btn-dark position-relative mx-3">
+                Review
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{getNumberOfReview(lawyer.reviews)}}+
+                </span>
+              </button>
+
+            </div>
+            
             <h5 class="card-title">{{ lawyer.name }} {{lawyer.surname}}</h5>
             <p  v-if="lawyer.services"  class="card-text">{{ truncate(lawyer.services,150) }}</p>
             <router-link :to="{name: 'lawyer-detail', params: { slug: lawyer.slug }}" class="btn btn-primary">
@@ -71,11 +83,10 @@
 </template>
 
 <script>
-// import Search from '../components/Search.vue'
 export default {
   name:'LawyersList',
   components:{
-    // Search
+    
   },
   data(){
     return{
@@ -88,14 +99,15 @@ export default {
       specializationsArray:[],
       selectedSpec: null,
       orderByNum:null,
-      orderByVote:null
+      orderByVote:null,
+      
     }
   },
 
   created(){
     this.getUsers(1,this.selectedSpec, this.orderByNum, this.orderByVote);
     this. getSpecs();
-  
+
   },
 
 
@@ -131,17 +143,15 @@ export default {
       })
     },
 
-    // searchData(val){
-    //   axios
-    //   .get('http://localhost:8000/api/search/', {params:{
-    //     specializations: val
-    //   }})
-    //   .then(response =>{
-    //     this.lawyers = response.data;
-    //     console.log(this.lawyers);
-    //   })
-  
-    // },
+    // Get the number of all reviews
+    getNumberOfReview(array){
+      let counter = 0;
+      for (let i = 0; i < array.length; i++) {
+        counter++;
+      }
+
+      return counter;
+    },
 
     // truncate the services paragraph
     truncate(text,maxlength){
