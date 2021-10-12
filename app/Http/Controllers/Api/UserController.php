@@ -29,7 +29,6 @@ class UserController extends Controller
             $users = User::with(['specializations','reviews'])->paginate(9);
         } else {
             // $users = User::with(['specializations'])->where('id', $specs )->paginate(9);
-            
             if($perNumber){
            
                 $users = User::with(['specializations','reviews'])

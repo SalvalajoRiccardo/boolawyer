@@ -15,7 +15,8 @@
         </div>  
         @endforelse
         
-      
+       <!-- Go-Back Button -->
+       <a class="btn btn-secondary" href="{{route('admin.users.index')}}">Go Back</a>
     </div>
     
 @endsection

@@ -7,10 +7,13 @@
           <input type="radio" :id="'a' + index" :value="item.id" v-model="selectedSpec" name="specializations">
           <label :for="'a' + index">{{item.name}}</label>
       </button>
+       <!-- <button class="btn btn-secondary mx-2" v-for="(item,index) in specializationsArray" :key="index">
+        <router-link :to="{name:'lawyers', params:{id: item.id}}"> {{item.name}}</router-link>
+      </button> -->
     </div>
 
     <!-- FILTER BOTTON PER NUMBER AVERAGE_VOTE OF REVIEWS -->
-    <div class="row justify-content-center my-3" v-if="selectedSpec">
+    <div class="row justify-content-center my-3">
       <!-- BUTTON ORDER BY NUMBER -->
       <button class="btn btn-primary mx-2" @click="getUsers(1, selectedSpec,orderByNum==true,orderByVote)">
         order by number of reviews
@@ -85,6 +88,9 @@
 <script>
 export default {
   name:'LawyersList',
+  props:{
+    id:Number
+  },
   components:{
     
   },
@@ -97,7 +103,7 @@ export default {
       urlSpec:'http://localhost:8000/api/specializations',
       expand:false,
       specializationsArray:[],
-      selectedSpec: null,
+      selectedSpec: this.id,
       orderByNum:null,
       orderByVote:null,
       
@@ -106,10 +112,10 @@ export default {
 
   created(){
     this.getUsers(1,this.selectedSpec, this.orderByNum, this.orderByVote);
-    this. getSpecs();
+    this.getSpecs();
+    
 
   },
-
 
   methods:{
 
@@ -126,7 +132,7 @@ export default {
         this.lawyers = response.data.results.data;
         this.currentPage = response.data.results.current_page;
         this.lastPage = response.data.results.last_page;
-        // console.log(response.data.results.data);
+        console.log(response.data.results.data);
         // console.log(response.data.results.current_page);
         // console.log(response.data.results.last_page);
 

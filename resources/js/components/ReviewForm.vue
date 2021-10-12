@@ -84,7 +84,7 @@ export default {
                 this.success=true;
                 // console.log(response);
                 this.sending=false;
-                this.name="";
+                this.reviewer="";
                 this.vote="";
                 this.text="";
                 }

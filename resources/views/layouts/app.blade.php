@@ -22,6 +22,12 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- includes the Braintree JS client SDK -->
+    <script src="https://js.braintreegateway.com/web/dropin/1.32.0/js/dropin.min.js"></script>
+
+    <!-- includes jQuery -->
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="app">
@@ -107,7 +113,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="nav-link px-0 align-middle">
+                                    <a href="{{route('admin.sponsor.index')}}" class="nav-link px-0 align-middle">
                                         <i class="bi bi-star-fill" style="font-size:1.1rem"></i> 
                                         <h6 class="ms-2 d-none d-sm-inline">Sponsorizzazione</h6>
                                     </a>

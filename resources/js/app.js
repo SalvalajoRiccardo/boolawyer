@@ -36,3 +36,8 @@ import router from './router';
     render:h=>h(App),
     router
 });
+
+
+// The checkout route
+const checkout = require('./routes/checkout');
+app.use('/checkout', checkout);

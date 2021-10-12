@@ -2523,7 +2523,7 @@ __webpack_require__.r(__webpack_exports__);
           _this.success = true; // console.log(response);
 
           _this.sending = false;
-          _this.name = "";
+          _this.reviewer = "";
           _this.vote = "";
           _this.text = "";
         }
@@ -2549,8 +2549,44 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Home'
+  name: 'Home',
+  data: function data() {
+    return {
+      urlSpec: 'http://localhost:8000/api/specializations',
+      specializationsArray: [],
+      selectedSpec: null
+    };
+  },
+  created: function created() {
+    // this.getUsers(1,this.selectedSpec, this.orderByNum, this.orderByVote);
+    this.getSpecs();
+  },
+  methods: {
+    // Get all the lawyers from the PI
+    getSpecs: function getSpecs() {
+      var _this = this;
+
+      axios.get(this.urlSpec).then(function (response) {
+        _this.specializationsArray = response.data.results; // console.log(this.specializationsArray);
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -2648,8 +2684,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'LawyersList',
+  props: {
+    id: Number
+  },
   components: {},
   data: function data() {
     return {
@@ -2660,7 +2702,7 @@ __webpack_require__.r(__webpack_exports__);
       urlSpec: 'http://localhost:8000/api/specializations',
       expand: false,
       specializationsArray: [],
-      selectedSpec: null,
+      selectedSpec: this.id,
       orderByNum: null,
       orderByVote: null
     };
@@ -2684,8 +2726,8 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (response) {
         _this.lawyers = response.data.results.data;
         _this.currentPage = response.data.results.current_page;
-        _this.lastPage = response.data.results.last_page; // console.log(response.data.results.data);
-        // console.log(response.data.results.current_page);
+        _this.lastPage = response.data.results.last_page;
+        console.log(response.data.results.data); // console.log(response.data.results.current_page);
         // console.log(response.data.results.last_page);
       });
     },
@@ -39309,22 +39351,6 @@ var render = function() {
                   )
                 ],
                 1
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "nav-item" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "nav-link",
-                      attrs: { to: { name: "lawyers" } }
-                    },
-                    [_vm._v("Lawyers")]
-                  )
-                ],
-                1
               )
             ]),
             _vm._v(" "),
@@ -39752,7 +39778,26 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h2", [_vm._v("This is the Home")])
+  return _c("section", [
+    _c("h2", [_vm._v("This is the Home")]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "row justify-content-center my-3" },
+      _vm._l(_vm.specializationsArray, function(item, index) {
+        return _c(
+          "router-link",
+          {
+            key: index,
+            staticClass: "btn btn-secondary mx-2",
+            attrs: { to: { name: "lawyers", params: { id: item.id } } }
+          },
+          [_vm._v(" \n      " + _vm._s(item.name) + "\n    ")]
+        )
+      }),
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -39828,45 +39873,43 @@ var render = function() {
       0
     ),
     _vm._v(" "),
-    _vm.selectedSpec
-      ? _c("div", { staticClass: "row justify-content-center my-3" }, [
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-primary mx-2",
-              on: {
-                click: function($event) {
-                  return _vm.getUsers(
-                    1,
-                    _vm.selectedSpec,
-                    _vm.orderByNum == true,
-                    _vm.orderByVote
-                  )
-                }
-              }
-            },
-            [_vm._v("\n      order by number of reviews\n    ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-primary mx-2",
-              on: {
-                click: function($event) {
-                  return _vm.getUsers(
-                    1,
-                    _vm.selectedSpec,
-                    _vm.orderByNum,
-                    _vm.orderByVote == true
-                  )
-                }
-              }
-            },
-            [_vm._v("\n      order by vote of reviews\n    ")]
-          )
-        ])
-      : _vm._e(),
+    _c("div", { staticClass: "row justify-content-center my-3" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary mx-2",
+          on: {
+            click: function($event) {
+              return _vm.getUsers(
+                1,
+                _vm.selectedSpec,
+                _vm.orderByNum == true,
+                _vm.orderByVote
+              )
+            }
+          }
+        },
+        [_vm._v("\n      order by number of reviews\n    ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary mx-2",
+          on: {
+            click: function($event) {
+              return _vm.getUsers(
+                1,
+                _vm.selectedSpec,
+                _vm.orderByNum,
+                _vm.orderByVote == true
+              )
+            }
+          }
+        },
+        [_vm._v("\n      order by vote of reviews\n    ")]
+      )
+    ]),
     _vm._v(" "),
     _c(
       "div",
@@ -55703,7 +55746,11 @@ var app = new Vue({
     return h(_views_App__WEBPACK_IMPORTED_MODULE_0__["default"]);
   },
   router: _router__WEBPACK_IMPORTED_MODULE_1__["default"]
-});
+}); // The checkout route
+
+var checkout = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module './routes/checkout'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+app.use('/checkout', checkout);
 
 /***/ }),
 
@@ -56350,14 +56397,16 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     name: 'home',
     component: _pages_Home_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   }, {
-    path: '/lawyers',
+    path: '/lawyers/:id',
     name: 'lawyers',
-    component: _pages_LawyersList_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+    component: _pages_LawyersList_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    props: true
   }, {
     path: '/lawyer/:slug',
     name: 'lawyer-detail',
     component: _pages_SingleLawyer__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }]
+  } // 
+  ]
 });
 /* harmony default export */ __webpack_exports__["default"] = (router);
 

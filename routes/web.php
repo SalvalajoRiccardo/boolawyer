@@ -33,6 +33,8 @@ Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')->
     Route::get('/reviews', 'HomeController@review')->name('review_page');
 
     Route::resource('/users', 'UserController');
+    Route::resource('/sponsor', 'SponsorController');
+
 });
 
 // Rotte per front-end Vue

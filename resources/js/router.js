@@ -17,15 +17,17 @@ const router = new VueRouter({
             component: Home
         },
         {
-            path: '/lawyers',
+            path: '/lawyers/:id',
             name: 'lawyers',
             component: LawyersList,
+            props: true
         },
         {
             path: '/lawyer/:slug',
             name: 'lawyer-detail',
             component: SingleLawyer,
         },
+        // 
     ],
 });
 
