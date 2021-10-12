@@ -92,8 +92,7 @@ export default {
     data() {
       return {
         lawyer: [],
-    
-        
+
       }
     },
     mounted(){
