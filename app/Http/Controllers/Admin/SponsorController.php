@@ -50,10 +50,21 @@ class SponsorController extends Controller
      */
     public function show($id)
     {
+       
         $user=Auth::user();
         
         $sponsor=Sponsor::find($id);
-        return view('admin.sponsor.show', compact('sponsor', 'user'));
+         
+        $gateway = new \Braintree\Gateway([
+            'environment' => config('services.braintree.environment'),
+            'merchantId' => config('services.braintree.merchantId'),
+            'publicKey' => config('services.braintree.publicKey'),
+            'privateKey' => config('services.braintree.privateKey')
+        ]);
+
+        $token = $gateway->ClientToken()->generate();
+
+        return view('admin.sponsor.show', compact('sponsor', 'user','token'));
     }
 
     /**

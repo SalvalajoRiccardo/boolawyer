@@ -32,18 +32,26 @@
             {{-- Messages + reviews --}}
             <div class="my-3">
               {{-- Messages --}}
-              <a href="{{route('admin.message_page')}}" type="button" class="btn btn-light position-relative mx-3">
-                <i class="bi bi-chat-text"></i>
+              <a href="{{route('admin.message_page')}}" type="button" class="btn btn-light position-relative mx-2">
+                <i class="bi bi-chat-dots-fill" style="font-size:1.1rem"></i>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                   {{count($user->messages)}}+
                 </span>
               </a>
 
               {{-- Review --}}
-              <a href="{{route('admin.review_page')}}" type="button" class="btn btn-light position-relative mx-3">
-                <i class="bi bi-card-text"></i>
+              <a href="{{route('admin.review_page')}}" type="button" class="btn btn-light position-relative mx-2">
+                <i class="bi bi-pencil" style="font-size:1.1rem"></i>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                   {{count($user->reviews)}}+
+                </span>
+              </a>
+
+              {{-- SPONSOR --}}
+              <a href="{{route('admin.sponsor.index')}}" type="button" class="btn btn-light position-relative mx-2">
+                <i class="bi bi-star-fill" style="font-size:1.1rem"></i> 
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  BUY
                 </span>
               </a>
             </div>
