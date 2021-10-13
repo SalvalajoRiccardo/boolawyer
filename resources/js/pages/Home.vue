@@ -12,20 +12,49 @@
         {{item.name}}
       </router-link>
 
-     
-      
-    
     </div>
-      <div v-for="(lawyer,index) in lawyers" :key="index">
-        <h2 v-if="lawyer.sponsors.length >= 1">{{lawyer.slug}}</h2>
-      </div>
+
+    <div class="row" v-for="(lawyer,index) in lawyers" :key="index">
+        <h2 class="text-white" v-if="lawyer.sponsors.length >= 1">{{lawyer.slug}}</h2>
+    </div>
+
+    <div class="wrapper">
+
+      <!-- Carousel -->
+      <agile :key="lawyers.length" :slidesToShow="5" :dots="false" :infinite="false"  :navButtons="false" ref="carousel">
+        <div class="slide" v-for="(el,index) in lawyers" :key="index">
+
+          <!-- IMG -->
+          <img :src="`http://localhost:8000/storage/` + el.photo" :alt="el.name">
+          <!-- Card Body -->
+          <div class="card-body">
+
+            
+            <!-- Movies name -->
+            <h4>{{el.name}}</h4>
+
+          </div> 
+
+        </div>
+      </agile>
+
+      <!-- LEFT button -->
+      <button class="btn btn_prev" @click="$refs.carousel.goToPrev()"><i class="fas fa-chevron-left"></i></button>
+      <!-- RIGHT button -->
+      <button class="btn btn_next" @click="$refs.carousel.goToNext()"><i class="fas fa-chevron-right"></i></button> 
+
+    </div>
 
   </section>
 </template>
 
 <script>
+import { VueAgile } from 'vue-agile';
 export default {
   name:'Home',
+  components:{
+      agile: VueAgile 
+    },
   data(){
     return{
       url:'http://localhost:8000/api/users',
@@ -138,4 +167,20 @@ export default {
       z-index: 1;
     }
   }
+
+  .wrapper {
+    .agile{
+            .slide{
+                position: relative;
+                height: 255px;
+                img{
+                    width:100%;
+
+                &:hover{
+                    cursor: pointer;
+                }
+
+                }
+            }}
+  } 
 </style>

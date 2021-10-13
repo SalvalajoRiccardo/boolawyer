@@ -41,16 +41,13 @@
             <div class="my-3">
 
               <!-- REVIEW NUMBER -->
-              <div v-if="lawyer.reviews" class="badge rounded-pill text-white position-relative mx-3">
+              <div v-if="lawyer.reviews" class="badge rounded-pill text-white position-relative mx-1">
                 <span>{{getNumberOfReview(lawyer.reviews)}}</span> Reviews
               </div>
 
-              <button v-if="lawyer.reviews.length >= 1" type="button" class="btn btn-dark position-relative mx-3">
-                Review
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                {{getVoteReview(lawyer.reviews)}}
-                </span>
-              </button>
+              <div v-if="lawyer.reviews.length >= 1" class="badge rounded-pill text-white position-relative mx-1">
+                Voto medio: <span>{{getVoteReview(lawyer.reviews)}}</span>
+              </div>
 
             </div>
             
@@ -206,9 +203,11 @@ export default {
     & .rounded-pill {
       background-color: $lawbronze;
       padding: 8px;
+      font-size: 1.1rem;
 
       & span {
         color: $lawblue;
+        
       }
     }
 
