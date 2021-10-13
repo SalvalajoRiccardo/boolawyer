@@ -7527,7 +7527,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@-webkit-keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\nbody {\n  background-image: linear-gradient(to right, rgba(44, 64, 101, 0.3) 0%, rgba(182, 157, 115, 0.3) 100%), url(\"/images/pexels-photo-8755742.jpeg\");\n  background-size: cover;\n  background-position: top;\n  font-family: \"Times New Roman\", Times, serif;\n}\n.btn-blue {\n  background-color: #2c4065;\n  color: #ddd;\n  font-size: 1.3rem;\n  transition: all 0.8s;\n}\n.btn-blue:hover {\n  background-color: #2c4065;\n  color: #ddd;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.btn-bronze {\n  background-color: rgba(182, 158, 115, 0.9);\n  color: #2c4065;\n  font-size: 1rem;\n  font-weight: 600 !important;\n  transition: all 0.8s;\n}\n.btn-bronze:hover {\n  background-color: #b69d73;\n  color: #2c4065;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.wrapper .agile .slide {\n  position: relative;\n  height: 255px;\n}\n.wrapper .agile .slide img {\n  width: 100%;\n}\n.wrapper .agile .slide img:hover {\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@-webkit-keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\nbody {\n  background-image: linear-gradient(to right, rgba(44, 64, 101, 0.3) 0%, rgba(182, 157, 115, 0.3) 100%), url(\"/images/pexels-photo-8755742.jpeg\");\n  background-size: cover;\n  background-position: top;\n  font-family: \"Times New Roman\", Times, serif;\n}\n.btn-blue {\n  background-color: #2c4065;\n  color: #ddd;\n  font-size: 1.3rem;\n  transition: all 0.8s;\n}\n.btn-blue:hover {\n  background-color: #2c4065;\n  color: #ddd;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.btn-bronze {\n  background-color: rgba(182, 158, 115, 0.9);\n  color: #2c4065;\n  font-size: 1rem;\n  font-weight: 600 !important;\n  transition: all 0.8s;\n}\n.btn-bronze:hover {\n  background-color: #b69d73;\n  color: #2c4065;\n  transform: scale(1.1);\n  z-index: 1;\n}\n@media screen and (max-width: 600px) {\n.card-body {\n    display: none;\n}\n}\n.wrapper {\n  position: relative;\n}\n.wrapper .slide {\n  height: 255px;\n  position: relative;\n  margin: 0 5px;\n}\n@media screen and (max-width: 600px) {\n.wrapper .slide {\n    height: 150px;\n}\n}\n.wrapper .slide .card-body {\n  text-align: center;\n  width: 100%;\n  background-color: #ddd;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.wrapper .slide img {\n  width: 100%;\n}\n.wrapper .btn {\n  background-color: white;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  position: absolute;\n  top: 30%;\n  right: 1%;\n  opacity: 0.6;\n}\n.wrapper .btn:hover {\n  cursor: pointer;\n  opacity: 1;\n}\n.wrapper .btn_prev {\n  left: -10%;\n}\n.wrapper .btn_next {\n  right: -10%;\n}", ""]);
 
 // exports
 
@@ -44559,100 +44559,88 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "section",
-    [
-      _c(
-        "div",
-        { staticClass: "row justify-content-center my-3" },
-        _vm._l(_vm.specializationsArray, function(item, index) {
-          return _c(
-            "router-link",
-            {
-              key: index,
-              staticClass: "btn btn-blue mx-2 mt-4",
-              attrs: { to: { name: "lawyers", params: { id: item.id } } }
-            },
-            [_vm._v(" \n      " + _vm._s(item.name) + "\n    ")]
-          )
-        }),
-        1
-      ),
-      _vm._v(" "),
-      _vm._l(_vm.lawyers, function(lawyer, index) {
-        return _c("div", { key: index, staticClass: "row" }, [
-          lawyer.sponsors.length >= 1
-            ? _c("h2", { staticClass: "text-white" }, [
-                _vm._v(_vm._s(lawyer.slug))
-              ])
-            : _vm._e()
-        ])
+  return _c("section", [
+    _c(
+      "div",
+      { staticClass: "row justify-content-center my-3" },
+      _vm._l(_vm.specializationsArray, function(item, index) {
+        return _c(
+          "router-link",
+          {
+            key: index,
+            staticClass: "btn btn-blue mx-2 mt-4",
+            attrs: { to: { name: "lawyers", params: { id: item.id } } }
+          },
+          [_vm._v(" \n      " + _vm._s(item.name) + "\n    ")]
+        )
       }),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "wrapper" },
-        [
-          _c(
-            "agile",
-            {
-              key: _vm.lawyers.length,
-              ref: "carousel",
-              attrs: {
-                slidesToShow: 5,
-                dots: false,
-                infinite: false,
-                navButtons: false
-              }
-            },
-            _vm._l(_vm.lawyers, function(el, index) {
-              return _c("div", { key: index, staticClass: "slide" }, [
-                _c("img", {
-                  attrs: {
-                    src: "http://localhost:8000/storage/" + el.photo,
-                    alt: el.name
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body" }, [
-                  _c("h4", [_vm._v(_vm._s(el.name))])
+      1
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "wrapper" },
+      [
+        _c(
+          "agile",
+          {
+            key: _vm.lawyers.length,
+            ref: "carousel",
+            attrs: {
+              slidesToShow: 3,
+              dots: false,
+              infinite: false,
+              navButtons: false
+            }
+          },
+          _vm._l(_vm.lawyers, function(el, index) {
+            return _c("div", { key: index, staticClass: "slide card" }, [
+              _c("img", {
+                attrs: {
+                  src: "http://localhost:8000/storage/" + el.photo,
+                  alt: el.name
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("h4", { staticClass: "card-title" }, [
+                  _vm._v(_vm._s(el.name))
                 ])
               ])
-            }),
-            0
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn_prev",
-              on: {
-                click: function($event) {
-                  return _vm.$refs.carousel.goToPrev()
-                }
+            ])
+          }),
+          0
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn btn_prev",
+            on: {
+              click: function($event) {
+                return _vm.$refs.carousel.goToPrev()
               }
-            },
-            [_c("i", { staticClass: "fas fa-chevron-left" })]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn_next",
-              on: {
-                click: function($event) {
-                  return _vm.$refs.carousel.goToNext()
-                }
+            }
+          },
+          [_c("i", { staticClass: "bi bi-chevron-left" })]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn btn_next",
+            on: {
+              click: function($event) {
+                return _vm.$refs.carousel.goToNext()
               }
-            },
-            [_c("i", { staticClass: "fas fa-chevron-right" })]
-          )
-        ],
-        1
-      )
-    ],
-    2
-  )
+            }
+          },
+          [_c("i", { staticClass: "bi bi-chevron-right" })]
+        )
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
