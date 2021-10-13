@@ -14,7 +14,7 @@
 
             <!-- TOGGLE -->
             <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"><i class="bi bi-three-dots-vertical"></i></span>
             </button>
 
             <!-- NAVBAR -->
@@ -90,5 +90,9 @@ export default {
            font-size: 2rem;
            font-weight: 300;
        }
+   }
+
+   span.navbar-toggler-icon {
+       color: $lawbronze;
    }
 </style>

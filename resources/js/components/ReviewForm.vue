@@ -9,7 +9,7 @@
       <!-- NAME -->
       <div class="mb-3">
         <label for="your_reviewer" class="form-label">Reviewer</label>
-        <input type="text" v-model="reviewer" class="form-control" name="reviewer" id="your_reviewer" placeholder="What's your name?">
+        <input type="text" v-model="reviewer" class="form-control" name="reviewer" id="your_reviewer" placeholder="Your name">
       </div>
 
       <!-- VOTE -->
@@ -18,17 +18,17 @@
           <!-- <span class="d-block"><i class="fas fa-star text-warning" v-for="(stella,index) in stelle(dettagli.vote_average)" :key="index"></i></span> -->
           
         <label for="your_vote" class="form-label">Vote </label>
-        <input type="number" v-model="vote" class="form-control" name="vote" id="your_vote" placeholder="vote...">
+        <input type="number" v-model="vote" class="form-control" name="vote" id="your_vote" placeholder="your vote">
       </div>
 
       <!-- TEXT -->
       <div class="mb-3">
         <label for="your_text" class="form-label">Your opinion</label>
-        <textarea  v-model="text" class="form-control" name="text" id="your_text" rows="3" placeholder="Write me your opinion..."></textarea>
+        <textarea  v-model="text" class="form-control" name="text" id="your_text" rows="3" placeholder="Leave a comment"></textarea>
       </div>
 
       <!-- BUTTON -->
-      <button v-on:click="valida" type="submit" class="btn btn-primary">{{sending ? 'invio in corso' : 'Submit'}}</button>
+      <button v-on:click="valida" type="submit" class="btn btn-blue">{{sending ? 'invio in corso' : 'Submit'}}</button>
           
     </form>
  </div>
@@ -101,6 +101,33 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+$lawblue: #2c4065;
+  form {
 
+    & #your_reviewer::placeholder,
+    & #your_vote::placeholder,
+    & #your_text::placeholder{
+      color: $lawblue;
+      font-weight: 600;
+      opacity: .8;
+    }
+
+    & #your_reviewer,
+    & #your_vote,
+    & #your_text {
+      color: $lawblue;
+    }
+
+    & .btn-blue{
+      font-size: 1rem;
+    }
+  }
+
+  .my_container {
+    background-color: rgba(119, 119, 119, 0.9);
+    color: #ddd;
+    border-radius: 5px;
+    border: 1px solid #6d6d6d;
+  }
 </style>

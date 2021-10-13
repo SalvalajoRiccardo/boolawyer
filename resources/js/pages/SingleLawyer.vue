@@ -33,10 +33,10 @@
 
                <!-- SPECIALIZATIONS -->
                 <div  v-if="lawyer.specializations">
-                  <h4 v-for="(specialization,index) in lawyer.specializations" :key="index" class="badge badge-dark mx-4">{{specialization.name}}</h4>
+                  <h4 v-for="(specialization,index) in lawyer.specializations" :key="index" class="badge rounded-pill mx-4">{{specialization.name}}</h4>
                 </div>
                 <!-- Button trigger modal - Parte del CV  -->
-                <button v-if="lawyer.cv" type="button" class="btn btn-primary m-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button v-if="lawyer.cv" type="button" class="btn btn-blue m-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
                   Visualizza CV
                 </button>
 
@@ -48,7 +48,7 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         
-                        <h5 class="modal-title" id="exampleModalLabel">CV</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">{{lawyer.name + " " + lawyer.surname}}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
                       </div>
                       <div class="modal-body">
@@ -69,11 +69,13 @@
       </div>
       <!-- END CARD -->
 
-      <!-- MESSAGE FORM -->
+      <div class="forms">
+        <!-- MESSAGE FORM -->
       <MessageForm :id="lawyer.id" />
 
       <!-- REVIEW FORM -->
       <ReviewForm :id="lawyer.id" />
+      </div>
 
 
     </div>
@@ -114,6 +116,34 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+// Colors
+  $lawblue: #2c4065;
+  $lawbronze: #b69d73;
+  $lawred: #83354c;
+  $notwhite: #ddd;
 
+  .card{
+    background-color: rgba(119, 119, 119, 0.9);
+    color: #ddd;
+
+    & h5 {
+      color: $lawbronze;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    & .rounded-pill {
+      background-color: $lawblue;
+      padding: 8px;
+    }
+
+    & .modal h5 {
+      color: $lawblue;
+    }
+  }
+
+  .forms {
+    padding: 50px 0;
+  }
 </style>

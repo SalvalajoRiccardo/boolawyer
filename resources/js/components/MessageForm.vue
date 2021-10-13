@@ -1,6 +1,6 @@
 <template>
 
- <div class="container my_container p-5">
+ <div class="container my_container p-5 my-3">
     <h2>Send me a message</h2>
 
     <div v-if="success" class="alert alert-primary">Messaggio inviato</div>
@@ -10,13 +10,13 @@
       <!-- NAME -->
       <div class="mb-3">
         <label for="your_name" class="form-label">Name</label>
-        <input type="text" v-model="name" class="form-control" name="name" id="your_name" placeholder="What's your name?">
+        <input type="text" v-model="name" class="form-control" name="name" id="your_name" placeholder="Your name">
       </div>
 
       <!-- EMAIL ADRESS -->
       <div class="mb-3">
         <label for="your_email" class="form-label">Email address</label>
-        <input type="email" v-model="email" class="form-control" name="email" id="your_email" placeholder="Email...">
+        <input type="email" v-model="email" class="form-control" name="email" id="your_email" placeholder="Your email address">
 
       </div>
 
@@ -27,7 +27,7 @@
       </div>
 
       <!-- BUTTON -->
-      <button v-on:click="valida" type="submit" class="btn btn-primary">{{sending ? 'invio in corso' : 'Submit'}}</button>
+      <button v-on:click="valida" type="submit" class="btn btn-blue">{{sending ? 'invio in corso' : 'Submit'}}</button>
           
     </form>
  </div>
@@ -121,6 +121,33 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+$lawblue: #2c4065;
+  form {
 
+    & #your_name::placeholder,
+    & #your_email::placeholder,
+    & #your_text::placeholder{
+      color: $lawblue;
+      font-weight: 600;
+      opacity: .8;
+    }
+
+    & #your_name,
+    & #your_email,
+    & #your_text {
+      color: $lawblue;
+    }
+
+    & .btn-blue{
+      font-size: 1rem;
+    }
+  }
+
+  .my_container {
+    background-color: rgba(119, 119, 119, 0.9);
+    color: #ddd;
+    border-radius: 5px;
+    border: 1px solid #6d6d6d;
+  }
 </style>
