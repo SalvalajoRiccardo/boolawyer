@@ -28,7 +28,7 @@
     <!-- LAWYERS -->
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col" v-for="lawyer in lawyers" :key='lawyer.id'>
-        <div class="card text-white bg-transparent border border-5 my-3 p-3 text-center">
+        <div class="card my-3 p-3 text-center">
 
           <!-- Image -->
           <div class="rounded-circle overflow-hidden m-auto" style="width:150px; height:150px;">
@@ -41,18 +41,15 @@
             <div class="my-3">
 
               <!-- REVIEW NUMBER -->
-              <button v-if="lawyer.reviews" type="button" class="btn btn-dark position-relative mx-3">
-                Review
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                {{getNumberOfReview(lawyer.reviews)}}+
-                </span>
-              </button>
+              <div v-if="lawyer.reviews" class="badge rounded-pill text-white position-relative mx-3">
+                <span>{{getNumberOfReview(lawyer.reviews)}}</span> Reviews
+              </div>
 
             </div>
             
             <h5 class="card-title">{{ lawyer.name }} {{lawyer.surname}}</h5>
             <p  v-if="lawyer.services"  class="card-text">{{ truncate(lawyer.services,150) }}</p>
-            <router-link :to="{name: 'lawyer-detail', params: { slug: lawyer.slug }}" class="btn btn-primary">
+            <router-link :to="{name: 'lawyer-detail', params: { slug: lawyer.slug }}" class="btn btn-blue">
               Dettagli
             </router-link>
           </div>
@@ -171,8 +168,36 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+  // Colors
+  $lawblue: #2c4065;
+  $lawbronze: #b69d73;
+  $lawred: #83354c;
+  $notwhite: #ddd;
 
+  .card{
+    background-color: rgba(119, 119, 119, 0.9);
+    color: #ddd;
 
+    & h5 {
+      color: $lawblue;
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    & .rounded-pill {
+      background-color: $lawbronze;
+      padding: 8px;
+
+      & span {
+        color: $lawblue;
+      }
+    }
+
+    & .modal h5 {
+      color: $lawblue;
+    }
+  }
 
 </style>
