@@ -2171,10 +2171,10 @@ module.exports = {
 /*!*****************************************!*\
   !*** ./node_modules/axios/package.json ***!
   \*****************************************/
-/*! exports provided: name, version, description, main, scripts, repository, keywords, author, license, bugs, homepage, devDependencies, browser, jsdelivr, unpkg, typings, dependencies, bundlesize, default */
+/*! exports provided: _args, _development, _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _spec, _where, author, browser, bugs, bundlesize, dependencies, description, devDependencies, homepage, jsdelivr, keywords, license, main, name, repository, scripts, typings, unpkg, version, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"name\":\"axios\",\"version\":\"0.21.4\",\"description\":\"Promise based HTTP client for the browser and node.js\",\"main\":\"index.js\",\"scripts\":{\"test\":\"grunt test\",\"start\":\"node ./sandbox/server.js\",\"build\":\"NODE_ENV=production grunt build\",\"preversion\":\"npm test\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\",\"postversion\":\"git push && git push --tags\",\"examples\":\"node ./examples/server.js\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"fix\":\"eslint --fix lib/**/*.js\"},\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/axios/axios.git\"},\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"author\":\"Matt Zabriskie\",\"license\":\"MIT\",\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"homepage\":\"https://axios-http.com\",\"devDependencies\":{\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.3.0\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^23.0.0\",\"grunt-karma\":\"^4.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^4.0.2\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^6.3.2\",\"karma-chrome-launcher\":\"^3.1.0\",\"karma-firefox-launcher\":\"^2.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^4.3.6\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.8\",\"karma-webpack\":\"^4.0.2\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^8.2.1\",\"sinon\":\"^4.5.0\",\"terser-webpack-plugin\":\"^4.2.3\",\"typescript\":\"^4.0.5\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^4.44.2\",\"webpack-dev-server\":\"^3.11.0\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"jsdelivr\":\"dist/axios.min.js\",\"unpkg\":\"dist/axios.min.js\",\"typings\":\"./index.d.ts\",\"dependencies\":{\"follow-redirects\":\"^1.14.0\"},\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}]}");
+module.exports = JSON.parse("{\"_args\":[[\"axios@0.21.4\",\"C:\\\\Users\\\\utente\\\\Desktop\\\\boolean\\\\mamp_public\\\\boolawyer\"]],\"_development\":true,\"_from\":\"axios@0.21.4\",\"_id\":\"axios@0.21.4\",\"_inBundle\":false,\"_integrity\":\"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==\",\"_location\":\"/axios\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"axios@0.21.4\",\"name\":\"axios\",\"escapedName\":\"axios\",\"rawSpec\":\"0.21.4\",\"saveSpec\":null,\"fetchSpec\":\"0.21.4\"},\"_requiredBy\":[\"#DEV:/\"],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz\",\"_spec\":\"0.21.4\",\"_where\":\"C:\\\\Users\\\\utente\\\\Desktop\\\\boolean\\\\mamp_public\\\\boolawyer\",\"author\":{\"name\":\"Matt Zabriskie\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"dependencies\":{\"follow-redirects\":\"^1.14.0\"},\"description\":\"Promise based HTTP client for the browser and node.js\",\"devDependencies\":{\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.3.0\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^23.0.0\",\"grunt-karma\":\"^4.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^4.0.2\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^6.3.2\",\"karma-chrome-launcher\":\"^3.1.0\",\"karma-firefox-launcher\":\"^2.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^4.3.6\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.8\",\"karma-webpack\":\"^4.0.2\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^8.2.1\",\"sinon\":\"^4.5.0\",\"terser-webpack-plugin\":\"^4.2.3\",\"typescript\":\"^4.0.5\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^4.44.2\",\"webpack-dev-server\":\"^3.11.0\"},\"homepage\":\"https://axios-http.com\",\"jsdelivr\":\"dist/axios.min.js\",\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"axios\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/axios/axios.git\"},\"scripts\":{\"build\":\"NODE_ENV=production grunt build\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"examples\":\"node ./examples/server.js\",\"fix\":\"eslint --fix lib/**/*.js\",\"postversion\":\"git push && git push --tags\",\"preversion\":\"npm test\",\"start\":\"node ./sandbox/server.js\",\"test\":\"grunt test\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\"},\"typings\":\"./index.d.ts\",\"unpkg\":\"dist/axios.min.js\",\"version\":\"0.21.4\"}");
 
 /***/ }),
 
@@ -7527,7 +7527,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@-webkit-keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\nbody {\n  background-image: linear-gradient(to right, rgba(44, 64, 101, 0.3) 0%, rgba(182, 157, 115, 0.3) 100%), url(\"/images/pexels-photo-8755742.jpeg\");\n  background-size: cover;\n  background-position: top;\n  font-family: \"Times New Roman\", Times, serif;\n}\n.btn-blue {\n  background-color: #2c4065;\n  color: #ddd;\n  font-size: 1.3rem;\n  transition: all 0.8s;\n}\n.btn-blue:hover {\n  background-color: #2c4065;\n  color: #ddd;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.btn-bronze {\n  background-color: rgba(182, 158, 115, 0.9);\n  color: #2c4065;\n  font-size: 1rem;\n  font-weight: 600 !important;\n  transition: all 0.8s;\n}\n.btn-bronze:hover {\n  background-color: #b69d73;\n  color: #2c4065;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.wrapper .agile .slide {\n  position: relative;\n  height: 255px;\n}\n.wrapper .agile .slide img {\n  width: 100%;\n}\n.wrapper .agile .slide img:hover {\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@-webkit-keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\nbody {\n  background-image: linear-gradient(to right, rgba(44, 64, 101, 0.3) 0%, rgba(182, 157, 115, 0.3) 100%), url(\"/images/pexels-photo-8755742.jpeg\");\n  background-size: cover;\n  background-position: top;\n  font-family: \"Times New Roman\", Times, serif;\n}\n.btn-blue {\n  background-color: #2c4065;\n  color: #ddd;\n  font-size: 1.3rem;\n  transition: all 0.8s;\n}\n.btn-blue:hover {\n  background-color: #2c4065;\n  color: #ddd;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.btn-bronze {\n  background-color: rgba(182, 158, 115, 0.9);\n  color: #2c4065;\n  font-size: 1rem;\n  font-weight: 600 !important;\n  transition: all 0.8s;\n}\n.btn-bronze:hover {\n  background-color: #b69d73;\n  color: #2c4065;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.wrapper {\n  position: relative;\n}\n.wrapper .agile .slide {\n  position: relative;\n  height: 255px;\n}\n.wrapper .agile .slide img {\n  width: 100%;\n}\n.wrapper .agile .slide img:hover {\n  cursor: pointer;\n}\n.wrapper .agile .slide .card-body {\n  color: honeydew;\n  background: #141414;\n  overflow: hidden;\n  height: 0;\n  padding: 0 10px;\n}\n.wrapper .agile .slide .card-body h4 {\n  padding: 10px;\n}\n.wrapper .agile .slide .card-body .card-icons {\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n.wrapper .agile .slide .card-body .card-icons .icons-container {\n  display: flex;\n  align-items: center;\n}\n.wrapper .agile .slide .card-body .card-icons .circle-icon {\n  width: 35px;\n  height: 35px;\n  font-size: 13px;\n  border-radius: 50%;\n  background: #242424;\n  border: 2px solid lightgrey;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin: 0 5px;\n}\n.wrapper .agile .slide .card-body .card-icons .circle-icon:hover {\n  cursor: pointer;\n  background: #2e2e2e;\n  border: 2px solid darkgrey;\n  color: lightgray;\n}\n.wrapper .agile .slide:hover {\n  background: #141414;\n}\n.wrapper .agile .slide:hover .card-body {\n  height: 100%;\n}\n.wrapper .btn {\n  background-color: white;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  position: absolute;\n  top: 30%;\n  right: 1%;\n  opacity: 0.6;\n}\n.wrapper .btn:hover {\n  cursor: pointer;\n  opacity: 1;\n}\n.wrapper .btn_prev {\n  left: 0;\n}\n.wrapper .btn_next {\n  right: 0;\n}", ""]);
 
 // exports
 
@@ -7603,7 +7603,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n* {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n", ""]);
+exports.push([module.i, "\n* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\n}\r\n", ""]);
 
 // exports
 
@@ -44559,100 +44559,86 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "section",
-    [
-      _c(
-        "div",
-        { staticClass: "row justify-content-center my-3" },
-        _vm._l(_vm.specializationsArray, function(item, index) {
-          return _c(
-            "router-link",
-            {
-              key: index,
-              staticClass: "btn btn-blue mx-2 mt-4",
-              attrs: { to: { name: "lawyers", params: { id: item.id } } }
-            },
-            [_vm._v(" \n      " + _vm._s(item.name) + "\n    ")]
-          )
-        }),
-        1
-      ),
-      _vm._v(" "),
-      _vm._l(_vm.lawyers, function(lawyer, index) {
-        return _c("div", { key: index, staticClass: "row" }, [
-          lawyer.sponsors.length >= 1
-            ? _c("h2", { staticClass: "text-white" }, [
-                _vm._v(_vm._s(lawyer.slug))
-              ])
-            : _vm._e()
-        ])
+  return _c("section", [
+    _c(
+      "div",
+      { staticClass: "row justify-content-center my-3" },
+      _vm._l(_vm.specializationsArray, function(item, index) {
+        return _c(
+          "router-link",
+          {
+            key: index,
+            staticClass: "btn btn-blue mx-2 mt-4",
+            attrs: { to: { name: "lawyers", params: { id: item.id } } }
+          },
+          [_vm._v(" \n      " + _vm._s(item.name) + "\n    ")]
+        )
       }),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "wrapper" },
-        [
-          _c(
-            "agile",
-            {
-              key: _vm.lawyers.length,
-              ref: "carousel",
-              attrs: {
-                slidesToShow: 5,
-                dots: false,
-                infinite: false,
-                navButtons: false
-              }
-            },
-            _vm._l(_vm.lawyers, function(el, index) {
-              return _c("div", { key: index, staticClass: "slide" }, [
-                _c("img", {
-                  attrs: {
-                    src: "http://localhost:8000/storage/" + el.photo,
-                    alt: el.name
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body" }, [
-                  _c("h4", [_vm._v(_vm._s(el.name))])
-                ])
+      1
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "wrapper" },
+      [
+        _c(
+          "agile",
+          {
+            key: _vm.lawyers.length,
+            ref: "carousel",
+            attrs: {
+              slidesToShow: 5,
+              dots: false,
+              infinite: false,
+              navButtons: false
+            }
+          },
+          _vm._l(_vm.lawyers, function(el, index) {
+            return _c("div", { key: index, staticClass: "slide" }, [
+              _c("img", {
+                attrs: {
+                  src: "http://localhost:8000/storage/" + el.photo,
+                  alt: el.name
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("h4", [_vm._v(_vm._s(el.name))])
               ])
-            }),
-            0
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn_prev",
-              on: {
-                click: function($event) {
-                  return _vm.$refs.carousel.goToPrev()
-                }
+            ])
+          }),
+          0
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn btn_prev",
+            on: {
+              click: function($event) {
+                return _vm.$refs.carousel.goToPrev()
               }
-            },
-            [_c("i", { staticClass: "fas fa-chevron-left" })]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn_next",
-              on: {
-                click: function($event) {
-                  return _vm.$refs.carousel.goToNext()
-                }
+            }
+          },
+          [_c("i", { staticClass: "bi bi-chevron-left" })]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn btn_next",
+            on: {
+              click: function($event) {
+                return _vm.$refs.carousel.goToNext()
               }
-            },
-            [_c("i", { staticClass: "fas fa-chevron-right" })]
-          )
-        ],
-        1
-      )
-    ],
-    2
-  )
+            }
+          },
+          [_c("i", { staticClass: "bi bi-chevron-right" })]
+        )
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -60581,7 +60567,7 @@ module.exports = function(module) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_App__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./views/App */ "./resources/js/views/App.vue");
 /* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./router */ "./resources/js/router.js");
-/* harmony import */ var vue_agile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-agile */ "./node_modules/vue-agile/src/index.js");
+/* harmony import */ var vue_agile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-agile */ "./node_modules/vue-agile/src/index.js");
 // First we will load all of this project's JavaScript dependencies which
 // includes Vue and other libraries. It is a great starting point when
 // building robust, powerful web applications using Vue and Laravel.
@@ -60599,7 +60585,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'; // 
 
 
 
-Vue.use(vue_agile__WEBPACK_IMPORTED_MODULE_2__["default"]);
+Vue.use(vue_agile__WEBPACK_IMPORTED_MODULE_3__["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -61505,8 +61491,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/gianlucagalassini/Documents/boolean/esercitazioni/mamp_public/boolawyer/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/gianlucagalassini/Documents/boolean/esercitazioni/mamp_public/boolawyer/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\utente\Desktop\boolean\mamp_public\boolawyer\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\utente\Desktop\boolean\mamp_public\boolawyer\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
