@@ -55746,11 +55746,7 @@ var app = new Vue({
     return h(_views_App__WEBPACK_IMPORTED_MODULE_0__["default"]);
   },
   router: _router__WEBPACK_IMPORTED_MODULE_1__["default"]
-}); // The checkout route
-
-var checkout = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module './routes/checkout'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-app.use('/checkout', checkout);
+});
 
 /***/ }),
 

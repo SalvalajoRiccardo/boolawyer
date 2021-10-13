@@ -4,7 +4,7 @@
 
     <div class="container">
 
-        @forelse ($data->reviews as $review)
+        @forelse ($data as $review)
             <div class="alert alert-primary" role="alert">
                 <h4 class="alert-heading"><i class="bi bi-person-badge"></i> {{$review->reviewer}}</h4>
                 <p>{{$review->text}}</p>
@@ -20,6 +20,9 @@
             
         @endforelse
 
+        
+        {{-- Pagination --}}
+        {{ $data->links() }}
         
         <!-- Go-Back Button -->
         <a class="btn btn-secondary" href="{{route('admin.users.index')}}">Go Back</a>

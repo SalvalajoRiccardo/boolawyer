@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
 
-        @forelse ($data->messages as $message)
+        @forelse ($data as $message)
             <div class="alert alert-primary" role="alert">
                 <h4 class="alert-heading"><i class="bi bi-person-badge"></i> {{$message->name}}</h4>
                 <p>{{$message->text}}</p>
@@ -14,6 +14,10 @@
             <p>Non ci sono messaggi</p>
         </div>  
         @endforelse
+
+
+        {{-- Pagination --}}
+        {{ $data->links() }}
         
        <!-- Go-Back Button -->
        <a class="btn btn-secondary" href="{{route('admin.users.index')}}">Go Back</a>
