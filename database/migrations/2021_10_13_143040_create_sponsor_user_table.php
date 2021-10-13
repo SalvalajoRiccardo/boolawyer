@@ -14,7 +14,6 @@ class CreateSponsorUserTable extends Migration
     public function up()
     {
         Schema::create('sponsor_user', function (Blueprint $table) {
-            // $table->id();
             $table->unsignedBigInteger('sponsor_id');
             $table->foreign('sponsor_id')->references('id')->on('sponsors')->onDelete('cascade');
 
@@ -23,10 +22,8 @@ class CreateSponsorUserTable extends Migration
             
             $table->primary(['sponsor_id','user_id']);
 
-            $table->date('sponsor_date_start');
-            $table->date('sponsor_date_end');
-
-            // $table->timestamps();
+            $table->dateTime('sponsor_date_start');
+            $table->dateTime('sponsor_date_end');
         });
     }
 

@@ -48,6 +48,13 @@
                 </span>
               </button>
 
+              <button v-if="lawyer.reviews.length >= 1" type="button" class="btn btn-dark position-relative mx-3">
+                Review
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{getVoteReview(lawyer.reviews)}}
+                </span>
+              </button>
+
             </div>
             
             <h5 class="card-title">{{ lawyer.name }} {{lawyer.surname}}</h5>
@@ -157,6 +164,16 @@ export default {
       }
 
       return counter;
+    },
+
+    getVoteReview(array){
+      let sum = 0;
+      array.forEach(element => {
+        sum += element.vote
+      });
+      var avg = sum/array.length;
+
+      return avg ;
     },
 
     // truncate the services paragraph

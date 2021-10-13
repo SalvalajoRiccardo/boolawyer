@@ -8,12 +8,18 @@
       <router-link 
         :to="{name:'lawyers', params:{id: item.id}}" 
         v-for="(item,index) in specializationsArray" :key="index"
-        class="btn btn-blue mx-2 mt-4" 
-      > 
+        class="btn btn-blue mx-2 mt-4"> 
         {{item.name}}
       </router-link>
+
+     
+      
     
     </div>
+      <div v-for="(lawyer,index) in lawyers" :key="index">
+        <h2 v-if="lawyer.sponsors.length >= 1">{{lawyer.slug}}</h2>
+      </div>
+
   </section>
 </template>
 
@@ -22,6 +28,8 @@ export default {
   name:'Home',
   data(){
     return{
+      url:'http://localhost:8000/api/users',
+      lawyers:[],
       urlSpec:'http://localhost:8000/api/specializations',
       specializationsArray:[],
       selectedSpec: null,
@@ -33,6 +41,7 @@ export default {
   created(){
     // this.getUsers(1,this.selectedSpec, this.orderByNum, this.orderByVote);
     this.getSpecs();
+    this.getSponsored();
     
 
   },
@@ -45,6 +54,14 @@ export default {
       .then(response=>{
         this.specializationsArray = response.data.results;          
         // console.log(this.specializationsArray);
+      })
+    },
+    getSponsored(){
+      axios
+      .get(this.url)
+      .then(response=>{
+         this.lawyers = response.data.results1;         
+        console.log(this.lawyers);
       })
     },
   }

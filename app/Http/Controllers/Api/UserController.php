@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Specialization;
 use App\Review;
+use App\Sponsor;
 use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
@@ -58,6 +59,8 @@ class UserController extends Controller
             
         }
 
+        $sponsorUser = User::with(['specializations','reviews','sponsors'])->get();
+
         foreach($users as $user){
             if($user->photo){
                 $user->photo = url('storage/' . $user->photo); 
@@ -72,7 +75,8 @@ class UserController extends Controller
         
         return response()->json([
             'success' => true,
-            'results' => $users
+            'results' => $users,
+            'results1' => $sponsorUser
         ]);
     
     }

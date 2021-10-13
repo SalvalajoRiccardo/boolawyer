@@ -43,7 +43,7 @@ Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')->
     Route::resource('/users', 'UserController');
     Route::resource('/sponsor', 'SponsorController');
 
-    Route::post('/checkout', function (Request $request) {
+    Route::post('/checkout', function (Request $request){
         $gateway = new Braintree\Gateway([
             'environment' => config('services.braintree.environment'),
             'merchantId' => config('services.braintree.merchantId'),
@@ -83,7 +83,8 @@ Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')->
             // 2021/10/14 09:36:00
      
         
-            $user->sponsors()->attach(['user_id'=>$id], ['sponsor_id'=> $sponsor], ['sponsor_date_start'=> '2021-10-14 09:36:00', 'sponsor_date_end'=> '2021-10-14 09:36:00']);
+            $user->sponsors()->attach($sponsor, ['sponsor_date_start'=> $sponsor_start, 'sponsor_date_end'=> $sponsor_end]);
+            // $user->sponsors()->attach(['user_id'=>$id], ['sponsor_id'=> $sponsor], ['sponsor_date_start'=> '2021-10-14 09:36:00', 'sponsor_date_end'=> '2021-10-14 09:36:00']);
 
            
             return back()->with('success_message', 'Transaction successful. The ID is:'. $transaction->id);
