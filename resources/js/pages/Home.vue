@@ -14,9 +14,9 @@
 
     </div>
 
-    <div class="row" v-for="(lawyer,index) in lawyers" :key="index">
+    <!-- <div class="row" v-for="(lawyer,index) in lawyers" :key="index">
         <h2 class="text-white" v-if="lawyer.sponsors.length >= 1">{{lawyer.slug}}</h2>
-    </div>
+    </div> -->
 
     <div class="wrapper">
 
@@ -39,9 +39,9 @@
       </agile>
 
       <!-- LEFT button -->
-      <button class="btn btn_prev" @click="$refs.carousel.goToPrev()"><i class="fas fa-chevron-left"></i></button>
+      <button class="btn btn_prev" @click="$refs.carousel.goToPrev()"><i class="bi bi-chevron-left"></i></button>
       <!-- RIGHT button -->
-      <button class="btn btn_next" @click="$refs.carousel.goToNext()"><i class="fas fa-chevron-right"></i></button> 
+      <button class="btn btn_next" @click="$refs.carousel.goToNext()"><i class="bi bi-chevron-right"></i></button> 
 
     </div>
 
@@ -168,19 +168,90 @@ export default {
     }
   }
 
-  .wrapper {
+  .wrapper{
+    position: relative;
     .agile{
-            .slide{
-                position: relative;
-                height: 255px;
-                img{
-                    width:100%;
+      .slide{
+        position: relative;
+        height: 255px;
+          img{
+            width:100%;
+  
+          &:hover{
+            cursor: pointer;
+          }
+  
+        }
 
-                &:hover{
-                    cursor: pointer;
-                }
+        .card-body{
+          color: honeydew;
+          background: #141414;
+          overflow: hidden;
+          height: 0;
+          padding: 0 10px;
 
-                }
-            }}
-  } 
+          h4{
+            padding: 10px;
+          }
+
+          .card-icons{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .icons-container{
+              display: flex;
+              align-items: center;
+            }
+            .circle-icon{
+              width:35px;
+              height: 35px;
+              font-size:13px;
+              border-radius: 50%;
+              background: #242424;
+              border:2px solid lightgrey;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 5px;
+              
+              &:hover{
+                cursor:pointer;
+                background: #2e2e2e;
+                border:2px solid darkgrey;
+                color: lightgray;
+              }
+            }
+          }
+        }
+        &:hover{
+          background: #141414;
+        }
+        &:hover .card-body{
+          height: 100%;
+        }
+      }
+    }
+    .btn{
+      background-color: white;
+      width:50px;
+      height: 50px;
+      border-radius: 50% ;
+      position: absolute;
+      top: 30%;
+      right:1%;
+      opacity:0.6;
+      &:hover{
+        cursor: pointer;
+        opacity:1
+      }
+        
+    }
+    .btn_prev{
+      left:0
+    }
+    .btn_next{
+      right: 0;
+    }
+  }
 </style>
