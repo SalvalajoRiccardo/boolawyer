@@ -3,8 +3,8 @@
     
     <!-- BUTTONS FOR ALL THE SPECIALIZATIONS -->
     <div class="row justify-content-center my-3">
-      <button :class="item" class="btn btn-secondary mx-2" v-for="(item,index) in specializationsArray" :key="'a'+ index" @change="getUsers(1, selectedSpec)">
-          <input type="radio" :id="'a' + index" :value="item.id" v-model="selectedSpec" name="specializations">
+      <button class="btn btn-blue btn-outline-light border-0 mx-2 mt-4" v-for="(item,index) in specializationsArray" :key="'a'+ index" @change="getUsers(1, selectedSpec)">
+          <input type="radio" class="d-none" :id="'a' + index" :value="item.id" v-model="selectedSpec" name="specializations">
           <label :for="'a' + index">{{item.name}}</label>
       </button>
        <!-- <button class="btn btn-secondary mx-2" v-for="(item,index) in specializationsArray" :key="index">
@@ -15,12 +15,12 @@
     <!-- FILTER BOTTON PER NUMBER AVERAGE_VOTE OF REVIEWS -->
     <div class="row justify-content-center my-3">
       <!-- BUTTON ORDER BY NUMBER -->
-      <button class="btn btn-primary mx-2" @click="getUsers(1, selectedSpec,orderByNum==true,orderByVote)">
+      <button class="btn btn-bronze mx-2 my-3" @click="getUsers(1, selectedSpec,orderByNum==true,orderByVote)">
         order by number of reviews
       </button>
 
     <!-- BUTTON ORDER BY VOTE -->
-      <button class="btn btn-primary mx-2" @click="getUsers(1, selectedSpec,orderByNum, orderByVote==true)">
+      <button class="btn btn-bronze mx-2 my-3" @click="getUsers(1, selectedSpec,orderByNum, orderByVote==true)">
         order by vote of reviews
       </button>
     </div>
@@ -28,7 +28,7 @@
     <!-- LAWYERS -->
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col" v-for="lawyer in lawyers" :key='lawyer.id'>
-        <div class="card my-3 p-3 text-center">
+        <div class="card text-white bg-transparent border border-5 my-3 p-3 text-center">
 
           <!-- Image -->
           <div class="rounded-circle overflow-hidden m-auto" style="width:150px; height:150px;">
@@ -172,5 +172,7 @@ export default {
 </script>
 
 <style>
+
+
 
 </style>
