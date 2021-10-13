@@ -7527,7 +7527,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@-webkit-keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\nbody {\n  background-image: linear-gradient(to right, rgba(44, 64, 101, 0.3) 0%, rgba(182, 157, 115, 0.3) 100%), url(\"/images/pexels-photo-8755742.jpeg\");\n  background-size: cover;\n  background-position: top;\n  font-family: \"Times New Roman\", Times, serif;\n}\n.btn-blue {\n  background-color: #2c4065;\n  color: #ddd;\n  font-size: 1.3rem;\n  transition: all 0.8s;\n}\n.btn-blue:hover {\n  background-color: #2c4065;\n  color: #ddd;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.btn-bronze {\n  background-color: rgba(182, 158, 115, 0.9);\n  color: #2c4065;\n  font-size: 1rem;\n  font-weight: 600 !important;\n  transition: all 0.8s;\n}\n.btn-bronze:hover {\n  background-color: #b69d73;\n  color: #2c4065;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.wrapper {\n  position: relative;\n}\n.wrapper .agile .slide {\n  position: relative;\n  height: 255px;\n}\n.wrapper .agile .slide img {\n  width: 100%;\n}\n.wrapper .agile .slide img:hover {\n  cursor: pointer;\n}\n.wrapper .agile .slide .card-body {\n  color: honeydew;\n  background: #141414;\n  overflow: hidden;\n  height: 0;\n  padding: 0 10px;\n}\n.wrapper .agile .slide .card-body h4 {\n  padding: 10px;\n}\n.wrapper .agile .slide .card-body .card-icons {\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n.wrapper .agile .slide .card-body .card-icons .icons-container {\n  display: flex;\n  align-items: center;\n}\n.wrapper .agile .slide .card-body .card-icons .circle-icon {\n  width: 35px;\n  height: 35px;\n  font-size: 13px;\n  border-radius: 50%;\n  background: #242424;\n  border: 2px solid lightgrey;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin: 0 5px;\n}\n.wrapper .agile .slide .card-body .card-icons .circle-icon:hover {\n  cursor: pointer;\n  background: #2e2e2e;\n  border: 2px solid darkgrey;\n  color: lightgray;\n}\n.wrapper .agile .slide:hover {\n  background: #141414;\n}\n.wrapper .agile .slide:hover .card-body {\n  height: 100%;\n}\n.wrapper .btn {\n  background-color: white;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  position: absolute;\n  top: 30%;\n  right: 1%;\n  opacity: 0.6;\n}\n.wrapper .btn:hover {\n  cursor: pointer;\n  opacity: 1;\n}\n.wrapper .btn_prev {\n  left: 0;\n}\n.wrapper .btn_next {\n  right: 0;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@-webkit-keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\nbody {\n  background-image: linear-gradient(to right, rgba(44, 64, 101, 0.3) 0%, rgba(182, 157, 115, 0.3) 100%), url(\"/images/pexels-photo-8755742.jpeg\");\n  background-size: cover;\n  background-position: top;\n  font-family: \"Times New Roman\", Times, serif;\n}\n.btn-blue {\n  background-color: #2c4065;\n  color: #ddd;\n  font-size: 1.3rem;\n  transition: all 0.8s;\n}\n.btn-blue:hover {\n  background-color: #2c4065;\n  color: #ddd;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.btn-bronze {\n  background-color: rgba(182, 158, 115, 0.9);\n  color: #2c4065;\n  font-size: 1rem;\n  font-weight: 600 !important;\n  transition: all 0.8s;\n}\n.btn-bronze:hover {\n  background-color: #b69d73;\n  color: #2c4065;\n  transform: scale(1.1);\n  z-index: 1;\n}\n@media screen and (max-width: 600px) {\n.card-body {\n    display: none;\n}\n}\n.wrapper {\n  position: relative;\n}\n.wrapper .slide {\n  height: 255px;\n  position: relative;\n  margin: 0 5px;\n}\n@media screen and (max-width: 600px) {\n.wrapper .slide {\n    height: 150px;\n}\n}\n.wrapper .slide .card-body {\n  text-align: center;\n  width: 100%;\n  background-color: #ddd;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.wrapper .slide img {\n  width: 100%;\n}\n.wrapper .btn {\n  background-color: white;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  position: absolute;\n  top: 30%;\n  right: 1%;\n  opacity: 0.6;\n}\n.wrapper .btn:hover {\n  cursor: pointer;\n  opacity: 1;\n}\n.wrapper .btn_prev {\n  left: -10%;\n}\n.wrapper .btn_next {\n  right: -10%;\n}", ""]);
 
 // exports
 
@@ -44587,14 +44587,14 @@ var render = function() {
             key: _vm.lawyers.length,
             ref: "carousel",
             attrs: {
-              slidesToShow: 5,
+              slidesToShow: 3,
               dots: false,
               infinite: false,
               navButtons: false
             }
           },
           _vm._l(_vm.lawyers, function(el, index) {
-            return _c("div", { key: index, staticClass: "slide" }, [
+            return _c("div", { key: index, staticClass: "slide card" }, [
               _c("img", {
                 attrs: {
                   src: "http://localhost:8000/storage/" + el.photo,
@@ -44603,7 +44603,9 @@ var render = function() {
               }),
               _vm._v(" "),
               _c("div", { staticClass: "card-body" }, [
-                _c("h4", [_vm._v(_vm._s(el.name))])
+                _c("h4", { staticClass: "card-title" }, [
+                  _vm._v(_vm._s(el.name))
+                ])
               ])
             ])
           }),

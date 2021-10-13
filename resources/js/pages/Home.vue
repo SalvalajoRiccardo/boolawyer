@@ -21,8 +21,8 @@
     <div class="wrapper">
 
       <!-- Carousel -->
-      <agile :key="lawyers.length" :slidesToShow="5" :dots="false" :infinite="false"  :navButtons="false" ref="carousel">
-        <div class="slide" v-for="(el,index) in lawyers" :key="index">
+      <agile :key="lawyers.length" :slidesToShow="3" :dots="false" :infinite="false"  :navButtons="false" ref="carousel">
+        <div class="slide card" v-for="(el,index) in lawyers" :key="index">
 
           <!-- IMG -->
           <img :src="`http://localhost:8000/storage/` + el.photo" :alt="el.name">
@@ -31,7 +31,7 @@
 
             
             <!-- Movies name -->
-            <h4>{{el.name}}</h4>
+            <h4 class="card-title">{{el.name}}</h4>
 
           </div> 
 
@@ -168,70 +168,39 @@ export default {
     }
   }
 
+  @media screen and (max-width: 600px) {
+    .card-body {
+      display: none;
+    }
+  }
+
   .wrapper{
     position: relative;
-    .agile{
-      .slide{
-        position: relative;
-        height: 255px;
-          img{
-            width:100%;
-  
-          &:hover{
-            cursor: pointer;
-          }
-  
-        }
+    
+    .slide {
+      height: 255px;
+      position: relative;
+      margin: 0 5px;
 
-        .card-body{
-          color: honeydew;
-          background: #141414;
-          overflow: hidden;
-          height: 0;
-          padding: 0 10px;
+      @media screen and (max-width: 600px){
+        height: 150px;
+      }
 
-          h4{
-            padding: 10px;
-          }
+      .card-body {
+        text-align: center;
+        width: 100%;
+        background-color: $notwhite;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
 
-          .card-icons{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            .icons-container{
-              display: flex;
-              align-items: center;
-            }
-            .circle-icon{
-              width:35px;
-              height: 35px;
-              font-size:13px;
-              border-radius: 50%;
-              background: #242424;
-              border:2px solid lightgrey;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              margin: 0 5px;
-              
-              &:hover{
-                cursor:pointer;
-                background: #2e2e2e;
-                border:2px solid darkgrey;
-                color: lightgray;
-              }
-            }
-          }
-        }
-        &:hover{
-          background: #141414;
-        }
-        &:hover .card-body{
-          height: 100%;
-        }
+      img {
+        width: 100%;
       }
     }
+
     .btn{
       background-color: white;
       width:50px;
@@ -248,10 +217,10 @@ export default {
         
     }
     .btn_prev{
-      left:0
+      left:-10%;
     }
     .btn_next{
-      right: 0;
+      right: -10%;
     }
   }
 </style>
