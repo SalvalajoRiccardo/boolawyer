@@ -7426,13 +7426,12 @@ exports.push([module.i, "main[data-v-b9c20fb8] {\n  min-height: calc(100vh - 100
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var escape = __webpack_require__(/*! ../../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@-webkit-keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\nbody {\n  background-image: linear-gradient(to right, rgba(44, 64, 101, 0.3) 0%, rgba(182, 157, 115, 0.3) 100%), url(" + escape(__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module '../../../public/storage/photo/pexels-photo-8755742.jpeg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()))) + ");\n  background-size: cover;\n  background-position: top;\n  font-family: \"Times New Roman\", Times, serif;\n}\n.btn-blue {\n  background-color: #2c4065;\n  color: #ddd;\n  font-size: 1.3rem;\n  transition: all 0.8s;\n}\n.btn-blue:hover {\n  background-color: #2c4065;\n  color: #ddd;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.btn-bronze {\n  background-color: rgba(182, 158, 115, 0.9);\n  color: #2c4065;\n  font-size: 1rem;\n  font-weight: 600 !important;\n  transition: all 0.8s;\n}\n.btn-bronze:hover {\n  background-color: #b69d73;\n  color: #2c4065;\n  transform: scale(1.1);\n  z-index: 1;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@-webkit-keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\nbody {\n  background-image: linear-gradient(to right, rgba(44, 64, 101, 0.3) 0%, rgba(182, 157, 115, 0.3) 100%), url(\"/images/pexels-photo-8755742.jpeg\");\n  background-size: cover;\n  background-position: top;\n  font-family: \"Times New Roman\", Times, serif;\n}\n.btn-blue {\n  background-color: #2c4065;\n  color: #ddd;\n  font-size: 1.3rem;\n  transition: all 0.8s;\n}\n.btn-blue:hover {\n  background-color: #2c4065;\n  color: #ddd;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.btn-bronze {\n  background-color: rgba(182, 158, 115, 0.9);\n  color: #2c4065;\n  font-size: 1rem;\n  font-weight: 600 !important;\n  transition: all 0.8s;\n}\n.btn-bronze:hover {\n  background-color: #b69d73;\n  color: #2c4065;\n  transform: scale(1.1);\n  z-index: 1;\n}", ""]);
 
 // exports
 
@@ -7540,33 +7539,6 @@ function toComment(sourceMap) {
 	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
 
 	return '/*# ' + data + ' */';
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/lib/url/escape.js":
-/*!***************************************************!*\
-  !*** ./node_modules/css-loader/lib/url/escape.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function escape(url) {
-    if (typeof url !== 'string') {
-        return url
-    }
-    // If url is already wrapped in quotes, remove them
-    if (/^['"].*['"]$/.test(url)) {
-        url = url.slice(1, -1);
-    }
-    // Should url be wrapped?
-    // See https://drafts.csswg.org/css-values-3/#urls
-    if (/["'() \t\n]/.test(url)) {
-        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
-    }
-
-    return url
 }
 
 
@@ -39468,7 +39440,7 @@ var render = function() {
               [
                 _c("img", {
                   attrs: {
-                    src: __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module '../../../public/storage/photo/logo.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                    src: "/images/logo.png",
                     alt: "logo Boolawyer",
                     title: "Clicca qui per tornare alla home"
                   }
@@ -39556,7 +39528,7 @@ var render = function() {
             [
               _c("img", {
                 attrs: {
-                  src: __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module '../../../public/storage/photo/logo.png'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+                  src: "/images/logo.png",
                   alt: "logo Boolawyer",
                   title: "Clicca qui per tornare alla home"
                 }

@@ -87,7 +87,7 @@ export default {
     linear-gradient(to right, 
       rgba(44, 64, 101, 0.3) 0%,
       rgba(182,157,115,0.3) 100%),
-    url(../../../public/storage/photo/pexels-photo-8755742.jpeg);
+    url('/images/pexels-photo-8755742.jpeg');
     background-size: cover;
     background-position: top;
     font-family: "Times New Roman", Times, serif;

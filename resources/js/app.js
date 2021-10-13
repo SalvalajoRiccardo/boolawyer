@@ -36,5 +36,3 @@ import router from './router';
     render:h=>h(App),
     router
 });
-
-

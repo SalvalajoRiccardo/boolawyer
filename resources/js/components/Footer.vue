@@ -4,8 +4,8 @@
       <!-- LOGO -->
       <div class="logo_box_footer">
         <router-link class="navbar-brand" :to="{name:'home'}">
-          <img src="../../../public/storage/photo/logo.png" alt="logo Boolawyer"
-                    title="Clicca qui per tornare alla home"> 
+          <img :src="'/images/logo.png'" alt="logo Boolawyer"
+            title="Clicca qui per tornare alla home"> 
         </router-link>
       </div>
 
