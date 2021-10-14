@@ -21,7 +21,7 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                 <ul class="navbar-nav header-nav">
                     <li class="nav-item">
-                         <router-link :to="{name:'home'}" class="nav-link"><span>Boolawyer</span></router-link>
+                         <router-link :to="{name:'home'}" class="nav-link"><span>Boolawyers</span></router-link>
                     </li>
                     <!-- <li class="nav-item">
                         <router-link :to="{name:'lawyers'}" class="nav-link">Lawyers</router-link>

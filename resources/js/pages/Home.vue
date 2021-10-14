@@ -19,23 +19,26 @@
       
       <!-- Carousel -->
       <agile :key="lawyers.length" :slidesToShow="1" :dots="false" :infinite="true"  :navButtons="false" ref="carousel" :options="myOptions" :autoplay="true" :autoplay-speed="5000">
-        <div class="slide card my-3 p-3 text-center" v-for="(lawyer,index) in filteredLawyers" :key="index">
-          
+        <div class="slide my-3 p-3 text-center" v-for="(lawyer,index) in filteredLawyers" :key="index">
+          <div class="p-3 card my-bg">
           <!-- IMG -->
-          <div class="rounded-circle overflow-hidden m-auto img_box" style="width:150px; height:150px;">
-            <img v-if="lawyer.photo" :src="`http://localhost:8000/storage/` + lawyer.photo" :alt="lawyer.name" class="img-fluid" :title="lawyer.name">
-            <img  v-else src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle m-auto" width="150">
-          </div>
-          <img >
-          <!-- Card Body -->
-          <div class="my_card-body pb-3">
-            <!-- Movies name -->
-            <h4>{{ lawyer.name }} {{lawyer.surname}}</h4>
-            <router-link :to="{name: 'lawyer-detail', params: { slug: lawyer.slug }}" class="btn btn-bronze">
-              Dettagli
-            </router-link>
+            <div class="rounded-circle overflow-hidden m-auto img_box" style="width:150px; height:150px;">
+              <img v-if="lawyer.photo" :src="`http://localhost:8000/storage/` + lawyer.photo" :alt="lawyer.name" class="img-fluid" :title="lawyer.name">
+              <img  v-else src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle m-auto" width="150">
+            </div>
+            <img >
+            <!-- Card Body -->
+            <div class="my_card-body pb-3">
+              <!-- Movies name -->
+              <h4>{{ lawyer.name }} {{lawyer.surname}}</h4>
+              <router-link :to="{name: 'lawyer-detail', params: { slug: lawyer.slug }}" class="btn btn-bronze">
+                Dettagli
+              </router-link>
 
-          </div> 
+            </div> 
+
+          </div>
+          
 
         </div>
       </agile>
@@ -267,6 +270,11 @@ export default {
     background-size: cover;
     background-position: top;
     font-family: "Times New Roman", Times, serif;
+    
+  }
+
+  .my-bg{
+    background-color: rgba(221, 221, 221,0.9);
   }
 
   .btn-blue {
@@ -310,17 +318,17 @@ export default {
     .slide {
       height: 275px;
       position: relative;
-      border:1px solid rgba(221, 221, 221,1);
-      background-color: rgba(221, 221, 221,0.5);
+      // border:1px solid rgba(221, 221, 221,1);
+      // background-color: rgba(221, 221, 221,0.5);
 
 
       .my_card-body {
         text-align: center;
         width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        // position: absolute;
+        // bottom: 0;
+        // left: 50%;
+        // transform: translateX(-50%);
 
         h4 {
           color: $lawblue;
