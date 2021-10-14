@@ -31,7 +31,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md my_navbar shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark my_navbar shadow-sm">
             <div class="container">
                 <div class="my_logo mx-2">
                     <img src="{{asset('images/logo.png')}}" alt="">
@@ -39,7 +39,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
