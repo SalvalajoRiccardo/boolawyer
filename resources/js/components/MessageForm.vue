@@ -1,7 +1,7 @@
 <template>
 
  <div class="container my_container p-5 my-3">
-    <h2 class="text_bronze">Send me a message</h2>
+    <h2 class="text_bronze">Mandami un messaggio</h2>
 
     <div v-if="success" class="alert alert-primary">Messaggio inviato</div>
 
@@ -10,13 +10,13 @@
       <div class="row">
         <!-- NAME -->
         <div class="mb-3 col-12 col-md-6">
-          <label for="your_name" class="form-label">Name</label>
+          <label for="your_name" class="form-label">Nome</label>
           <input type="text" v-model="name" class="form-control" name="name" id="your_name" placeholder="Your name">
         </div>
 
         <!-- EMAIL ADRESS -->
         <div class="mb-3 col-12 col-md-6">
-          <label for="your_email" class="form-label">Email address</label>
+          <label for="your_email" class="form-label">Indirizzo Email</label>
           <input type="email" v-model="email" class="form-control" name="email" id="your_email" placeholder="Your email address">
         </div>
       </div>
@@ -24,8 +24,8 @@
 
       <!-- MESSAGE -->
       <div class="mb-3">
-        <label for="your_text" class="form-label">Your message</label>
-        <textarea  v-model="text" class="form-control" name="text" id="your_text" rows="3" placeholder="Write me a message..."></textarea>
+        <label for="your_text" class="form-label">Il tuo messaggio</label>
+        <textarea  v-model="text" class="form-control" name="text" id="your_text" rows="3" placeholder="Scrivi un messaggio..."></textarea>
       </div>
 
       <!-- BUTTON -->

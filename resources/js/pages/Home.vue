@@ -4,9 +4,9 @@
     <div class="container first_container">
       <div class="row justify-content-center justify-content-md-center">
         <div class="col-12 col-md-6 pippo  text-center d-flex flex-column justify-content-center">
-          <span class="span_text my-2">Legal counseling</span>
-          <h2 class="h2_text_light">If you have any legal problems in your life</h2>
-          <h3 class="h3_text">we are available</h3>
+          <span class="span_text my-2">Consulenza Legale</span>
+          <h2 class="h2_text_light">Se hai un problema legale nella tua vita,</h2>
+          <h3 class="h3_text">noi siamo disponibili</h3>
         </div>
       </div>
 
@@ -15,10 +15,8 @@
     <!-- MEDICI IN EVIDENZA -->
     <div class="wrapper text-center">
 
-     
-        <span class="span_text_carousel text-center">SPONSORED LAWYERS</span>
+      <span class="span_text_carousel text-center">AVVOCATI IN EVIDENZA</span>
       
-
       <!-- Carousel -->
       <agile :key="lawyers.length" :slidesToShow="3" :dots="false" :infinite="false"  :navButtons="false" ref="carousel">
         <div class="slide card my-3 p-3 text-center" v-for="(lawyer,index) in filteredLawyers" :key="index">
@@ -53,9 +51,9 @@
     <!-- ABOUT SECTION -->
       <div class="row align-items-center">
         <div class="col-12 col-md-8 px-5 ">
-            <span class="span_text">Who we are</span>
-            <h2 class="h2_text_dark">We are here to fight against any violence with experience</h2>
-            <p class="p_text">Provide your request to the right lawyers to help you, selected for their expertise,the lawyers  will contact you directly to arrange to help you. All lawyers in our network are highly ranked by the independent legal directories, Legal 500 and Chambers and Partners.</p>
+            <span class="span_text">Chi siamo</span>
+            <h2 class="h2_text_dark">Siamo qui per combattere qualsiasi violazione con esperienza</h2>
+            <p class="p_text">Invia la tua richiesta agli avvocati giusti per aiutarti. Selezionati per la loro esperienza, gli avvocati ti contatteranno direttamente per organizzare un incontro e risolvere il tuo problema. Tutti gli avvocati della nostra rete sono altamente classificati ed appartengonoa studi legali indipendenti quali, Legal 500 e Chambers and Partners.</p>
         </div>
         <div class="col-12 col-md-4 justice_box text-center">
             <img :src="'/images/justice.png'" alt="justice statue">
@@ -65,8 +63,8 @@
       <!-- BUTTONS FOR ALL THE SPECIALIZATIONS -->
       <div class="row">
         <div class="col-12 col-md-8 px-5">
-          <span class="span_text">What we do</span>
-          <h5 class="my-2">Look for your lawyer by choosing a specialization</h5>
+          <span class="span_text">Cosa Facciamo</span>
+          <h5 class="my-2">Inizia la ricerca, scegliendo una Specializzazione</h5>
         </div>
       </div>
       <div class="row justify-content-center my-3">

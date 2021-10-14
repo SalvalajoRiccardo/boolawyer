@@ -10,7 +10,7 @@
       <div class="card-header bg-white border-0">
         <div class="row align-items-center">
           <div class="col-8">
-            <h3 class="mb-0">My account</h3>
+            <h3 class="mb-0">Account</h3>
           </div>
         </div>
       </div>
@@ -28,7 +28,7 @@
             <div class="col-lg-8 col-12">
 
               <!-- start USER INFORMATION -->
-              <h6 class="heading-small text-muted mb-4">User information</h6>
+              <h6 class="heading-small text-muted mb-4">Informazioni Utente</h6>
 
               <!-- Username  + Email-->
               <div class="row">
@@ -40,7 +40,7 @@
               
 
                 <div class="form-group col-12 col-md-6">
-                  <label for="exampleInputEmail1">Email address</label>
+                  <label for="exampleInputEmail1">Indirizzo Email</label>
                   <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value="{{$user->email}}" @error('email') is-invalid @enderror>
                   @error('email')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -53,7 +53,7 @@
               <div class="row">
 
                 <div class="form-group focused col-12 col-md-6">
-                  <label class="form-control-label" for="input-first-name">First name</label>
+                  <label class="form-control-label" for="input-first-name">Nome</label>
                   <input name="name" type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="{{$user->name}}" @error('name') is-invalid @enderror>
                   @error('name')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -61,7 +61,7 @@
                 </div>
 
                 <div class="form-group focused col-12 col-md-6">
-                  <label class="form-control-label" for="input-last-name">Last name</label>
+                  <label class="form-control-label" for="input-last-name">Cognome</label>
                   <input name="surname" type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value="{{$user->surname}}" @error('surname') is-invalid @enderror>
                   @error('surname')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -76,13 +76,13 @@
 
 
               <!-- start CONTACT INFORMATION -->
-              <h6 class="heading-small text-muted mb-4">Contact information</h6>
+              <h6 class="heading-small text-muted mb-4">Informazioni di contatto</h6>
               
 
               <div class="row">
 
                 <div class="form-group focused col-12 col-md-6">
-                  <label class="form-control-label" for="input-address">Address</label>
+                  <label class="form-control-label" for="input-address">Indirizzo</label>
                   <input name="address" id="input-address" class="form-control form-control-alternative" placeholder="Home Address" value="{{$user->address}}" type="text" @error('address') is-invalid @enderror>
                   @error('address')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -90,7 +90,7 @@
                 </div>
 
                 <div class="form-group focused col-12 col-md-6">
-                  <label class="form-control-label" for="input-phone">Phone</label>
+                  <label class="form-control-label" for="input-phone">Telefono</label>
                   <input name="phone" id="input-phone" class="form-control form-control-alternative" placeholder="Insert Phone" value="{{$user->phone}}" type="text" @error('phone') is-invalid @enderror>
                   @error('phone')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -112,7 +112,7 @@
 
               <div class="form-group focused">
                   
-                <label class="form-control-label" for="input-photo">Photo</label>
+                <label class="form-control-label" for="input-photo">Foto profilo</label>
 
                 <input  name="photo" id="input-photo" class="form-control-file " value="{{$user->photo}}" type="file" @error('photo') is-invalid @enderror>
                 @error('photo')
@@ -135,19 +135,19 @@
             {{-- Left part --}}
             <div class="col-lg-8 col-12">
 
-              <h6 class="heading-small text-muted mb-4">About me</h6>
+              <h6 class="heading-small text-muted mb-4">Altre Informazioni</h6>
               <div class="row">
                 <div class="col-12">
                   <div class="form-group focused">
-                    <label>Services</label>
-                    <textarea name="services" rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">{{$user->services}}</textarea>
+                    <label>Prestazioni</label>
+                    <textarea name="services" rows="4" class="form-control form-control-alternative" placeholder="Scrivi una breve descrizione...">{{$user->services}}</textarea>
                   </div>
                 </div>
               </div>
 
               <hr class="my-4">
 
-              <h6 class="heading-small text-muted mb-4">Specializations</h6>
+              <h6 class="heading-small text-muted mb-4">Specializzazioni</h6>
 
               <div class="row">
                 <div class="col-12">
@@ -192,12 +192,12 @@
           </div>
 
           <!-- Update Button -->
-          <button type="submit" class="btn blue_button_p">Update</button>
+          <button type="submit" class="btn blue_button_p">Aggiorna</button>
 
         </form>
 
         <!-- Go-Back Button -->
-        <a class="btn btn-secondary my-2" href="{{route('admin.users.index', $user->id )}}">Go Back</a>
+        <a class="btn btn-secondary my-2" href="{{route('admin.users.index', $user->id )}}">Indietro</a>
 
       </div>
 

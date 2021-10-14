@@ -1,6 +1,6 @@
 <template>
   <div class="container my_container p-5">
-    <h2 class="text_bronze">Write a review</h2>
+    <h2 class="text_bronze">Scrivi una recensione</h2>
 
     <div v-if="success" class="alert alert-primary">Review register</div>
 
@@ -18,15 +18,15 @@
 
           <!-- <span class="d-block"><i class="fas fa-star text-warning" v-for="(stella,index) in stelle(dettagli.vote_average)" :key="index"></i></span> -->
           
-        <label for="your_vote" class="form-label">Vote </label>
+        <label for="your_vote" class="form-label">Voto</label>
         <input type="number" v-model="vote" class="form-control" name="vote" id="your_vote" placeholder="your vote">
       </div>
       </div>
 
       <!-- TEXT -->
       <div class="mb-3">
-        <label for="your_text" class="form-label">Your opinion</label>
-        <textarea  v-model="text" class="form-control" name="text" id="your_text" rows="3" placeholder="Leave a comment"></textarea>
+        <label for="your_text" class="form-label">La tua opinione</label>
+        <textarea  v-model="text" class="form-control" name="text" id="your_text" rows="3" placeholder="Lascia un commento..."></textarea>
       </div>
 
       <!-- BUTTON -->

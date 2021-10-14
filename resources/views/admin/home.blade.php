@@ -23,11 +23,11 @@
     {{-- MESSAGES/REVIEWS PER MONTHS --}}
     <div class="row py-3 text-center">
         <div class="col-12 col-md-6 p-3">
-            <h4 class="py-2">Messages per months</h4>
+            <h4 class="py-2">Messaggi ricevuti per mese</h4>
             <canvas id="MessageChart" class="rounded shadow"></canvas>
         </div>
         <div class="col-12 col-md-6 p-3 text-center">
-            <h4 class="py-2">Reviews per months</h4>
+            <h4 class="py-2">Recensioni ricevute per mese</h4>
             <canvas id="ReviewChart" class="rounded shadow"></canvas>
         </div>
             
@@ -116,7 +116,7 @@
             labels:  {!! json_encode($yearsR)!!} ,
             datasets: [
                 {
-                    label: 'Reviews per year', 
+                    label: 'Recensioni ricevute per anno', 
                     data:  {!! json_encode($yearCountReview)!!},
                     backgroundColor: ["rgb(44, 64, 101)"],
                 },
@@ -215,7 +215,7 @@
             labels:  {!! json_encode($yearsM)!!} ,
             datasets: [
                 {
-                    label: 'Messages per year', 
+                    label: 'Messaggi ricevuti per anno', 
                     data:  {!! json_encode($yearCountMessage)!!},
                     backgroundColor: ["rgb(131, 53, 76)"],
                 },

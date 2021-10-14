@@ -87,7 +87,7 @@ Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')->
             // $user->sponsors()->attach(['user_id'=>$id], ['sponsor_id'=> $sponsor], ['sponsor_date_start'=> '2021-10-14 09:36:00', 'sponsor_date_end'=> '2021-10-14 09:36:00']);
 
            
-            return back()->with('success_message', 'Transaction successful. The ID is:'. $transaction->id);
+            return redirect()->route('admin.sponsor.index')->with('success_message', 'Transazione avvenuta con successo. The ID is:'. $transaction->id);
         } else {
             $errorString = "";
     

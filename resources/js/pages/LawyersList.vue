@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    
+
     <!-- BUTTONS FOR ALL THE SPECIALIZATIONS -->
     <div class="row justify-content-center my-3">
       <button class="btn btn-blue btn-outline-light border-0 mx-2 mt-4" v-for="(item,index) in specializationsArray" :key="'a'+ index" @change="getUsers(1, selectedSpec)">
@@ -16,12 +16,12 @@
     <div class="row justify-content-center my-3">
       <!-- BUTTON ORDER BY NUMBER -->
       <button class="btn btn-bronze mx-2 my-3" @click="getUsers(1, selectedSpec,orderByNum==true,orderByVote)">
-        order by number of reviews
+        ordina per numero di reviews
       </button>
 
     <!-- BUTTON ORDER BY VOTE -->
       <button class="btn btn-bronze mx-2 my-3" @click="getUsers(1, selectedSpec,orderByNum, orderByVote==true)">
-        order by vote of reviews
+        ordina per media voti delle reviews
       </button>
     </div>
    
@@ -107,7 +107,6 @@ export default {
       selectedSpec: this.id,
       orderByNum:null,
       orderByVote:null,
-      
     }
   },
 

@@ -23,11 +23,7 @@
         <h3 class="pt-4">Payment Form</h3>
         <div class="spacer"></div>
 
-        @if (session()->has('success_message'))
-            <div class="alert alert-success">
-                {{ session()->get('success_message') }}
-            </div>
-        @endif
+      
 
         @if(count($errors) > 0)
             <div class="alert alert-danger">

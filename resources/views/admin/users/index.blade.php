@@ -59,9 +59,9 @@
               </a>
             </div>
 
-            <a href="{{route('admin.users.edit', $user->id )}}" class="btn grey_button_p d-block">Edit Info</a>
-            <a href="{{route('change.password')}}" class="btn blue_button_p d-block my-3">Change password</a>
-            <a href="#" class="btn btn-dark d-block">Delete Profile</a>
+            <a href="{{route('admin.users.edit', $user->id )}}" class="btn grey_button_p d-block">Modifica info</a>
+            <a href="{{route('change.password')}}" class="btn blue_button_p d-block my-3">Cambia password</a>
+            <a href="#" class="btn btn-dark d-block">Cancella Profilo</a>
             
           </div>
 
@@ -81,7 +81,7 @@
           {{-- Name --}}
           <div class="row align-items-center">
             <div class="col-sm-3">
-              <h6 class="mb-0">Name</h6>
+              <h6 class="mb-0">Nome</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               {{$user->name}}
@@ -92,7 +92,7 @@
           {{-- Surname --}}
           <div class="row align-items-center">
             <div class="col-sm-3">
-              <h6 class="mb-0">Surname</h6>
+              <h6 class="mb-0">Cognome</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               {{$user->surname}}
@@ -114,7 +114,7 @@
           {{-- Phone --}}
           <div class="row align-items-center">
             <div class="col-sm-3">
-              <h6 class="mb-0">Phone</h6>
+              <h6 class="mb-0">Telefono</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               {{-- phone right part/ tasto per richiesta numero di telefono --}}
@@ -122,7 +122,7 @@
               {{$user->phone}}
               @else
                 <a class="btn blue_button_outline_p" href="{{route('admin.users.edit', $user->id )}}">
-                  Insert your Phone number
+                  Inserisci il tuo telefono
                 </a>
               @endif
               
@@ -174,7 +174,7 @@
           {{-- Address --}}
           <div class="row align-items-center">
               <div class="col-sm-3">
-                <h6 class="mb-0">Address</h6>
+                <h6 class="mb-0">Indirizzo</h6>
               </div>
               <div class="col-sm-9 text-secondary">
                 {{$user->address}}
@@ -185,16 +185,16 @@
           {{-- Specializations --}}
           <div class="row align-items-center">
             <div class="col-sm-3">
-              <h6 class="mb-0">Specializations</h6>
+              <h6 class="mb-0">Specializzazioni</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               @foreach ($user->specializations as $specialization)    
-                <span span class="btn blue_button_transparent">{{$specialization->name}}</span>
+                <span class="btn blue_button_transparent mb-2">{{$specialization->name}}</span>
               @endforeach
 
               {{-- da aggiungere effetto a comparsa su hover --}}
-              <a class="btn blue_button_outline_p" href="{{route('admin.users.edit', $user->id )}}">
-                Add more <i class="bi bi-plus-lg"></i>
+              <a class="btn blue_button_outline_p mb-2" href="{{route('admin.users.edit', $user->id )}}">
+                Aggiungi <i class="bi bi-plus-lg"></i>
               </a>    
             </div>
           </div>
@@ -203,7 +203,7 @@
           {{-- Services --}}
           <div class="row">
             <div class="col-sm-3">
-              <h6 class="mb-0">Services</h6>
+              <h6 class="mb-0">Prestazioni</h6>
             </div>
             <div class="col-sm-9 text-secondary">
                {{-- services right part/ tasto per richiesta inserimento servizi --}}
@@ -211,7 +211,7 @@
                 <p>{{$user->services}}</p>
                @else
                 <a class="btn blue_button_outline_p" href="{{route('admin.users.edit', $user->id )}}">
-                  Insert your services
+                  Inserisci le tue Prestazioni
                 </a>
                @endif
             </div>

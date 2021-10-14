@@ -2645,8 +2645,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Home',
@@ -44295,7 +44293,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container my_container p-5 my-3" }, [
-    _c("h2", { staticClass: "text_bronze" }, [_vm._v("Send me a message")]),
+    _c("h2", { staticClass: "text_bronze" }, [_vm._v("Mandami un messaggio")]),
     _vm._v(" "),
     _vm.success
       ? _c("div", { staticClass: "alert alert-primary" }, [
@@ -44319,7 +44317,7 @@ var render = function() {
             _c(
               "label",
               { staticClass: "form-label", attrs: { for: "your_name" } },
-              [_vm._v("Name")]
+              [_vm._v("Nome")]
             ),
             _vm._v(" "),
             _c("input", {
@@ -44354,7 +44352,7 @@ var render = function() {
             _c(
               "label",
               { staticClass: "form-label", attrs: { for: "your_email" } },
-              [_vm._v("Email address")]
+              [_vm._v("Indirizzo Email")]
             ),
             _vm._v(" "),
             _c("input", {
@@ -44390,7 +44388,7 @@ var render = function() {
           _c(
             "label",
             { staticClass: "form-label", attrs: { for: "your_text" } },
-            [_vm._v("Your message")]
+            [_vm._v("Il tuo messaggio")]
           ),
           _vm._v(" "),
           _c("textarea", {
@@ -44407,7 +44405,7 @@ var render = function() {
               name: "text",
               id: "your_text",
               rows: "3",
-              placeholder: "Write me a message..."
+              placeholder: "Scrivi un messaggio..."
             },
             domProps: { value: _vm.text },
             on: {
@@ -44457,7 +44455,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container my_container p-5" }, [
-    _c("h2", { staticClass: "text_bronze" }, [_vm._v("Write a review")]),
+    _c("h2", { staticClass: "text_bronze" }, [_vm._v("Scrivi una recensione")]),
     _vm._v(" "),
     _vm.success
       ? _c("div", { staticClass: "alert alert-primary" }, [
@@ -44516,7 +44514,7 @@ var render = function() {
             _c(
               "label",
               { staticClass: "form-label", attrs: { for: "your_vote" } },
-              [_vm._v("Vote ")]
+              [_vm._v("Voto")]
             ),
             _vm._v(" "),
             _c("input", {
@@ -44552,7 +44550,7 @@ var render = function() {
           _c(
             "label",
             { staticClass: "form-label", attrs: { for: "your_text" } },
-            [_vm._v("Your opinion")]
+            [_vm._v("La tua opinione")]
           ),
           _vm._v(" "),
           _c("textarea", {
@@ -44569,7 +44567,7 @@ var render = function() {
               name: "text",
               id: "your_text",
               rows: "3",
-              placeholder: "Leave a comment"
+              placeholder: "Lascia un commento..."
             },
             domProps: { value: _vm.text },
             on: {
@@ -44626,7 +44624,7 @@ var render = function() {
       { staticClass: "wrapper text-center" },
       [
         _c("span", { staticClass: "span_text_carousel text-center" }, [
-          _vm._v("SPONSORED LAWYERS")
+          _vm._v("AVVOCATI IN EVIDENZA")
         ]),
         _vm._v(" "),
         _c(
@@ -44795,14 +44793,16 @@ var staticRenderFns = [
             },
             [
               _c("span", { staticClass: "span_text my-2" }, [
-                _vm._v("Legal counseling")
+                _vm._v("Consulenza Legale")
               ]),
               _vm._v(" "),
               _c("h2", { staticClass: "h2_text_light" }, [
-                _vm._v("If you have any legal problems in your life")
+                _vm._v("Se hai un problema legale nella tua vita,")
               ]),
               _vm._v(" "),
-              _c("h3", { staticClass: "h3_text" }, [_vm._v("we are available")])
+              _c("h3", { staticClass: "h3_text" }, [
+                _vm._v("noi siamo disponibili")
+              ])
             ]
           )
         ]
@@ -44814,15 +44814,15 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-12 col-md-8 px-5 " }, [
-      _c("span", { staticClass: "span_text" }, [_vm._v("Who we are")]),
+      _c("span", { staticClass: "span_text" }, [_vm._v("Chi siamo")]),
       _vm._v(" "),
       _c("h2", { staticClass: "h2_text_dark" }, [
-        _vm._v("We are here to fight against any violence with experience")
+        _vm._v("Siamo qui per combattere qualsiasi violazione con esperienza")
       ]),
       _vm._v(" "),
       _c("p", { staticClass: "p_text" }, [
         _vm._v(
-          "Provide your request to the right lawyers to help you, selected for their expertise,the lawyers  will contact you directly to arrange to help you. All lawyers in our network are highly ranked by the independent legal directories, Legal 500 and Chambers and Partners."
+          "Invia la tua richiesta agli avvocati giusti per aiutarti. Selezionati per la loro esperienza, gli avvocati ti contatteranno direttamente per organizzare un incontro e risolvere il tuo problema. Tutti gli avvocati della nostra rete sono altamente classificati ed appartengonoa studi legali indipendenti quali, Legal 500 e Chambers and Partners."
         )
       ])
     ])
@@ -44833,10 +44833,10 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-12 col-md-8 px-5" }, [
-        _c("span", { staticClass: "span_text" }, [_vm._v("What we do")]),
+        _c("span", { staticClass: "span_text" }, [_vm._v("Cosa Facciamo")]),
         _vm._v(" "),
         _c("h5", { staticClass: "my-2" }, [
-          _vm._v("Look for your lawyer by choosing a specialization")
+          _vm._v("Inizia la ricerca, scegliendo una Specializzazione")
         ])
       ])
     ])
@@ -44931,7 +44931,7 @@ var render = function() {
             }
           }
         },
-        [_vm._v("\n      order by number of reviews\n    ")]
+        [_vm._v("\n      ordina per numero di reviews\n    ")]
       ),
       _vm._v(" "),
       _c(
@@ -44949,7 +44949,7 @@ var render = function() {
             }
           }
         },
-        [_vm._v("\n      order by vote of reviews\n    ")]
+        [_vm._v("\n      ordina per media voti delle reviews\n    ")]
       )
     ]),
     _vm._v(" "),
