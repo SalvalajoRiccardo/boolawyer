@@ -3,7 +3,7 @@
   
     <div class="container first_container">
       <div class="row justify-content-center justify-content-md-center">
-        <div class="col-12 col-md-6 pippo  text-center d-flex flex-column justify-content-center">
+        <div id="welcome-text" class="col-12 col-md-6 pippo text-center d-flex flex-column justify-content-center">
           <span class="span_text my-2">Consulenza Legale</span>
           <h2 class="h2_text_light">Se hai un problema legale nella tua vita,</h2>
           <h3 class="h3_text">noi siamo disponibili</h3>
@@ -221,6 +221,10 @@ export default {
     color:#000223
   }
 
+  #welcome-text {
+    animation: slideInBelow 2s ease-out;
+  }
+
   // Animations
   @keyframes slideInLeft {
 
@@ -241,6 +245,17 @@ export default {
 
     100% {opacity: 1;
         transform: translateX(0);}
+  }
+
+  @keyframes slideInBelow {
+
+    0% {opacity: 0;
+        scale: 0;
+        transform: translateY(50px);}
+
+    100% {opacity: 1;
+          scale: 1;
+          transform: translateY(0);}
   }
 
   body {
