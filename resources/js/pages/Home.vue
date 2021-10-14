@@ -18,7 +18,7 @@
       <span class="span_text_carousel text-center">AVVOCATI IN EVIDENZA</span>
       
       <!-- Carousel -->
-      <agile :key="lawyers.length" :slidesToShow="3" :dots="false" :infinite="false"  :navButtons="false" ref="carousel">
+      <agile :key="lawyers.length" :slidesToShow="1" :dots="false" :infinite="false"  :navButtons="false" ref="carousel" :options="myOptions">
         <div class="slide card my-3 p-3 text-center" v-for="(lawyer,index) in filteredLawyers" :key="index">
           
           <!-- IMG -->
@@ -104,6 +104,24 @@ export default {
       urlSpec:'http://localhost:8000/api/specializations',
       specializationsArray:[],
       selectedSpec: null,
+      myOptions: {
+
+        responsive: [
+          {
+            breakpoint: 500,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 900,
+            settings: {
+              slidesToShow: 3
+            }
+          },
+          
+        ]
+      }
 
     }
   },

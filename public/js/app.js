@@ -2657,7 +2657,20 @@ __webpack_require__.r(__webpack_exports__);
       lawyers: [],
       urlSpec: 'http://localhost:8000/api/specializations',
       specializationsArray: [],
-      selectedSpec: null
+      selectedSpec: null,
+      myOptions: {
+        responsive: [{
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 2
+          }
+        }, {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 3
+          }
+        }]
+      }
     };
   },
   computed: {
@@ -44635,10 +44648,11 @@ var render = function() {
             key: _vm.lawyers.length,
             ref: "carousel",
             attrs: {
-              slidesToShow: 3,
+              slidesToShow: 1,
               dots: false,
               infinite: false,
-              navButtons: false
+              navButtons: false,
+              options: _vm.myOptions
             }
           },
           _vm._l(_vm.filteredLawyers, function(lawyer, index) {
