@@ -18,7 +18,7 @@
       <span class="span_text_carousel text-center">AVVOCATI IN EVIDENZA</span>
       
       <!-- Carousel -->
-      <agile :key="lawyers.length" :slidesToShow="1" :dots="false" :infinite="false"  :navButtons="false" ref="carousel" :options="myOptions">
+      <agile :key="lawyers.length" :slidesToShow="1" :dots="false" :infinite="true"  :navButtons="false" ref="carousel" :options="myOptions" :autoplay="true" :autoplay-speed="5000">
         <div class="slide card my-3 p-3 text-center" v-for="(lawyer,index) in filteredLawyers" :key="index">
           
           <!-- IMG -->
@@ -295,7 +295,7 @@ export default {
     .slide {
       height: 275px;
       position: relative;
-      margin: 0 5px;
+      border:1px solid rgba(221, 221, 221,1);
       background-color: rgba(221, 221, 221,0.5);
 
 
