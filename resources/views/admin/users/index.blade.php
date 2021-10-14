@@ -35,7 +35,7 @@
             {{-- Messages + reviews --}}
             <div class="my-3">
               {{-- Messages --}}
-              <a href="{{route('admin.message_page')}}" type="button" class="btn btn-light position-relative mx-2">
+              <a href="{{route('admin.message_page')}}" type="button" class="btn btn-light position-relative m-2">
                 <i class="bi bi-chat-dots-fill" style="font-size:1.1rem"></i>
                 {{-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bronze_button">
                   {{count($user->messages)}}+
@@ -43,7 +43,7 @@
               </a>
 
               {{-- Review --}}
-              <a href="{{route('admin.review_page')}}" type="button" class="btn btn-light position-relative mx-2">
+              <a href="{{route('admin.review_page')}}" type="button" class="btn btn-light position-relative m-2">
                 <i class="bi bi-pencil" style="font-size:1.1rem"></i>
                 {{-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bronze_button">
                   {{count($user->reviews)}}+
@@ -51,7 +51,7 @@
               </a>
 
               {{-- SPONSOR --}}
-              <a href="{{route('admin.sponsor.index')}}" type="button" class="btn btn-light position-relative mx-2">
+              <a href="{{route('admin.sponsor.index')}}" type="button" class="btn btn-light position-relative m-2">
                 <i class="bi bi-star-fill" style="font-size:1.1rem"></i> 
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bronze_button">
                   BUY
@@ -81,7 +81,7 @@
           {{-- Name --}}
           <div class="row align-items-center">
             <div class="col-sm-3">
-              <h6 class="mb-0">Nome</h6>
+              <h6 class="mb-2">Nome</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               {{$user->name}}
@@ -92,7 +92,7 @@
           {{-- Surname --}}
           <div class="row align-items-center">
             <div class="col-sm-3">
-              <h6 class="mb-0">Cognome</h6>
+              <h6 class="mb-2">Cognome</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               {{$user->surname}}
@@ -103,7 +103,7 @@
           {{-- EMAIL --}}
           <div class="row align-items-center">
               <div class="col-sm-3">
-                  <h6 class="mb-0">Email</h6>
+                  <h6 class="mb-2">Email</h6>
               </div>
               <div class="col-sm-9 text-secondary">
                   {{$user->email}}
@@ -114,7 +114,7 @@
           {{-- Phone --}}
           <div class="row align-items-center">
             <div class="col-sm-3">
-              <h6 class="mb-0">Telefono</h6>
+              <h6 class="mb-2">Telefono</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               {{-- phone right part/ tasto per richiesta numero di telefono --}}
@@ -133,7 +133,7 @@
           {{-- CV --}}
           <div class="row align-items-center">
             <div class="col-sm-3">
-              <h6 class="mb-0">CV</h6>
+              <h6 class="mb-2">CV</h6>
             </div>
             <div class="col-sm-9 text-secondary">
             <!-- Button trigger modal -->
@@ -174,7 +174,7 @@
           {{-- Address --}}
           <div class="row align-items-center">
               <div class="col-sm-3">
-                <h6 class="mb-0">Indirizzo</h6>
+                <h6 class="mb-2">Indirizzo</h6>
               </div>
               <div class="col-sm-9 text-secondary">
                 {{$user->address}}
@@ -185,7 +185,7 @@
           {{-- Specializations --}}
           <div class="row align-items-center">
             <div class="col-sm-3">
-              <h6 class="mb-0">Specializzazioni</h6>
+              <h6 class="mb-2">Specializzazioni</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               @foreach ($user->specializations as $specialization)    
@@ -203,7 +203,7 @@
           {{-- Services --}}
           <div class="row">
             <div class="col-sm-3">
-              <h6 class="mb-0">Prestazioni</h6>
+              <h6 class="mb-2">Prestazioni</h6>
             </div>
             <div class="col-sm-9 text-secondary">
                {{-- services right part/ tasto per richiesta inserimento servizi --}}
