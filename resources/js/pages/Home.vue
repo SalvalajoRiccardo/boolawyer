@@ -251,7 +251,7 @@ export default {
 
     0% {opacity: 0;
         scale: 0;
-        transform: translateY(70px);}
+        transform: translateY(50px);}
 
     100% {opacity: 1;
           scale: 1;
