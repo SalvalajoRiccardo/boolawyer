@@ -19,8 +19,8 @@
 @section('content')
 
 <div class="container">
-    <div class="col-md-6 offset-md-3">
-        <h1>Payment Form</h1>
+    <div class="col-md-6 offset-md-3 shadow">
+        <h3 class="pt-4">Payment Form</h3>
         <div class="spacer"></div>
 
         @if (session()->has('success_message'))
@@ -139,7 +139,7 @@
             <div class="spacer"></div>
 
             <input id="nonce" name="payment_method_nonce" type="hidden" />
-            <button type="submit" class="btn btn-success">Submit Payment</button>
+            <button type="submit" class="btn btn-success mb-4">Submit Payment</button>
         </form>
     </div>
 </div>

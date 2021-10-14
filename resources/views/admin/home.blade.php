@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    {{-- <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
@@ -18,23 +18,27 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    {{-- MESSAGES --}}
-    <div class="row py-3">
+    {{-- MESSAGES/REVIEWS PER MONTHS --}}
+    <div class="row py-3 text-center">
         <div class="col-12 col-md-6 p-3">
+            <h4 class="py-2">Messages per months</h4>
             <canvas id="MessageChart" class="rounded shadow"></canvas>
         </div>
+        <div class="col-12 col-md-6 p-3 text-center">
+            <h4 class="py-2">Reviews per months</h4>
+            <canvas id="ReviewChart" class="rounded shadow"></canvas>
+        </div>
+            
+    </div>
+
+    {{-- MESSAGES/REVIEWS PER YEARS --}}
+    <div class="row py-3">
         <div class="col-12 col-md-6 p-3">
             <canvas id="MessageChartYear" class="rounded shadow"></canvas>
         </div>
-    </div>
 
-    {{-- REVIEWS --}}
-    <div class="row py-3">
-        <div class="col-12 col-md-6 p-3">
-            <canvas id="ReviewChart" class="rounded shadow"></canvas>
-        </div>
         <div class="col-12 col-md-6 p-3">
             <canvas id="ReviewChartYear" class="rounded shadow"></canvas>
         </div>
@@ -64,7 +68,7 @@
                 {
                     label: 'Reviews per month', 
                     data:  {!! json_encode($monthCountReview)!!},
-                    backgroundColor: ["rgba(0,0,128,0.4)","rgba(0,0,128,0.6)","rgba(0,0,128,0.7)"],
+                    backgroundColor: ["rgba(44, 64, 101,0.4)","rgba(44, 64, 101,0.6)","rgba(44, 64, 101,0.7)"],
                     fill:true
                 },
             ]
@@ -114,7 +118,7 @@
                 {
                     label: 'Reviews per year', 
                     data:  {!! json_encode($yearCountReview)!!},
-                    backgroundColor: ["rgba(0,0,53,0.7)"],
+                    backgroundColor: ["rgb(44, 64, 101)"],
                 },
             ]
         },
@@ -163,7 +167,7 @@
                 {
                     label: 'Message per month', 
                     data:  {!! json_encode($monthCountMessage)!!},
-                    backgroundColor: ["rgba(128,0,0,0.4)","rgba(128,0,0,0.6)","rgba(128,0,0,0.7)"],
+                    backgroundColor: ["rgba(131, 53, 76,0.4)","rgba(131, 53, 76,0.6)","rgba(131, 53, 76,0.7)"],
                     fill:true
                 },
             ]
@@ -213,7 +217,7 @@
                 {
                     label: 'Messages per year', 
                     data:  {!! json_encode($yearCountMessage)!!},
-                    backgroundColor: ["rgba(155,17,30,0.7)"],
+                    backgroundColor: ["rgb(131, 53, 76)"],
                 },
             ]
         },

@@ -31,8 +31,11 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md my_navbar shadow-sm">
             <div class="container">
+                <div class="my_logo mx-2">
+                    <img src="{{asset('images/logo.png')}}" alt="">
+                </div>
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -88,11 +91,11 @@
 
                 <!-- start SIDEBAR -->
                 @auth
-                    <div class="col-auto col-md-3 col-xl-2 px-0 bg-dark">
-                        <div  class="d-flex align-items-center justify-content-center bg-secondary text-white">
+                    <div class="col-auto col-md-3 col-xl-2 px-0 my_sidebar">
+                        <div class="d-flex align-items-center justify-content-center my_dashboard">
                             <span class="d-none d-sm-inline py-3">Dashboard</span>
                         </div>
-                        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 bg-dark min-vh-100">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 my_menu min-vh-100">
                             <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                                 <li>  
                                     <a href="{{route('admin.users.index')}}" class="nav-link align-middle px-0 ">

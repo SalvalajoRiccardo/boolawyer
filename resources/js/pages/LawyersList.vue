@@ -31,9 +31,9 @@
         <div class="card my-3 p-3 text-center">
 
           <!-- Image -->
-          <div class="rounded-circle overflow-hidden m-auto" style="width:150px; height:150px;">
+          <div class="rounded-circle overflow-hidden m-auto bg-white" style="width:150px; height:150px;">
             <img v-if="lawyer.photo" :src="lawyer.photo" :alt="lawyer.name" class="img-fluid" :title="lawyer.name">
-            <img  v-else src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle m-auto" width="150">
+            <img  v-else :src="'/images/user.png'" alt="Admin" class="rounded-circle m-auto" width="150">
           </div>
 
           <div class="card-body">
@@ -46,7 +46,7 @@
               </div>
 
               <div v-if="lawyer.reviews.length >= 1" class="badge rounded-pill text-white position-relative mx-1">
-                Voto medio: <span>{{getVoteReview(lawyer.reviews)}}</span>
+                Voto medio: <span>{{getVoteReview(lawyer.reviews).toFixed(1)}}</span>
               </div>
 
             </div>

@@ -2599,6 +2599,50 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Home',
@@ -2613,6 +2657,13 @@ __webpack_require__.r(__webpack_exports__);
       specializationsArray: [],
       selectedSpec: null
     };
+  },
+  computed: {
+    filteredLawyers: function filteredLawyers() {
+      return this.lawyers.filter(function (element) {
+        return element.sponsors.length >= 1;
+      });
+    }
   },
   created: function created() {
     // this.getUsers(1,this.selectedSpec, this.orderByNum, this.orderByVote);
@@ -7527,7 +7578,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@-webkit-keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\nbody {\n  background-image: linear-gradient(to right, rgba(44, 64, 101, 0.3) 0%, rgba(182, 157, 115, 0.3) 100%), url(\"/images/pexels-photo-8755742.jpeg\");\n  background-size: cover;\n  background-position: top;\n  font-family: \"Times New Roman\", Times, serif;\n}\n.btn-blue {\n  background-color: #2c4065;\n  color: #ddd;\n  font-size: 1.3rem;\n  transition: all 0.8s;\n}\n.btn-blue:hover {\n  background-color: #2c4065;\n  color: #ddd;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.btn-bronze {\n  background-color: rgba(182, 158, 115, 0.9);\n  color: #2c4065;\n  font-size: 1rem;\n  font-weight: 600 !important;\n  transition: all 0.8s;\n}\n.btn-bronze:hover {\n  background-color: #b69d73;\n  color: #2c4065;\n  transform: scale(1.1);\n  z-index: 1;\n}\n@media screen and (max-width: 600px) {\n.card-body {\n    display: none;\n}\n}\n.wrapper {\n  position: relative;\n}\n.wrapper .slide {\n  height: 255px;\n  position: relative;\n  margin: 0 5px;\n}\n@media screen and (max-width: 600px) {\n.wrapper .slide {\n    height: 150px;\n}\n}\n.wrapper .slide .card-body {\n  text-align: center;\n  width: 100%;\n  background-color: #ddd;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.wrapper .slide img {\n  width: 100%;\n}\n.wrapper .btn {\n  background-color: white;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  position: absolute;\n  top: 30%;\n  right: 1%;\n  opacity: 0.6;\n}\n.wrapper .btn:hover {\n  cursor: pointer;\n  opacity: 1;\n}\n.wrapper .btn_prev {\n  left: -10%;\n}\n.wrapper .btn_next {\n  right: -10%;\n}", ""]);
+exports.push([module.i, "/* Typography */\n.span_text {\n  text-transform: uppercase;\n  color: #b69d73;\n  font-weight: bold;\n  font-size: 20px;\n}\n.span_text_carousel {\n  text-transform: uppercase;\n  color: white;\n  font-weight: bold;\n  font-size: 24px;\n  text-shadow: 1.25px 1.25px #2c4065, 1px 1px #2c4065, 0.75px 0.75px #2c4065, 0.5px 0.5px #2c4065, 0.25px 0.25px #2c4065;\n}\n.h2_text_light {\n  color: #ddd;\n  font-weight: bold;\n  font-size: 40px;\n  width: 80%;\n  margin: 0 auto;\n}\n.h2_text_dark {\n  color: #2c4065;\n}\n.h3_text {\n  font-style: italic;\n  color: #b69d73;\n  font-weight: bold;\n  font-size: 36px;\n}\n.p_text {\n  font-size: 16px;\n  letter-spacing: 1px;\n  line-height: 26px;\n  color: #000223;\n}\n@-webkit-keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@-webkit-keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\nbody {\n  background-image: linear-gradient(to right, rgba(44, 64, 101, 0.4) 0%, rgba(182, 157, 115, 0.4) 100%), url(\"/images/pexels-photo-8755742.jpeg\");\n  background-size: cover;\n  background-position: top;\n  font-family: \"Times New Roman\", Times, serif;\n}\n.btn-blue {\n  background-color: #2c4065;\n  color: #ddd;\n  font-size: 1.3rem;\n  transition: all 0.8s;\n}\n.btn-blue:hover {\n  background-color: #2c4065;\n  color: #ddd;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.btn-bronze {\n  background-color: rgba(182, 158, 115, 0.9);\n  color: #2c4065;\n  font-size: 1rem;\n  font-weight: 600 !important;\n  transition: all 0.8s;\n}\n.btn-bronze:hover {\n  background-color: #b69d73;\n  color: #2c4065;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.first_container {\n  height: 500px;\n}\n.first_container .pippo {\n  height: 500px;\n}\n.wrapper {\n  position: relative;\n}\n.wrapper .slide {\n  height: 275px;\n  position: relative;\n  margin: 0 5px;\n  background-color: rgba(221, 221, 221, 0.5);\n}\n.wrapper .slide .my_card-body {\n  text-align: center;\n  width: 100%;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.wrapper .slide .my_card-body h4 {\n  color: #2c4065;\n  font-size: 1.5rem;\n  font-weight: 800;\n  letter-spacing: 2px;\n}\n.wrapper .slide .img_box {\n  background-color: white;\n}\n.wrapper .slide .img_box img {\n  width: 100%;\n}\n.wrapper .button {\n  background-color: white;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  position: absolute;\n  top: 50%;\n  right: 1%;\n  opacity: 0.6;\n}\n.wrapper .button:hover {\n  cursor: pointer;\n  opacity: 1;\n}\n.wrapper .btn_prev {\n  left: -8%;\n}\n.wrapper .btn_next {\n  right: -8%;\n}\n.about_container {\n  background-color: rgba(221, 221, 221, 0.9);\n}\n.about_container .justice_box {\n  height: 300px;\n}\n.about_container .justice_box img {\n  height: 100%;\n}", ""]);
 
 // exports
 
@@ -44560,27 +44611,16 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("section", [
-    _c(
-      "div",
-      { staticClass: "row justify-content-center my-3" },
-      _vm._l(_vm.specializationsArray, function(item, index) {
-        return _c(
-          "router-link",
-          {
-            key: index,
-            staticClass: "btn btn-blue mx-2 mt-4",
-            attrs: { to: { name: "lawyers", params: { id: item.id } } }
-          },
-          [_vm._v(" \n      " + _vm._s(item.name) + "\n    ")]
-        )
-      }),
-      1
-    ),
+    _vm._m(0),
     _vm._v(" "),
     _c(
       "div",
-      { staticClass: "wrapper" },
+      { staticClass: "wrapper text-center" },
       [
+        _c("span", { staticClass: "span_text_carousel text-center" }, [
+          _vm._v("SPONSORED LAWYERS")
+        ]),
+        _vm._v(" "),
         _c(
           "agile",
           {
@@ -44593,21 +44633,69 @@ var render = function() {
               navButtons: false
             }
           },
-          _vm._l(_vm.lawyers, function(el, index) {
-            return _c("div", { key: index, staticClass: "slide card" }, [
-              _c("img", {
-                attrs: {
-                  src: "http://localhost:8000/storage/" + el.photo,
-                  alt: el.name
-                }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h4", { staticClass: "card-title" }, [
-                  _vm._v(_vm._s(el.name))
-                ])
-              ])
-            ])
+          _vm._l(_vm.filteredLawyers, function(lawyer, index) {
+            return _c(
+              "div",
+              { key: index, staticClass: "slide card my-3 p-3 text-center" },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "rounded-circle overflow-hidden m-auto img_box",
+                    staticStyle: { width: "150px", height: "150px" }
+                  },
+                  [
+                    lawyer.photo
+                      ? _c("img", {
+                          staticClass: "img-fluid",
+                          attrs: {
+                            src:
+                              "http://localhost:8000/storage/" + lawyer.photo,
+                            alt: lawyer.name,
+                            title: lawyer.name
+                          }
+                        })
+                      : _c("img", {
+                          staticClass: "rounded-circle m-auto",
+                          attrs: {
+                            src:
+                              "https://bootdey.com/img/Content/avatar/avatar7.png",
+                            alt: "Admin",
+                            width: "150"
+                          }
+                        })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("img"),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "my_card-body pb-3" },
+                  [
+                    _c("h4", [
+                      _vm._v(_vm._s(lawyer.name) + " " + _vm._s(lawyer.surname))
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "btn btn-bronze",
+                        attrs: {
+                          to: {
+                            name: "lawyer-detail",
+                            params: { slug: lawyer.slug }
+                          }
+                        }
+                      },
+                      [_vm._v("\n            Dettagli\n          ")]
+                    )
+                  ],
+                  1
+                )
+              ]
+            )
           }),
           0
         ),
@@ -44615,7 +44703,7 @@ var render = function() {
         _c(
           "button",
           {
-            staticClass: "btn btn_prev",
+            staticClass: "button btn_prev",
             on: {
               click: function($event) {
                 return _vm.$refs.carousel.goToPrev()
@@ -44628,7 +44716,7 @@ var render = function() {
         _c(
           "button",
           {
-            staticClass: "btn btn_next",
+            staticClass: "button btn_next",
             on: {
               click: function($event) {
                 return _vm.$refs.carousel.goToNext()
@@ -44639,10 +44727,113 @@ var render = function() {
         )
       ],
       1
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "container about_container py-5 rounded mt-3 mb-5" },
+      [
+        _c("div", { staticClass: "row align-items-center" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "col-12 col-md-4 justice_box text-center" },
+            [
+              _c("img", {
+                attrs: { src: "/images/justice.png", alt: "justice statue" }
+              })
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _vm._m(2),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "row justify-content-center my-3" },
+          _vm._l(_vm.specializationsArray, function(item, index) {
+            return _c(
+              "router-link",
+              {
+                key: index,
+                staticClass: "btn btn-blue mx-2 mt-4",
+                attrs: { to: { name: "lawyers", params: { id: item.id } } }
+              },
+              [_vm._v(" \n        " + _vm._s(item.name) + "\n      ")]
+            )
+          }),
+          1
+        )
+      ]
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container first_container" }, [
+      _c(
+        "div",
+        { staticClass: "row justify-content-center justify-content-md-center" },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "col-12 col-md-6 pippo  text-center d-flex flex-column justify-content-center"
+            },
+            [
+              _c("span", { staticClass: "span_text my-2" }, [
+                _vm._v("Legal counseling")
+              ]),
+              _vm._v(" "),
+              _c("h2", { staticClass: "h2_text_light" }, [
+                _vm._v("If you have any legal problems in your life")
+              ]),
+              _vm._v(" "),
+              _c("h3", { staticClass: "h3_text" }, [_vm._v("we are available")])
+            ]
+          )
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-12 col-md-8 px-5 " }, [
+      _c("span", { staticClass: "span_text" }, [_vm._v("Who we are")]),
+      _vm._v(" "),
+      _c("h2", { staticClass: "h2_text_dark" }, [
+        _vm._v("We are here to fight against any violence with experience")
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "p_text" }, [
+        _vm._v(
+          "Provide your request to the right lawyers to help you, selected for their expertise,the lawyers  will contact you directly to arrange to help you. All lawyers in our network are highly ranked by the independent legal directories, Legal 500 and Chambers and Partners."
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-12 col-md-8 px-5" }, [
+        _c("span", { staticClass: "span_text" }, [_vm._v("What we do")]),
+        _vm._v(" "),
+        _c("h5", { staticClass: "my-2" }, [
+          _vm._v("Look for your lawyer by choosing a specialization")
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -44763,7 +44954,7 @@ var render = function() {
             _c(
               "div",
               {
-                staticClass: "rounded-circle overflow-hidden m-auto",
+                staticClass: "rounded-circle overflow-hidden m-auto bg-white",
                 staticStyle: { width: "150px", height: "150px" }
               },
               [
@@ -44779,8 +44970,7 @@ var render = function() {
                   : _c("img", {
                       staticClass: "rounded-circle m-auto",
                       attrs: {
-                        src:
-                          "https://bootdey.com/img/Content/avatar/avatar7.png",
+                        src: "/images/user.png",
                         alt: "Admin",
                         width: "150"
                       }
@@ -44821,7 +45011,11 @@ var render = function() {
                         [
                           _vm._v("\n              Voto medio: "),
                           _c("span", [
-                            _vm._v(_vm._s(_vm.getVoteReview(lawyer.reviews)))
+                            _vm._v(
+                              _vm._s(
+                                _vm.getVoteReview(lawyer.reviews).toFixed(1)
+                              )
+                            )
                           ])
                         ]
                       )
@@ -60569,7 +60763,7 @@ module.exports = function(module) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_App__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./views/App */ "./resources/js/views/App.vue");
 /* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./router */ "./resources/js/router.js");
-/* harmony import */ var vue_agile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-agile */ "./node_modules/vue-agile/src/index.js");
+/* harmony import */ var vue_agile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-agile */ "./node_modules/vue-agile/src/index.js");
 // First we will load all of this project's JavaScript dependencies which
 // includes Vue and other libraries. It is a great starting point when
 // building robust, powerful web applications using Vue and Laravel.
@@ -60587,7 +60781,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'; // 
 
 
 
-Vue.use(vue_agile__WEBPACK_IMPORTED_MODULE_3__["default"]);
+Vue.use(vue_agile__WEBPACK_IMPORTED_MODULE_2__["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

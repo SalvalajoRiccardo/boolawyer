@@ -19,11 +19,14 @@
        
         <div class="d-flex flex-column align-items-center text-center card-body">
           {{-- IMAGE --}}
-          @if ( $user->photo)
-            <img src="{{ asset('storage/' . $user->photo)}}" class="img-fluid" alt="{{$user->name}}"  title="{{$user->name}}">
-          @else
-            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
-          @endif
+          <div class="img_backend_box">
+            @if ( $user->photo)
+              <img src="{{ asset('storage/' . $user->photo)}}" class="img-fluid" alt="{{$user->name}}"  title="{{$user->name}}">
+            @else
+              <img src="{{asset('images/user.png')}}" alt="Admin" class="rounded-circle" width="150">
+            @endif
+
+          </div>
           
           
           <div class="mt-3">
@@ -34,31 +37,31 @@
               {{-- Messages --}}
               <a href="{{route('admin.message_page')}}" type="button" class="btn btn-light position-relative mx-2">
                 <i class="bi bi-chat-dots-fill" style="font-size:1.1rem"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bronze_button">
                   {{count($user->messages)}}+
-                </span>
+                </span> --}}
               </a>
 
               {{-- Review --}}
               <a href="{{route('admin.review_page')}}" type="button" class="btn btn-light position-relative mx-2">
                 <i class="bi bi-pencil" style="font-size:1.1rem"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bronze_button">
                   {{count($user->reviews)}}+
-                </span>
+                </span> --}}
               </a>
 
               {{-- SPONSOR --}}
               <a href="{{route('admin.sponsor.index')}}" type="button" class="btn btn-light position-relative mx-2">
                 <i class="bi bi-star-fill" style="font-size:1.1rem"></i> 
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bronze_button">
                   BUY
                 </span>
               </a>
             </div>
 
-            <a href="{{route('admin.users.edit', $user->id )}}" class="btn btn-secondary d-block">Edit Info</a>
-            <a href="{{route('change.password')}}" class="btn btn-primary d-block my-3">Change password</a>
-            <a href="#" class="btn btn-danger d-block">Delete Profile</a>
+            <a href="{{route('admin.users.edit', $user->id )}}" class="btn grey_button_p d-block">Edit Info</a>
+            <a href="{{route('change.password')}}" class="btn blue_button_p d-block my-3">Change password</a>
+            <a href="#" class="btn btn-dark d-block">Delete Profile</a>
             
           </div>
 
@@ -118,7 +121,7 @@
               @if ($user->phone)
               {{$user->phone}}
               @else
-                <a class="btn btn-outline-primary" href="{{route('admin.users.edit', $user->id )}}">
+                <a class="btn blue_button_outline_p" href="{{route('admin.users.edit', $user->id )}}">
                   Insert your Phone number
                 </a>
               @endif
@@ -136,11 +139,11 @@
             <!-- Button trigger modal -->
               
               @if ($user->cv)
-              <button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+              <button  type="button" class="btn blue_button_p" data-toggle="modal" data-target="#exampleModalLong">
                 Visualizza CV
               </button>
               @else
-                    <a class="btn btn-warning" href="{{route('admin.users.edit', $user->id )}}">
+                    <a class="btn bronze_button" href="{{route('admin.users.edit', $user->id )}}">
                       Inserisci il tuo CV
                     </a>
               @endif
@@ -186,11 +189,11 @@
             </div>
             <div class="col-sm-9 text-secondary">
               @foreach ($user->specializations as $specialization)    
-                <span span class="text-secondary mb-1 btn alert-primary">{{$specialization->name}}</span>
+                <span span class="btn blue_button_transparent">{{$specialization->name}}</span>
               @endforeach
 
               {{-- da aggiungere effetto a comparsa su hover --}}
-              <a class="btn btn-outline-primary" href="{{route('admin.users.edit', $user->id )}}">
+              <a class="btn blue_button_outline_p" href="{{route('admin.users.edit', $user->id )}}">
                 Add more <i class="bi bi-plus-lg"></i>
               </a>    
             </div>
@@ -207,7 +210,7 @@
                @if ($user->services)
                 <p>{{$user->services}}</p>
                @else
-                <a class="btn btn-outline-primary" href="{{route('admin.users.edit', $user->id )}}">
+                <a class="btn blue_button_outline_p" href="{{route('admin.users.edit', $user->id )}}">
                   Insert your services
                 </a>
                @endif

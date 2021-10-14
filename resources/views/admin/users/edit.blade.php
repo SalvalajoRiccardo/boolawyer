@@ -192,7 +192,7 @@
           </div>
 
           <!-- Update Button -->
-          <button type="submit" class="btn btn-primary">Update</button>
+          <button type="submit" class="btn blue_button_p">Update</button>
 
         </form>
 

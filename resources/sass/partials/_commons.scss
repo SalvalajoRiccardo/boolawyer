@@ -1,0 +1,152 @@
+.my_logo{
+    width:40px;
+        img{
+            width:100%
+        }
+}
+
+
+.my_navbar{
+    color: #b69d73;
+    background-color: #83354c;
+   a{
+    color: whitesmoke;
+   }
+}
+
+.my_sidebar{
+    background-color: #282828;
+    
+
+    .my_dashboard{
+        background-image: linear-gradient(225deg,  #b69d73 0%, rgba(182, 157, 115,0.6) 50%, rgba(182, 157, 115,0.3)100%);
+        color: whitesmoke;
+    }
+
+    .my_menu{
+        ul{
+            li{
+                a{
+                    color: whitesmoke;
+                    h6{
+                        padding-left: 5px;
+                        color: whitesmoke;
+                        &:hover{
+                            color:#b69d73;
+                        }
+                    }
+                }
+
+                ul{
+                    li{
+                        span{
+                            padding-left: 5px;
+                            &:hover{
+                                color:#b69d73;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+.img_backend_box{
+    width:300px;
+    height: 300px;
+    overflow: hidden;
+    img{
+        width:100%
+    }
+}
+
+// ALL BUTTONS
+.blue_button_p{
+    background-color: #2c4065;
+    color: white;
+
+    &:hover{
+        background-color: #2d4574;
+        color: white;
+    } 
+}
+
+.blue_button_outline_p{
+    border:2px solid #2c4065;
+    background-color: white;
+    color: #122444;
+    transition: all 0.4s linear;
+    &:hover{
+        color: white;
+        background-color: #2c4065;  
+    }
+}
+
+.blue_button_transparent{
+    color: white;
+    background-color: #2c406593;
+    &:hover{
+        color:burlywood
+    }
+}
+
+.grey_button_p{
+    background-color: #b6b6b6;
+    color: white;
+
+    &:hover{
+        background-color: #979797;
+        color: white;
+    }
+          
+}
+
+.my_message{
+    .my_message_header{
+        background-color: rgba(40, 40, 40,0.1);
+        i{
+            color:#c5ab7f
+        }
+        p{
+            color:#a38859
+        }
+    }
+
+    .my_message_footer{
+        color: grey;
+    }
+    
+}
+
+// BADGES
+.bronze_button{
+    background-color:#dbb168;
+    color: white;
+}
+
+
+// LOGIN/REGISTER PAGES STYLE
+.register_login_image{
+    background-image:
+    linear-gradient(to right, 
+      rgba(44, 64, 101, 0.4) 0%,
+      rgba(182,157,115,0.4) 100%),
+      url('/images/pexels-photo-8755742.jpeg');
+    background-size: cover;
+}
+
+.img_login{
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.background_transparent_bronze{
+    background-color:#b69f732f ;
+}
+
+// STATISTIC PAGE
+.row_chart_p{
+    height: 200px;
+}

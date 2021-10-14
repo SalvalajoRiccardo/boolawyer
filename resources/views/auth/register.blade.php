@@ -2,15 +2,20 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+    <div class="card overflow-hidden">
+        <div class="row justify-content-center">
+            <div class="col-md-4 register_login_image">
+                {{-- <img src="{{asset('images/pexels-photo-8755742.jpeg')}}" class="img-fluid rounded-start" alt="..."> --}}
+            </div>
+            <div class="col-md-8 p-0 ">
+                <div class="card-body text-center p-0">
+                  
+                    <div class="card-header background_transparent_bronze"><h4>{{ __('Register') }}</h4></div>
+                
+                    <form method="POST" action="{{ route('register') }}" class="py-5">
                         @csrf
-                       
+                        
                     
                         {{-- NAME --}}
                         <div class="form-group row">
@@ -46,11 +51,13 @@
                         <div class="form-group row">
                             <label class="col-md-4 col-form-label text-md-right">{{ __('Specializations') }}</label>
                             
-                            <select name="specializations">
-                                @foreach($data as $spec)
-                                <option value="{{$spec->id}}">{{$spec->name}}</option>
-                                @endforeach
-                            </select>
+                            <div class="col-md-6">
+                                <select name="specializations"  class="form-control">
+                                    @foreach($data as $spec)
+                                    <option value="{{$spec->id}}">{{$spec->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
                         
                         {{-- ADDRESS --}}
@@ -106,10 +113,10 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-                                 
+                                    
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn blue_button_p">
                                     {{ __('Register') }}
                                 </button>
                             </div>
@@ -117,21 +124,24 @@
 
                         
                     </form>
-
-                    {{-- @if($errors->any()){
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{$error}}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    }
-                    @endif --}}
-
+    
+                        {{-- @if($errors->any()){
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{$error}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        }
+                        @endif --}}
+    
                 </div>
             </div>
         </div>
     </div>
+    
+
+
 </div>
 @endsection

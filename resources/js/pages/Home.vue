@@ -1,37 +1,41 @@
 <template>
   <section>
-    
-
-    <!-- BUTTONS FOR ALL THE SPECIALIZATIONS -->
-    <div class="row justify-content-center my-3">
-     
-      <router-link 
-        :to="{name:'lawyers', params:{id: item.id}}" 
-        v-for="(item,index) in specializationsArray" :key="index"
-        class="btn btn-blue mx-2 mt-4"> 
-        {{item.name}}
-      </router-link>
+  
+    <div class="container first_container">
+      <div class="row justify-content-center justify-content-md-center">
+        <div class="col-12 col-md-6 pippo  text-center d-flex flex-column justify-content-center">
+          <span class="span_text my-2">Legal counseling</span>
+          <h2 class="h2_text_light">If you have any legal problems in your life</h2>
+          <h3 class="h3_text">we are available</h3>
+        </div>
+      </div>
 
     </div>
 
-    <!-- <div class="row" v-for="(lawyer,index) in lawyers" :key="index">
-        <h2 class="text-white" v-if="lawyer.sponsors.length >= 1">{{lawyer.slug}}</h2>
-    </div> -->
+    <!-- MEDICI IN EVIDENZA -->
+    <div class="wrapper text-center">
 
-    <div class="wrapper">
+     
+        <span class="span_text_carousel text-center">SPONSORED LAWYERS</span>
+      
 
       <!-- Carousel -->
       <agile :key="lawyers.length" :slidesToShow="3" :dots="false" :infinite="false"  :navButtons="false" ref="carousel">
-        <div class="slide card" v-for="(el,index) in lawyers" :key="index">
-
+        <div class="slide card my-3 p-3 text-center" v-for="(lawyer,index) in filteredLawyers" :key="index">
+          
           <!-- IMG -->
-          <img :src="`http://localhost:8000/storage/` + el.photo" :alt="el.name">
+          <div class="rounded-circle overflow-hidden m-auto img_box" style="width:150px; height:150px;">
+            <img v-if="lawyer.photo" :src="`http://localhost:8000/storage/` + lawyer.photo" :alt="lawyer.name" class="img-fluid" :title="lawyer.name">
+            <img  v-else src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle m-auto" width="150">
+          </div>
+          <img >
           <!-- Card Body -->
-          <div class="card-body">
-
-            
+          <div class="my_card-body pb-3">
             <!-- Movies name -->
-            <h4 class="card-title">{{el.name}}</h4>
+            <h4>{{ lawyer.name }} {{lawyer.surname}}</h4>
+            <router-link :to="{name: 'lawyer-detail', params: { slug: lawyer.slug }}" class="btn btn-bronze">
+              Dettagli
+            </router-link>
 
           </div> 
 
@@ -39,12 +43,52 @@
       </agile>
 
       <!-- LEFT button -->
-      <button class="btn btn_prev" @click="$refs.carousel.goToPrev()"><i class="bi bi-chevron-left"></i></button>
+      <button class="button btn_prev" @click="$refs.carousel.goToPrev()"><i class="bi bi-chevron-left"></i></button>
       <!-- RIGHT button -->
-      <button class="btn btn_next" @click="$refs.carousel.goToNext()"><i class="bi bi-chevron-right"></i></button> 
+      <button class="button btn_next" @click="$refs.carousel.goToNext()"><i class="bi bi-chevron-right"></i></button> 
 
     </div>
 
+    <div class="container about_container py-5 rounded mt-3 mb-5">
+    <!-- ABOUT SECTION -->
+      <div class="row align-items-center">
+        <div class="col-12 col-md-8 px-5 ">
+            <span class="span_text">Who we are</span>
+            <h2 class="h2_text_dark">We are here to fight against any violence with experience</h2>
+            <p class="p_text">Provide your request to the right lawyers to help you, selected for their expertise,the lawyers  will contact you directly to arrange to help you. All lawyers in our network are highly ranked by the independent legal directories, Legal 500 and Chambers and Partners.</p>
+        </div>
+        <div class="col-12 col-md-4 justice_box text-center">
+            <img :src="'/images/justice.png'" alt="justice statue">
+        </div>
+
+      </div>
+      <!-- BUTTONS FOR ALL THE SPECIALIZATIONS -->
+      <div class="row">
+        <div class="col-12 col-md-8 px-5">
+          <span class="span_text">What we do</span>
+          <h5 class="my-2">Look for your lawyer by choosing a specialization</h5>
+        </div>
+      </div>
+      <div class="row justify-content-center my-3">
+        
+        <router-link 
+          :to="{name:'lawyers', params:{id: item.id}}" 
+          v-for="(item,index) in specializationsArray" :key="index"
+          class="btn btn-blue mx-2 mt-4"> 
+          {{item.name}}
+        </router-link>
+
+      </div>
+    </div>
+  
+      
+
+
+    <!-- <div class="row" v-for="(lawyer,index) in lawyers" :key="index">
+        <h2 class="text-white" v-if="lawyer.sponsors.length >= 1">{{lawyer.slug}}</h2>
+    </div> -->
+
+  
   </section>
 </template>
 
@@ -53,8 +97,8 @@ import { VueAgile } from 'vue-agile';
 export default {
   name:'Home',
   components:{
-      agile: VueAgile 
-    },
+    agile: VueAgile,
+  },
   data(){
     return{
       url:'http://localhost:8000/api/users',
@@ -63,6 +107,14 @@ export default {
       specializationsArray:[],
       selectedSpec: null,
 
+    }
+  },
+
+  computed : {
+    filteredLawyers : function (){
+      return this.lawyers.filter((element)=>{
+         return element.sponsors.length >= 1;
+      });
     }
   },
 
@@ -106,6 +158,53 @@ export default {
   $lawred: #83354c;
   $notwhite: #ddd;
 
+  /* Typography */
+  .span_text{
+    text-transform:uppercase;
+    color: #b69d73;
+    font-weight:bold;
+    font-size: 20px;
+  }
+
+  .span_text_carousel{
+    text-transform:uppercase;
+    color: white;
+    font-weight:bold;
+    font-size: 24px;
+    text-shadow: 
+        1.25px 1.25px  #2c4065,
+        1px 1px        #2c4065,
+        0.75px 0.75px  #2c4065,
+        0.5px 0.5px    #2c4065,
+        0.25px 0.25px  #2c4065;
+  }
+
+  .h2_text_light{
+    color:$notwhite;
+    font-weight:bold;
+    font-size: 40px;
+    width:80%;
+    margin: 0 auto;
+  }
+
+  .h2_text_dark{
+    color:$lawblue;
+  }
+
+  .h3_text{
+    font-style: italic;
+    color:$lawbronze;
+    font-weight:bold;
+    font-size: 36px;
+  }
+
+  .p_text{
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 26px;
+    color:#000223
+  }
+
   // Animations
   @keyframes slideInLeft {
 
@@ -131,8 +230,8 @@ export default {
   body {
     background-image: 
     linear-gradient(to right, 
-      rgba(44, 64, 101, 0.3) 0%,
-      rgba(182,157,115,0.3) 100%),
+      rgba(44, 64, 101, 0.4) 0%,
+      rgba(182,157,115,0.4) 100%),
     url('/images/pexels-photo-8755742.jpeg');
     background-size: cover;
     background-position: top;
@@ -168,46 +267,54 @@ export default {
     }
   }
 
-  @media screen and (max-width: 600px) {
-    .card-body {
-      display: none;
+  .first_container{
+    height: 500px;
+    .pippo{
+      height: 500px;
     }
   }
-
   .wrapper{
     position: relative;
     
     .slide {
-      height: 255px;
+      height: 275px;
       position: relative;
       margin: 0 5px;
+      background-color: rgba(221, 221, 221,0.5);
 
-      @media screen and (max-width: 600px){
-        height: 150px;
-      }
 
-      .card-body {
+      .my_card-body {
         text-align: center;
         width: 100%;
-        background-color: $notwhite;
         position: absolute;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+
+        h4 {
+          color: $lawblue;
+          font-size: 1.5rem;
+          font-weight: 800;
+          letter-spacing: 2px;
+        }
+
       }
 
-      img {
+      .img_box{
+        background-color: white;
+        img {
         width: 100%;
+      }
       }
     }
 
-    .btn{
+    .button{
       background-color: white;
       width:50px;
       height: 50px;
       border-radius: 50% ;
       position: absolute;
-      top: 30%;
+      top: 50%;
       right:1%;
       opacity:0.6;
       &:hover{
@@ -217,10 +324,21 @@ export default {
         
     }
     .btn_prev{
-      left:-10%;
+      left:-8%;
     }
     .btn_next{
-      right: -10%;
+      right: -8%;
     }
   }
+
+  .about_container{
+    background-color: rgba(221, 221, 221,0.9);
+
+    .justice_box{
+        height:300px;
+        img{
+            height: 100%;
+        }
+    }
+}
 </style>
