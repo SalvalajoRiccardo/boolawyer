@@ -60,6 +60,7 @@ export default {
   $lawred: #83354c;
   $notwhite: #ddd;
 
+
    nav.navbar {
        background-color: $lawred;
    }
@@ -83,8 +84,7 @@ export default {
        animation: slideInRight 1s ease-out;
        transition: .5s;
        &:hover {
-           transform: scale(1.1);
-           color: $lawbronze;
+           color: $lawblue;
        }
        & span {
            font-size: 2rem;

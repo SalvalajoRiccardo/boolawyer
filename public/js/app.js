@@ -7520,7 +7520,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "nav.navbar {\n  background-color: #83354c;\n}\n.logo_box {\n  color: #ddd;\n  text-shadow: 0 3px #2c4065;\n  -webkit-animation: slideInLeft 1s ease-out;\n          animation: slideInLeft 1s ease-out;\n}\n.logo_box img {\n  max-height: 4rem;\n}\n.header-nav li > a,\n.header-nav li > a:link,\n.header-nav li > a:active {\n  text-decoration: none;\n  font-size: 1.2rem;\n  color: #b69d73;\n  -webkit-animation: slideInRight 1s ease-out;\n          animation: slideInRight 1s ease-out;\n  transition: 0.5s;\n}\n.header-nav li > a:hover,\n.header-nav li > a:link:hover,\n.header-nav li > a:active:hover {\n  transform: scale(1.1);\n  color: #b69d73;\n}\n.header-nav li > a span,\n.header-nav li > a:link span,\n.header-nav li > a:active span {\n  font-size: 2rem;\n  font-weight: 300;\n}\nspan.navbar-toggler-icon {\n  color: #b69d73;\n}", ""]);
+exports.push([module.i, "nav.navbar {\n  background-color: #83354c;\n}\n.logo_box {\n  color: #ddd;\n  text-shadow: 0 3px #2c4065;\n  -webkit-animation: slideInLeft 1s ease-out;\n          animation: slideInLeft 1s ease-out;\n}\n.logo_box img {\n  max-height: 4rem;\n}\n.header-nav li > a,\n.header-nav li > a:link,\n.header-nav li > a:active {\n  text-decoration: none;\n  font-size: 1.2rem;\n  color: #b69d73;\n  -webkit-animation: slideInRight 1s ease-out;\n          animation: slideInRight 1s ease-out;\n  transition: 0.5s;\n}\n.header-nav li > a:hover,\n.header-nav li > a:link:hover,\n.header-nav li > a:active:hover {\n  color: #2c4065;\n}\n.header-nav li > a span,\n.header-nav li > a:link span,\n.header-nav li > a:active span {\n  font-size: 2rem;\n  font-weight: 300;\n}\nspan.navbar-toggler-icon {\n  color: #b69d73;\n}", ""]);
 
 // exports
 
@@ -7672,7 +7672,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\n}\r\n", ""]);
+exports.push([module.i, "\n* {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n", ""]);
 
 // exports
 
