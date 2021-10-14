@@ -10990,8 +10990,7 @@ a.text-dark:focus {
 }
 
 .img_backend_box {
-  width: 300px;
-  height: 300px;
+  max-height: 300px;
   overflow: hidden;
 }
 

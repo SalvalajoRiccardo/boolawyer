@@ -44459,7 +44459,7 @@ var render = function() {
     _vm._v(" "),
     _vm.success
       ? _c("div", { staticClass: "alert alert-primary" }, [
-          _vm._v("Review register")
+          _vm._v("La tua Review è stata registrata")
         ])
       : _vm._e(),
     _vm._v(" "),
@@ -44496,7 +44496,7 @@ var render = function() {
                 type: "text",
                 name: "reviewer",
                 id: "your_reviewer",
-                placeholder: "Your name"
+                placeholder: "Il tuo nome"
               },
               domProps: { value: _vm.reviewer },
               on: {
@@ -44529,9 +44529,11 @@ var render = function() {
               staticClass: "form-control",
               attrs: {
                 type: "number",
+                min: "1",
+                max: "5",
                 name: "vote",
                 id: "your_vote",
-                placeholder: "your vote"
+                placeholder: "Il tuo voto"
               },
               domProps: { value: _vm.vote },
               on: {

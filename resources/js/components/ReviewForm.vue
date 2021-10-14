@@ -2,7 +2,7 @@
   <div class="container my_container p-5">
     <h2 class="text_bronze">Scrivi una recensione</h2>
 
-    <div v-if="success" class="alert alert-primary">Review register</div>
+    <div v-if="success" class="alert alert-primary">La tua Review è stata registrata</div>
 
     <form @submit.prevent="sendForm" >
 
@@ -10,7 +10,7 @@
         <!-- NAME -->
       <div class="mb-3 col-12 col-md-6">
         <label for="your_reviewer" class="form-label">Reviewer</label>
-        <input type="text" v-model="reviewer" class="form-control" name="reviewer" id="your_reviewer" placeholder="Your name">
+        <input type="text" v-model="reviewer" class="form-control" name="reviewer" id="your_reviewer" placeholder="Il tuo nome">
       </div>
 
       <!-- VOTE -->
@@ -19,7 +19,7 @@
           <!-- <span class="d-block"><i class="fas fa-star text-warning" v-for="(stella,index) in stelle(dettagli.vote_average)" :key="index"></i></span> -->
           
         <label for="your_vote" class="form-label">Voto</label>
-        <input type="number" v-model="vote" class="form-control" name="vote" id="your_vote" placeholder="your vote">
+        <input type="number" v-model="vote" min="1" max="5" class="form-control" name="vote" id="your_vote" placeholder="Il tuo voto">
       </div>
       </div>
 
