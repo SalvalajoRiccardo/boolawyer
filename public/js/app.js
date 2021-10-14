@@ -2171,10 +2171,10 @@ module.exports = {
 /*!*****************************************!*\
   !*** ./node_modules/axios/package.json ***!
   \*****************************************/
-/*! exports provided: name, version, description, main, scripts, repository, keywords, author, license, bugs, homepage, devDependencies, browser, jsdelivr, unpkg, typings, dependencies, bundlesize, default */
+/*! exports provided: _args, _development, _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _spec, _where, author, browser, bugs, bundlesize, dependencies, description, devDependencies, homepage, jsdelivr, keywords, license, main, name, repository, scripts, typings, unpkg, version, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"name\":\"axios\",\"version\":\"0.21.4\",\"description\":\"Promise based HTTP client for the browser and node.js\",\"main\":\"index.js\",\"scripts\":{\"test\":\"grunt test\",\"start\":\"node ./sandbox/server.js\",\"build\":\"NODE_ENV=production grunt build\",\"preversion\":\"npm test\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\",\"postversion\":\"git push && git push --tags\",\"examples\":\"node ./examples/server.js\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"fix\":\"eslint --fix lib/**/*.js\"},\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/axios/axios.git\"},\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"author\":\"Matt Zabriskie\",\"license\":\"MIT\",\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"homepage\":\"https://axios-http.com\",\"devDependencies\":{\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.3.0\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^23.0.0\",\"grunt-karma\":\"^4.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^4.0.2\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^6.3.2\",\"karma-chrome-launcher\":\"^3.1.0\",\"karma-firefox-launcher\":\"^2.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^4.3.6\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.8\",\"karma-webpack\":\"^4.0.2\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^8.2.1\",\"sinon\":\"^4.5.0\",\"terser-webpack-plugin\":\"^4.2.3\",\"typescript\":\"^4.0.5\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^4.44.2\",\"webpack-dev-server\":\"^3.11.0\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"jsdelivr\":\"dist/axios.min.js\",\"unpkg\":\"dist/axios.min.js\",\"typings\":\"./index.d.ts\",\"dependencies\":{\"follow-redirects\":\"^1.14.0\"},\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}]}");
+module.exports = JSON.parse("{\"_args\":[[\"axios@0.21.4\",\"C:\\\\Users\\\\utente\\\\Desktop\\\\boolean\\\\mamp_public\\\\boolawyer\"]],\"_development\":true,\"_from\":\"axios@0.21.4\",\"_id\":\"axios@0.21.4\",\"_inBundle\":false,\"_integrity\":\"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==\",\"_location\":\"/axios\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"axios@0.21.4\",\"name\":\"axios\",\"escapedName\":\"axios\",\"rawSpec\":\"0.21.4\",\"saveSpec\":null,\"fetchSpec\":\"0.21.4\"},\"_requiredBy\":[\"#DEV:/\"],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz\",\"_spec\":\"0.21.4\",\"_where\":\"C:\\\\Users\\\\utente\\\\Desktop\\\\boolean\\\\mamp_public\\\\boolawyer\",\"author\":{\"name\":\"Matt Zabriskie\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"dependencies\":{\"follow-redirects\":\"^1.14.0\"},\"description\":\"Promise based HTTP client for the browser and node.js\",\"devDependencies\":{\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.3.0\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^23.0.0\",\"grunt-karma\":\"^4.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^4.0.2\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^6.3.2\",\"karma-chrome-launcher\":\"^3.1.0\",\"karma-firefox-launcher\":\"^2.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^4.3.6\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.8\",\"karma-webpack\":\"^4.0.2\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^8.2.1\",\"sinon\":\"^4.5.0\",\"terser-webpack-plugin\":\"^4.2.3\",\"typescript\":\"^4.0.5\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^4.44.2\",\"webpack-dev-server\":\"^3.11.0\"},\"homepage\":\"https://axios-http.com\",\"jsdelivr\":\"dist/axios.min.js\",\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"axios\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/axios/axios.git\"},\"scripts\":{\"build\":\"NODE_ENV=production grunt build\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"examples\":\"node ./examples/server.js\",\"fix\":\"eslint --fix lib/**/*.js\",\"postversion\":\"git push && git push --tags\",\"preversion\":\"npm test\",\"start\":\"node ./sandbox/server.js\",\"test\":\"grunt test\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\"},\"typings\":\"./index.d.ts\",\"unpkg\":\"dist/axios.min.js\",\"version\":\"0.21.4\"}");
 
 /***/ }),
 
@@ -7615,7 +7615,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-52d94ab4] {\n  background-color: rgba(119, 119, 119, 0.9);\n  color: #ddd;\n}\n.card h5[data-v-52d94ab4] {\n  color: #2c4065;\n  font-size: 1.5rem;\n  font-weight: 800;\n  letter-spacing: 2px;\n}\n.card .rounded-pill[data-v-52d94ab4] {\n  background-color: #b69d73;\n  padding: 8px;\n  font-size: 1.1rem;\n}\n.card .rounded-pill span[data-v-52d94ab4] {\n  color: #2c4065;\n}\n.card .modal h5[data-v-52d94ab4] {\n  color: #2c4065;\n}", ""]);
+exports.push([module.i, ".selectedButton[data-v-52d94ab4] {\n  background-color: #ddd;\n  color: #b69d73;\n}\n.card[data-v-52d94ab4] {\n  background-color: rgba(119, 119, 119, 0.9);\n  color: #ddd;\n  height: 483px;\n}\n.card h5[data-v-52d94ab4] {\n  color: #2c4065;\n  font-size: 1.5rem;\n  font-weight: 800;\n  letter-spacing: 2px;\n}\n.card .rounded-pill[data-v-52d94ab4] {\n  background-color: #b69d73;\n  padding: 8px;\n  font-size: 1.1rem;\n}\n.card .rounded-pill span[data-v-52d94ab4] {\n  color: #2c4065;\n}\n.card .modal h5[data-v-52d94ab4] {\n  color: #2c4065;\n}", ""]);
 
 // exports
 
@@ -7672,7 +7672,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n* {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n", ""]);
+exports.push([module.i, "\n* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\n}\r\n", ""]);
 
 // exports
 
@@ -44120,7 +44120,7 @@ var render = function() {
                   staticClass: "nav-link",
                   attrs: { to: { name: "lawyers" }, href: "#" }
                 },
-                [_vm._v("Lawyers")]
+                [_vm._v("Avvocati")]
               )
             ],
             1
@@ -44350,7 +44350,7 @@ var render = function() {
                 type: "text",
                 name: "name",
                 id: "your_name",
-                placeholder: "Your name"
+                placeholder: "Il tuo nome"
               },
               domProps: { value: _vm.name },
               on: {
@@ -44385,7 +44385,7 @@ var render = function() {
                 type: "email",
                 name: "email",
                 id: "your_email",
-                placeholder: "Your email address"
+                placeholder: "Il tuo indirizzo email"
               },
               domProps: { value: _vm.email },
               on: {
@@ -44442,7 +44442,7 @@ var render = function() {
             attrs: { type: "submit" },
             on: { click: _vm.valida }
           },
-          [_vm._v(_vm._s(_vm.sending ? "invio in corso" : "Submit"))]
+          [_vm._v(_vm._s(_vm.sending ? "invio in corso" : "Invio"))]
         )
       ]
     )
@@ -44606,7 +44606,7 @@ var render = function() {
             attrs: { type: "submit" },
             on: { click: _vm.valida }
           },
-          [_vm._v(_vm._s(_vm.sending ? "invio in corso" : "Submit"))]
+          [_vm._v(_vm._s(_vm.sending ? "invio in corso" : "Invio"))]
         )
       ]
     )
@@ -44899,6 +44899,7 @@ var render = function() {
           {
             key: "a" + index,
             staticClass: "btn btn-blue btn-outline-light border-0 mx-2 mt-4",
+            class: item.id == _vm.selectedSpec ? "selectedButton" : "",
             on: {
               change: function($event) {
                 return _vm.getUsers(1, _vm.selectedSpec)
@@ -45117,7 +45118,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Previous")]
+                    [_vm._v("Precedente")]
                   )
                 ]
               ),
@@ -45160,7 +45161,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Next")]
+                    [_vm._v("Successiva")]
                   )
                 ]
               )
@@ -61719,8 +61720,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Riccardo\Documents\corso_boolean\mamp_public\boolawyer\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Riccardo\Documents\corso_boolean\mamp_public\boolawyer\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\utente\Desktop\boolean\mamp_public\boolawyer\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\utente\Desktop\boolean\mamp_public\boolawyer\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -185,7 +185,7 @@
           {{-- Specializations --}}
           <div class="row align-items-center">
             <div class="col-sm-4">
-              <h6 class="mb-2 ">Specializzazioni</h6>
+              <h6 class="mb-2 text-truncate">Specializzazioni</h6>
             </div>
             <div class="col-sm-8 text-secondary">
               @foreach ($user->specializations as $specialization)    

@@ -3,7 +3,7 @@
 
     <!-- BUTTONS FOR ALL THE SPECIALIZATIONS -->
     <div class="row justify-content-center my-3">
-      <button class="btn btn-blue btn-outline-light border-0 mx-2 mt-4" v-for="(item,index) in specializationsArray" :key="'a'+ index" @change="getUsers(1, selectedSpec)">
+      <button class="btn btn-blue btn-outline-light border-0 mx-2 mt-4" v-for="(item,index) in specializationsArray" :key="'a'+ index" @change="getUsers(1, selectedSpec)" :class="(item.id == selectedSpec)?'selectedButton':''">
           <input type="radio" class="d-none" :id="'a' + index" :value="item.id" v-model="selectedSpec" name="specializations">
           <label :for="'a' + index">{{item.name}}</label>
       </button>
@@ -52,7 +52,7 @@
             </div>
             
             <h5 class="card-title">{{ lawyer.name }} {{lawyer.surname}}</h5>
-            <p  v-if="lawyer.services"  class="card-text">{{ truncate(lawyer.services,150) }}</p>
+            <p  v-if="lawyer.services"  class="card-text">{{ truncate(lawyer.services,150)}}</p>
             <router-link :to="{name: 'lawyer-detail', params: { slug: lawyer.slug }}" class="btn btn-blue">
               Dettagli
             </router-link>
@@ -66,7 +66,7 @@
       <nav aria-label="page-navigation-example" class="navigation_posts">
         <ul class="pagination my-4">
           <li class="page-item" :class="{'disabled' : currentPage==1}">
-            <button class="page-link "  @click="getUsers(currentPage-1)">Previous</button>
+            <button class="page-link "  @click="getUsers(currentPage-1)">Precedente</button>
           </li>
           <li class="page-item" 
             v-for="i in lastPage" :key="i" 
@@ -77,7 +77,7 @@
           </li>
           
           <li class="page-item" :class="{'disabled': currentPage == lastPage}" >
-            <button class="page-link " @click="getUsers(currentPage + 1)">Next</button>
+            <button class="page-link " @click="getUsers(currentPage + 1)">Successiva</button>
           </li>
         </ul>
       </nav>
@@ -188,9 +188,16 @@ export default {
   $lawred: #83354c;
   $notwhite: #ddd;
 
+  .selectedButton{
+    background-color:#ddd;
+    color: #b69d73;
+  }
+
+
   .card{
     background-color: rgba(119, 119, 119, 0.9);
     color: #ddd;
+    height:483px;
 
     & h5 {
       color: $lawblue;

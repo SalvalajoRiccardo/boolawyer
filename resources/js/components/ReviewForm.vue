@@ -30,7 +30,7 @@
       </div>
 
       <!-- BUTTON -->
-      <button v-on:click="valida" type="submit" class="btn btn-blue">{{sending ? 'invio in corso' : 'Submit'}}</button>
+      <button v-on:click="valida" type="submit" class="btn btn-blue">{{sending ? 'invio in corso' : 'Invio'}}</button>
           
     </form>
  </div>

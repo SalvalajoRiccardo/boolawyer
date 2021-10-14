@@ -14,7 +14,7 @@
           <router-link :to="{name:'home'}" class="nav-link active" aria-current="page" href="#">Home</router-link>
         </li>
         <li class="nav-item">
-          <router-link :to="{name:'lawyers'}" class="nav-link" href="#">Lawyers</router-link>
+          <router-link :to="{name:'lawyers'}" class="nav-link" href="#">Avvocati</router-link>
         </li>
       </ul>
 

@@ -11,13 +11,13 @@
         <!-- NAME -->
         <div class="mb-3 col-12 col-md-6">
           <label for="your_name" class="form-label">Nome</label>
-          <input type="text" v-model="name" class="form-control" name="name" id="your_name" placeholder="Your name">
+          <input type="text" v-model="name" class="form-control" name="name" id="your_name" placeholder="Il tuo nome">
         </div>
 
         <!-- EMAIL ADRESS -->
         <div class="mb-3 col-12 col-md-6">
           <label for="your_email" class="form-label">Indirizzo Email</label>
-          <input type="email" v-model="email" class="form-control" name="email" id="your_email" placeholder="Your email address">
+          <input type="email" v-model="email" class="form-control" name="email" id="your_email" placeholder="Il tuo indirizzo email">
         </div>
       </div>
 
@@ -29,7 +29,7 @@
       </div>
 
       <!-- BUTTON -->
-      <button v-on:click="valida" type="submit" class="btn btn-blue">{{sending ? 'invio in corso' : 'Submit'}}</button>
+      <button v-on:click="valida" type="submit" class="btn btn-blue">{{sending ? 'invio in corso' : 'Invio'}}</button>
           
     </form>
  </div>
