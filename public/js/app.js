@@ -2351,6 +2351,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'MessageForm',
   props: {
@@ -2444,6 +2446,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -7540,7 +7544,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "form #your_name[data-v-367b72d0]::-moz-placeholder, form #your_email[data-v-367b72d0]::-moz-placeholder, form #your_text[data-v-367b72d0]::-moz-placeholder {\n  color: #2c4065;\n  font-weight: 600;\n  opacity: 0.8;\n}\nform #your_name[data-v-367b72d0]:-ms-input-placeholder, form #your_email[data-v-367b72d0]:-ms-input-placeholder, form #your_text[data-v-367b72d0]:-ms-input-placeholder {\n  color: #2c4065;\n  font-weight: 600;\n  opacity: 0.8;\n}\nform #your_name[data-v-367b72d0]::placeholder, form #your_email[data-v-367b72d0]::placeholder, form #your_text[data-v-367b72d0]::placeholder {\n  color: #2c4065;\n  font-weight: 600;\n  opacity: 0.8;\n}\nform #your_name[data-v-367b72d0], form #your_email[data-v-367b72d0], form #your_text[data-v-367b72d0] {\n  color: #2c4065;\n}\nform .btn-blue[data-v-367b72d0] {\n  font-size: 1rem;\n}\n.my_container[data-v-367b72d0] {\n  background-color: rgba(119, 119, 119, 0.9);\n  color: #ddd;\n  border-radius: 5px;\n  border: 1px solid #6d6d6d;\n}", ""]);
+exports.push([module.i, ".text_bronze[data-v-367b72d0] {\n  color: #b69d73;\n}\nform #your_name[data-v-367b72d0]::-moz-placeholder, form #your_email[data-v-367b72d0]::-moz-placeholder, form #your_text[data-v-367b72d0]::-moz-placeholder {\n  color: #2c4065;\n  font-weight: 600;\n  opacity: 0.8;\n}\nform #your_name[data-v-367b72d0]:-ms-input-placeholder, form #your_email[data-v-367b72d0]:-ms-input-placeholder, form #your_text[data-v-367b72d0]:-ms-input-placeholder {\n  color: #2c4065;\n  font-weight: 600;\n  opacity: 0.8;\n}\nform #your_name[data-v-367b72d0]::placeholder, form #your_email[data-v-367b72d0]::placeholder, form #your_text[data-v-367b72d0]::placeholder {\n  color: #2c4065;\n  font-weight: 600;\n  opacity: 0.8;\n}\nform #your_name[data-v-367b72d0], form #your_email[data-v-367b72d0], form #your_text[data-v-367b72d0] {\n  color: #2c4065;\n}\nform .btn-blue[data-v-367b72d0] {\n  font-size: 1rem;\n}\n.my_container[data-v-367b72d0] {\n  background-color: rgba(119, 119, 119, 0.9);\n  color: #ddd;\n  border-radius: 5px;\n  border: 1px solid #6d6d6d;\n}", ""]);
 
 // exports
 
@@ -7559,7 +7563,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "form #your_reviewer[data-v-44a63ae7]::-moz-placeholder, form #your_vote[data-v-44a63ae7]::-moz-placeholder, form #your_text[data-v-44a63ae7]::-moz-placeholder {\n  color: #2c4065;\n  font-weight: 600;\n  opacity: 0.8;\n}\nform #your_reviewer[data-v-44a63ae7]:-ms-input-placeholder, form #your_vote[data-v-44a63ae7]:-ms-input-placeholder, form #your_text[data-v-44a63ae7]:-ms-input-placeholder {\n  color: #2c4065;\n  font-weight: 600;\n  opacity: 0.8;\n}\nform #your_reviewer[data-v-44a63ae7]::placeholder, form #your_vote[data-v-44a63ae7]::placeholder, form #your_text[data-v-44a63ae7]::placeholder {\n  color: #2c4065;\n  font-weight: 600;\n  opacity: 0.8;\n}\nform #your_reviewer[data-v-44a63ae7], form #your_vote[data-v-44a63ae7], form #your_text[data-v-44a63ae7] {\n  color: #2c4065;\n}\nform .btn-blue[data-v-44a63ae7] {\n  font-size: 1rem;\n}\n.my_container[data-v-44a63ae7] {\n  background-color: rgba(119, 119, 119, 0.9);\n  color: #ddd;\n  border-radius: 5px;\n  border: 1px solid #6d6d6d;\n}", ""]);
+exports.push([module.i, ".text_bronze[data-v-44a63ae7] {\n  color: #b69d73;\n}\nform #your_reviewer[data-v-44a63ae7]::-moz-placeholder, form #your_vote[data-v-44a63ae7]::-moz-placeholder, form #your_text[data-v-44a63ae7]::-moz-placeholder {\n  color: #2c4065;\n  font-weight: 600;\n  opacity: 0.8;\n}\nform #your_reviewer[data-v-44a63ae7]:-ms-input-placeholder, form #your_vote[data-v-44a63ae7]:-ms-input-placeholder, form #your_text[data-v-44a63ae7]:-ms-input-placeholder {\n  color: #2c4065;\n  font-weight: 600;\n  opacity: 0.8;\n}\nform #your_reviewer[data-v-44a63ae7]::placeholder, form #your_vote[data-v-44a63ae7]::placeholder, form #your_text[data-v-44a63ae7]::placeholder {\n  color: #2c4065;\n  font-weight: 600;\n  opacity: 0.8;\n}\nform #your_reviewer[data-v-44a63ae7], form #your_vote[data-v-44a63ae7], form #your_text[data-v-44a63ae7] {\n  color: #2c4065;\n}\nform .btn-blue[data-v-44a63ae7] {\n  font-size: 1rem;\n}\n.my_container[data-v-44a63ae7] {\n  background-color: rgba(119, 119, 119, 0.9);\n  color: #ddd;\n  border-radius: 5px;\n  border: 1px solid #6d6d6d;\n}", ""]);
 
 // exports
 
@@ -7616,7 +7620,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-8ae83716] {\n  background-color: rgba(119, 119, 119, 0.9);\n  color: #ddd;\n}\n.card h5[data-v-8ae83716] {\n  color: #b69d73;\n  font-weight: 600;\n  letter-spacing: 2px;\n}\n.card .rounded-pill[data-v-8ae83716] {\n  background-color: #2c4065;\n  padding: 8px;\n}\n.card .modal h5[data-v-8ae83716] {\n  color: #2c4065;\n}\n.forms[data-v-8ae83716] {\n  padding: 50px 0;\n}", ""]);
+exports.push([module.i, ".my_card_header[data-v-8ae83716] {\n  background-color: #666666;\n}\n.my_card_body[data-v-8ae83716] {\n  background-color: rgba(141, 141, 141, 0.8);\n}\n.card[data-v-8ae83716] {\n  background-color: rgba(119, 119, 119, 0.8);\n  color: #ddd;\n}\n.card h5[data-v-8ae83716] {\n  color: #b69d73;\n  font-weight: 600;\n  letter-spacing: 2px;\n}\n.card .rounded-pill[data-v-8ae83716] {\n  background-color: #2c4065;\n  padding: 8px;\n}\n.card .modal h5[data-v-8ae83716] {\n  color: #2c4065;\n}\n.forms[data-v-8ae83716] {\n  padding: 50px 0;\n}", ""]);
 
 // exports
 
@@ -44291,7 +44295,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container my_container p-5 my-3" }, [
-    _c("h2", [_vm._v("Send me a message")]),
+    _c("h2", { staticClass: "text_bronze" }, [_vm._v("Send me a message")]),
     _vm._v(" "),
     _vm.success
       ? _c("div", { staticClass: "alert alert-primary" }, [
@@ -44310,74 +44314,76 @@ var render = function() {
         }
       },
       [
-        _c("div", { staticClass: "mb-3" }, [
-          _c(
-            "label",
-            { staticClass: "form-label", attrs: { for: "your_name" } },
-            [_vm._v("Name")]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.name,
-                expression: "name"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              type: "text",
-              name: "name",
-              id: "your_name",
-              placeholder: "Your name"
-            },
-            domProps: { value: _vm.name },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "mb-3 col-12 col-md-6" }, [
+            _c(
+              "label",
+              { staticClass: "form-label", attrs: { for: "your_name" } },
+              [_vm._v("Name")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.name,
+                  expression: "name"
                 }
-                _vm.name = $event.target.value
-              }
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "mb-3" }, [
-          _c(
-            "label",
-            { staticClass: "form-label", attrs: { for: "your_email" } },
-            [_vm._v("Email address")]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.email,
-                expression: "email"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              type: "email",
-              name: "email",
-              id: "your_email",
-              placeholder: "Your email address"
-            },
-            domProps: { value: _vm.email },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "text",
+                name: "name",
+                id: "your_name",
+                placeholder: "Your name"
+              },
+              domProps: { value: _vm.name },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.name = $event.target.value
                 }
-                _vm.email = $event.target.value
               }
-            }
-          })
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "mb-3 col-12 col-md-6" }, [
+            _c(
+              "label",
+              { staticClass: "form-label", attrs: { for: "your_email" } },
+              [_vm._v("Email address")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.email,
+                  expression: "email"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "email",
+                name: "email",
+                id: "your_email",
+                placeholder: "Your email address"
+              },
+              domProps: { value: _vm.email },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.email = $event.target.value
+                }
+              }
+            })
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "mb-3" }, [
@@ -44451,7 +44457,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container my_container p-5" }, [
-    _c("h2", [_vm._v("Write a review")]),
+    _c("h2", { staticClass: "text_bronze" }, [_vm._v("Write a review")]),
     _vm._v(" "),
     _vm.success
       ? _c("div", { staticClass: "alert alert-primary" }, [
@@ -44470,74 +44476,76 @@ var render = function() {
         }
       },
       [
-        _c("div", { staticClass: "mb-3" }, [
-          _c(
-            "label",
-            { staticClass: "form-label", attrs: { for: "your_reviewer" } },
-            [_vm._v("Reviewer")]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.reviewer,
-                expression: "reviewer"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              type: "text",
-              name: "reviewer",
-              id: "your_reviewer",
-              placeholder: "Your name"
-            },
-            domProps: { value: _vm.reviewer },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "mb-3 col-12 col-md-6" }, [
+            _c(
+              "label",
+              { staticClass: "form-label", attrs: { for: "your_reviewer" } },
+              [_vm._v("Reviewer")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.reviewer,
+                  expression: "reviewer"
                 }
-                _vm.reviewer = $event.target.value
-              }
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "mb-3" }, [
-          _c(
-            "label",
-            { staticClass: "form-label", attrs: { for: "your_vote" } },
-            [_vm._v("Vote ")]
-          ),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.vote,
-                expression: "vote"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              type: "number",
-              name: "vote",
-              id: "your_vote",
-              placeholder: "your vote"
-            },
-            domProps: { value: _vm.vote },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "text",
+                name: "reviewer",
+                id: "your_reviewer",
+                placeholder: "Your name"
+              },
+              domProps: { value: _vm.reviewer },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.reviewer = $event.target.value
                 }
-                _vm.vote = $event.target.value
               }
-            }
-          })
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "mb-3 col-12 col-md-6" }, [
+            _c(
+              "label",
+              { staticClass: "form-label", attrs: { for: "your_vote" } },
+              [_vm._v("Vote ")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.vote,
+                  expression: "vote"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "number",
+                name: "vote",
+                id: "your_vote",
+                placeholder: "your vote"
+              },
+              domProps: { value: _vm.vote },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.vote = $event.target.value
+                }
+              }
+            })
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "mb-3" }, [
@@ -45161,8 +45169,8 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container mt-3" }, [
-    _c("div", { staticClass: "card mb-3" }, [
-      _c("div", { staticClass: "row g-0" }, [
+    _c("div", { staticClass: "card p-0" }, [
+      _c("div", { staticClass: "row g-0 align-items-center" }, [
         _c("div", { staticClass: "col-md-4" }, [
           _vm.lawyer.photo
             ? _c("img", {
@@ -45172,9 +45180,9 @@ var render = function() {
             : _vm._e()
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card-body p-0" }, [
-            _c("h5", { staticClass: "card-title card-header" }, [
+        _c("div", { staticClass: "col-md-8 mb-0" }, [
+          _c("div", { staticClass: "card-body my_card_body px-0 pt-0" }, [
+            _c("h5", { staticClass: "card-title card-header my_card_header" }, [
               _vm._v(
                 " " +
                   _vm._s(_vm.lawyer.name) +
@@ -45183,7 +45191,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _c("p", { staticClass: "card-text p-4 d-block" }, [
+            _c("p", { staticClass: "card-text pt-4 px-4 d-block" }, [
               _c("i", { staticClass: "bi bi-house-door" }),
               _vm._v(" : " + _vm._s(_vm.lawyer.address))
             ]),
@@ -45203,7 +45211,7 @@ var render = function() {
                   )
                 ]),
             _vm._v(" "),
-            _c("p", { staticClass: "card-text p-4 d-block" }, [
+            _c("p", { staticClass: "card-text px-4 d-block" }, [
               _c("i", { staticClass: "bi bi-envelope" }),
               _vm._v(" : " + _vm._s(_vm.lawyer.email))
             ]),
@@ -45212,7 +45220,7 @@ var render = function() {
               ? _c("p", { staticClass: "card-text p-4" }, [
                   _vm._v(" " + _vm._s(_vm.lawyer.services))
                 ])
-              : _c("small", { staticClass: "d-block m-4" }, [
+              : _c("small", { staticClass: "m-4 pb-4" }, [
                   _vm._v(
                     "services: L'utente non ha ancora aggiunto le sue prestazioni, "
                   ),
@@ -45253,10 +45261,8 @@ var render = function() {
                   [_vm._v("\n              Visualizza CV\n            ")]
                 )
               : _c("small", { staticClass: "d-block m-4" }, [
-                  _vm._v("CV: L'utente non ha ancora aggiunto il suo CV, "),
-                  _c("br"),
                   _vm._v(
-                    " invia un messaggio per richiedere ulteriori informazioni"
+                    "CV: L'utente non ha ancora aggiunto il suo CV, invia un messaggio per richiedere ulteriori informazioni"
                   )
                 ]),
             _vm._v(" "),

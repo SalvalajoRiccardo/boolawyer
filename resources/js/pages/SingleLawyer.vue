@@ -2,8 +2,8 @@
     <div class="container mt-3">
 
       <!-- START CARD -->
-      <div class="card mb-3" >
-        <div class="row g-0">
+      <div class="card p-0" >
+        <div class="row g-0 align-items-center">
 
           <!-- IMAGE PROFILE -->
           <div class="col-md-4">
@@ -11,25 +11,25 @@
           </div>
 
           <!-- ALL PROFILE INFO -->
-          <div class="col-md-8">
-            <div class="card-body p-0">
+          <div class="col-md-8 mb-0">
+            <div class="card-body my_card_body px-0 pt-0">
 
               <!-- Parte nome e cognome -->
-              <h5 class="card-title card-header"> {{ lawyer.name }}  {{ lawyer.surname }}</h5>
+              <h5 class="card-title card-header my_card_header"> {{ lawyer.name }}  {{ lawyer.surname }}</h5>
 
               <!-- parte dell'address -->
-              <p class="card-text p-4 d-block"><i class="bi bi-house-door"></i> : {{ lawyer.address }}</p>
+              <p class="card-text pt-4 px-4 d-block"><i class="bi bi-house-door"></i> : {{ lawyer.address }}</p>
 
               <!-- parte del phone -->
               <p v-if="lawyer.phone" class="card-text px-4 d-block"><i class="bi bi-telephone"></i> : {{ lawyer.phone }}</p>
               <small v-else class="d-block m-4">phone: L'utente non ha ancora aggiunto il suo numero di cellulare, <br> invia un messaggio per richiedere ulteriori informazioni</small>
 
               <!-- parte della email -->
-              <p class="card-text p-4 d-block"><i class="bi bi-envelope"></i> : {{ lawyer.email }}</p>
+              <p class="card-text px-4 d-block"><i class="bi bi-envelope"></i> : {{ lawyer.email }}</p>
               
               <!-- parte dei services -->
               <p v-if="lawyer.services" class="card-text p-4"> {{ lawyer.services }}</p>
-              <small v-else class="d-block m-4">services: L'utente non ha ancora aggiunto le sue prestazioni, <br> invia un messaggio per richiedere ulteriori informazioni</small>
+              <small v-else class="m-4 pb-4">services: L'utente non ha ancora aggiunto le sue prestazioni, <br> invia un messaggio per richiedere ulteriori informazioni</small>
 
                <!-- SPECIALIZATIONS -->
                 <div  v-if="lawyer.specializations">
@@ -40,7 +40,7 @@
                   Visualizza CV
                 </button>
 
-                <small v-else class="d-block m-4">CV: L'utente non ha ancora aggiunto il suo CV, <br> invia un messaggio per richiedere ulteriori informazioni</small>
+                <small v-else class="d-block m-4">CV: L'utente non ha ancora aggiunto il suo CV, invia un messaggio per richiedere ulteriori informazioni</small>
 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -123,8 +123,16 @@ export default {
   $lawred: #83354c;
   $notwhite: #ddd;
 
+  .my_card_header{
+    background-color:rgb(102, 102, 102) ;
+  }
+
+  .my_card_body{
+    background-color: rgba(141, 141, 141, 0.8)
+  }
+
   .card{
-    background-color: rgba(119, 119, 119, 0.9);
+    background-color: rgba(119, 119, 119, 0.8);
     color: #ddd;
 
     & h5 {

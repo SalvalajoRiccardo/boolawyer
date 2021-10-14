@@ -1,24 +1,26 @@
 <template>
 
  <div class="container my_container p-5 my-3">
-    <h2>Send me a message</h2>
+    <h2 class="text_bronze">Send me a message</h2>
 
     <div v-if="success" class="alert alert-primary">Messaggio inviato</div>
 
     <form @submit.prevent="sendForm">
 
-      <!-- NAME -->
-      <div class="mb-3">
-        <label for="your_name" class="form-label">Name</label>
-        <input type="text" v-model="name" class="form-control" name="name" id="your_name" placeholder="Your name">
+      <div class="row">
+        <!-- NAME -->
+        <div class="mb-3 col-12 col-md-6">
+          <label for="your_name" class="form-label">Name</label>
+          <input type="text" v-model="name" class="form-control" name="name" id="your_name" placeholder="Your name">
+        </div>
+
+        <!-- EMAIL ADRESS -->
+        <div class="mb-3 col-12 col-md-6">
+          <label for="your_email" class="form-label">Email address</label>
+          <input type="email" v-model="email" class="form-control" name="email" id="your_email" placeholder="Your email address">
+        </div>
       </div>
 
-      <!-- EMAIL ADRESS -->
-      <div class="mb-3">
-        <label for="your_email" class="form-label">Email address</label>
-        <input type="email" v-model="email" class="form-control" name="email" id="your_email" placeholder="Your email address">
-
-      </div>
 
       <!-- MESSAGE -->
       <div class="mb-3">
@@ -122,6 +124,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.text_bronze{
+  color:#b69d73
+}
+
 $lawblue: #2c4065;
   form {
 
