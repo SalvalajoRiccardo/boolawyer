@@ -10956,7 +10956,7 @@ a.text-dark:focus {
 }
 
 .my_navbar a {
-  color: whitesmoke;
+  color: #9b8052;
 }
 
 .my_sidebar {
@@ -10990,8 +10990,7 @@ a.text-dark:focus {
 }
 
 .img_backend_box {
-  width: 300px;
-  height: 300px;
+  max-height: 300px;
   overflow: hidden;
 }
 

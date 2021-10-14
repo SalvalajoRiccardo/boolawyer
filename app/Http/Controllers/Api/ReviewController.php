@@ -15,7 +15,7 @@ class ReviewController extends Controller
         
         $validator = Validator::make($request->all(), [
             'reviewer' => 'required',
-            'vote' => 'required',
+            'vote' => 'required|numeric|min:1|max:5',
             'text' => 'required',
         ]);
         

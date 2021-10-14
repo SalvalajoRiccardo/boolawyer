@@ -3,7 +3,7 @@
   
     <div class="container first_container">
       <div class="row justify-content-center justify-content-md-center">
-        <div class="col-12 col-md-6 pippo  text-center d-flex flex-column justify-content-center">
+        <div id="welcome-text" class="col-12 col-md-6 pippo text-center d-flex flex-column justify-content-center">
           <span class="span_text my-2">Consulenza Legale</span>
           <h2 class="h2_text_light">Se hai un problema legale nella tua vita,</h2>
           <h3 class="h3_text">noi siamo disponibili</h3>
@@ -18,7 +18,7 @@
       <span class="span_text_carousel text-center">AVVOCATI IN EVIDENZA</span>
       
       <!-- Carousel -->
-      <agile :key="lawyers.length" :slidesToShow="3" :dots="false" :infinite="false"  :navButtons="false" ref="carousel">
+      <agile :key="lawyers.length" :slidesToShow="1" :dots="false" :infinite="true"  :navButtons="false" ref="carousel" :options="myOptions" :autoplay="true" :autoplay-speed="5000">
         <div class="slide card my-3 p-3 text-center" v-for="(lawyer,index) in filteredLawyers" :key="index">
           
           <!-- IMG -->
@@ -104,6 +104,24 @@ export default {
       urlSpec:'http://localhost:8000/api/specializations',
       specializationsArray:[],
       selectedSpec: null,
+      myOptions: {
+
+        responsive: [
+          {
+            breakpoint: 500,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 900,
+            settings: {
+              slidesToShow: 3
+            }
+          },
+          
+        ]
+      }
 
     }
   },
@@ -203,6 +221,10 @@ export default {
     color:#000223
   }
 
+  #welcome-text {
+    animation: slideInBelow 2s ease-out;
+  }
+
   // Animations
   @keyframes slideInLeft {
 
@@ -223,6 +245,17 @@ export default {
 
     100% {opacity: 1;
         transform: translateX(0);}
+  }
+
+  @keyframes slideInBelow {
+
+    0% {opacity: 0;
+        scale: 0;
+        transform: translateY(50px);}
+
+    100% {opacity: 1;
+          scale: 1;
+          transform: translateY(0);}
   }
 
   body {
@@ -277,7 +310,7 @@ export default {
     .slide {
       height: 275px;
       position: relative;
-      margin: 0 5px;
+      border:1px solid rgba(221, 221, 221,1);
       background-color: rgba(221, 221, 221,0.5);
 
 

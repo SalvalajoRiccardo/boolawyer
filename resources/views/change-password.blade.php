@@ -19,7 +19,7 @@
                     <form method="POST" action="{{ route('change.password') }}">
                         @csrf
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">Current Password</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">Password Attuale</label>
                             <div class="col-md-6">
                                 <input type="password" class="form-control @error('current_password') is-invalid @enderror" name="current_password" autocomplete="current_password">
                                 @error('current_password')
@@ -31,7 +31,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">New Password</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">Nuova Password</label>
                             <div class="col-md-6">
                                 <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="password">
                                 @error('password')
@@ -43,7 +43,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">Password Confirmation</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">Conferma Password</label>
                             <div class="col-md-6">
                                 <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" autocomplete="password_confirmation">
                                 @error('password_confirmation')
@@ -60,7 +60,7 @@
                                     Change Password
                                 </button>
                                 {{-- bottone per tornare indietro --}}
-                                <a class="btn btn-secondary" href="{{route('admin.users.index' )}}">Go Back</a>
+                                <a class="btn btn-secondary" href="{{route('admin.users.index' )}}">Indietro</a>
                             </div>
                         </div>
                     </form>

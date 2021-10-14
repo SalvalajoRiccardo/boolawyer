@@ -2657,7 +2657,20 @@ __webpack_require__.r(__webpack_exports__);
       lawyers: [],
       urlSpec: 'http://localhost:8000/api/specializations',
       specializationsArray: [],
-      selectedSpec: null
+      selectedSpec: null,
+      myOptions: {
+        responsive: [{
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 2
+          }
+        }, {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 3
+          }
+        }]
+      }
     };
   },
   computed: {
@@ -7580,7 +7593,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* Typography */\n.span_text {\n  text-transform: uppercase;\n  color: #b69d73;\n  font-weight: bold;\n  font-size: 20px;\n}\n.span_text_carousel {\n  text-transform: uppercase;\n  color: white;\n  font-weight: bold;\n  font-size: 24px;\n  text-shadow: 1.25px 1.25px #2c4065, 1px 1px #2c4065, 0.75px 0.75px #2c4065, 0.5px 0.5px #2c4065, 0.25px 0.25px #2c4065;\n}\n.h2_text_light {\n  color: #ddd;\n  font-weight: bold;\n  font-size: 40px;\n  width: 80%;\n  margin: 0 auto;\n}\n.h2_text_dark {\n  color: #2c4065;\n}\n.h3_text {\n  font-style: italic;\n  color: #b69d73;\n  font-weight: bold;\n  font-size: 36px;\n}\n.p_text {\n  font-size: 16px;\n  letter-spacing: 1px;\n  line-height: 26px;\n  color: #000223;\n}\n@-webkit-keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@-webkit-keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\nbody {\n  background-image: linear-gradient(to right, rgba(44, 64, 101, 0.4) 0%, rgba(182, 157, 115, 0.4) 100%), url(\"/images/pexels-photo-8755742.jpeg\");\n  background-size: cover;\n  background-position: top;\n  font-family: \"Times New Roman\", Times, serif;\n}\n.btn-blue {\n  background-color: #2c4065;\n  color: #ddd;\n  font-size: 1.3rem;\n  transition: all 0.8s;\n}\n.btn-blue:hover {\n  background-color: #2c4065;\n  color: #ddd;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.btn-bronze {\n  background-color: rgba(182, 158, 115, 0.9);\n  color: #2c4065;\n  font-size: 1rem;\n  font-weight: 600 !important;\n  transition: all 0.8s;\n}\n.btn-bronze:hover {\n  background-color: #b69d73;\n  color: #2c4065;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.first_container {\n  height: 500px;\n}\n.first_container .pippo {\n  height: 500px;\n}\n.wrapper {\n  position: relative;\n}\n.wrapper .slide {\n  height: 275px;\n  position: relative;\n  margin: 0 5px;\n  background-color: rgba(221, 221, 221, 0.5);\n}\n.wrapper .slide .my_card-body {\n  text-align: center;\n  width: 100%;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.wrapper .slide .my_card-body h4 {\n  color: #2c4065;\n  font-size: 1.5rem;\n  font-weight: 800;\n  letter-spacing: 2px;\n}\n.wrapper .slide .img_box {\n  background-color: white;\n}\n.wrapper .slide .img_box img {\n  width: 100%;\n}\n.wrapper .button {\n  background-color: white;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  position: absolute;\n  top: 50%;\n  right: 1%;\n  opacity: 0.6;\n}\n.wrapper .button:hover {\n  cursor: pointer;\n  opacity: 1;\n}\n.wrapper .btn_prev {\n  left: -8%;\n}\n.wrapper .btn_next {\n  right: -8%;\n}\n.about_container {\n  background-color: rgba(221, 221, 221, 0.9);\n}\n.about_container .justice_box {\n  height: 300px;\n}\n.about_container .justice_box img {\n  height: 100%;\n}", ""]);
+exports.push([module.i, "/* Typography */\n.span_text {\n  text-transform: uppercase;\n  color: #b69d73;\n  font-weight: bold;\n  font-size: 20px;\n}\n.span_text_carousel {\n  text-transform: uppercase;\n  color: white;\n  font-weight: bold;\n  font-size: 24px;\n  text-shadow: 1.25px 1.25px #2c4065, 1px 1px #2c4065, 0.75px 0.75px #2c4065, 0.5px 0.5px #2c4065, 0.25px 0.25px #2c4065;\n}\n.h2_text_light {\n  color: #ddd;\n  font-weight: bold;\n  font-size: 40px;\n  width: 80%;\n  margin: 0 auto;\n}\n.h2_text_dark {\n  color: #2c4065;\n}\n.h3_text {\n  font-style: italic;\n  color: #b69d73;\n  font-weight: bold;\n  font-size: 36px;\n}\n.p_text {\n  font-size: 16px;\n  letter-spacing: 1px;\n  line-height: 26px;\n  color: #000223;\n}\n#welcome-text {\n  -webkit-animation: slideInBelow 2s ease-out;\n          animation: slideInBelow 2s ease-out;\n}\n@-webkit-keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInLeft {\n0% {\n    opacity: 0;\n    transform: translateX(-70px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@-webkit-keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@keyframes slideInRight {\n0% {\n    opacity: 0;\n    transform: translateX(50px);\n}\n100% {\n    opacity: 1;\n    transform: translateX(0);\n}\n}\n@-webkit-keyframes slideInBelow {\n0% {\n    opacity: 0;\n    scale: 0;\n    transform: translateY(50px);\n}\n100% {\n    opacity: 1;\n    scale: 1;\n    transform: translateY(0);\n}\n}\n@keyframes slideInBelow {\n0% {\n    opacity: 0;\n    scale: 0;\n    transform: translateY(50px);\n}\n100% {\n    opacity: 1;\n    scale: 1;\n    transform: translateY(0);\n}\n}\nbody {\n  background-image: linear-gradient(to right, rgba(44, 64, 101, 0.4) 0%, rgba(182, 157, 115, 0.4) 100%), url(\"/images/pexels-photo-8755742.jpeg\");\n  background-size: cover;\n  background-position: top;\n  font-family: \"Times New Roman\", Times, serif;\n}\n.btn-blue {\n  background-color: #2c4065;\n  color: #ddd;\n  font-size: 1.3rem;\n  transition: all 0.8s;\n}\n.btn-blue:hover {\n  background-color: #2c4065;\n  color: #ddd;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.btn-bronze {\n  background-color: rgba(182, 158, 115, 0.9);\n  color: #2c4065;\n  font-size: 1rem;\n  font-weight: 600 !important;\n  transition: all 0.8s;\n}\n.btn-bronze:hover {\n  background-color: #b69d73;\n  color: #2c4065;\n  transform: scale(1.1);\n  z-index: 1;\n}\n.first_container {\n  height: 500px;\n}\n.first_container .pippo {\n  height: 500px;\n}\n.wrapper {\n  position: relative;\n}\n.wrapper .slide {\n  height: 275px;\n  position: relative;\n  border: 1px solid #dddddd;\n  background-color: rgba(221, 221, 221, 0.5);\n}\n.wrapper .slide .my_card-body {\n  text-align: center;\n  width: 100%;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.wrapper .slide .my_card-body h4 {\n  color: #2c4065;\n  font-size: 1.5rem;\n  font-weight: 800;\n  letter-spacing: 2px;\n}\n.wrapper .slide .img_box {\n  background-color: white;\n}\n.wrapper .slide .img_box img {\n  width: 100%;\n}\n.wrapper .button {\n  background-color: white;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  position: absolute;\n  top: 50%;\n  right: 1%;\n  opacity: 0.6;\n}\n.wrapper .button:hover {\n  cursor: pointer;\n  opacity: 1;\n}\n.wrapper .btn_prev {\n  left: -8%;\n}\n.wrapper .btn_next {\n  right: -8%;\n}\n.about_container {\n  background-color: rgba(221, 221, 221, 0.9);\n}\n.about_container .justice_box {\n  height: 300px;\n}\n.about_container .justice_box img {\n  height: 100%;\n}", ""]);
 
 // exports
 
@@ -44459,7 +44472,7 @@ var render = function() {
     _vm._v(" "),
     _vm.success
       ? _c("div", { staticClass: "alert alert-primary" }, [
-          _vm._v("Review register")
+          _vm._v("La tua Review è stata registrata")
         ])
       : _vm._e(),
     _vm._v(" "),
@@ -44496,7 +44509,7 @@ var render = function() {
                 type: "text",
                 name: "reviewer",
                 id: "your_reviewer",
-                placeholder: "Your name"
+                placeholder: "Il tuo nome"
               },
               domProps: { value: _vm.reviewer },
               on: {
@@ -44529,9 +44542,11 @@ var render = function() {
               staticClass: "form-control",
               attrs: {
                 type: "number",
+                min: "1",
+                max: "5",
                 name: "vote",
                 id: "your_vote",
-                placeholder: "your vote"
+                placeholder: "Il tuo voto"
               },
               domProps: { value: _vm.vote },
               on: {
@@ -44633,10 +44648,13 @@ var render = function() {
             key: _vm.lawyers.length,
             ref: "carousel",
             attrs: {
-              slidesToShow: 3,
+              slidesToShow: 1,
               dots: false,
-              infinite: false,
-              navButtons: false
+              infinite: true,
+              navButtons: false,
+              options: _vm.myOptions,
+              autoplay: true,
+              "autoplay-speed": 5000
             }
           },
           _vm._l(_vm.filteredLawyers, function(lawyer, index) {
@@ -44789,7 +44807,8 @@ var staticRenderFns = [
             "div",
             {
               staticClass:
-                "col-12 col-md-6 pippo  text-center d-flex flex-column justify-content-center"
+                "col-12 col-md-6 pippo text-center d-flex flex-column justify-content-center",
+              attrs: { id: "welcome-text" }
             },
             [
               _c("span", { staticClass: "span_text my-2" }, [
