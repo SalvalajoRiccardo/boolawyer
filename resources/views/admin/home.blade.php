@@ -24,11 +24,11 @@
     <div class="row py-3 text-center">
         <div class="col-12 col-md-6 p-3">
             <h4 class="py-2">Messaggi ricevuti per mese</h4>
-            <canvas id="MessageChart" class="rounded shadow"></canvas>
+            <canvas id="MessageChart" class="rounded shadow my_canvas"></canvas>
         </div>
         <div class="col-12 col-md-6 p-3 text-center">
             <h4 class="py-2">Recensioni ricevute per mese</h4>
-            <canvas id="ReviewChart" class="rounded shadow"></canvas>
+            <canvas id="ReviewChart" class="rounded shadow my_canvas"></canvas>
         </div>
             
     </div>
@@ -36,11 +36,13 @@
     {{-- MESSAGES/REVIEWS PER YEARS --}}
     <div class="row py-3">
         <div class="col-12 col-md-6 p-3">
-            <canvas id="MessageChartYear" class="rounded shadow"></canvas>
+            <h4 class="py-2">Messaggi ricevuti per anno</h4>
+            <canvas id="MessageChartYear" class="rounded shadow my_canvas"></canvas>
         </div>
 
         <div class="col-12 col-md-6 p-3">
-            <canvas id="ReviewChartYear" class="rounded shadow"></canvas>
+            <h4 class="py-2">Recensioni ricevute per anno</h4>
+            <canvas id="ReviewChartYear" class="rounded shadow my_canvas"></canvas>
         </div>
     </div>
     
