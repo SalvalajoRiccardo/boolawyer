@@ -15,18 +15,18 @@
     <!-- FILTER BOTTON PER NUMBER AVERAGE_VOTE OF REVIEWS -->
     <div class="row justify-content-center my-3">
       <!-- BUTTON ORDER BY NUMBER -->
-      <button class="btn btn-bronze mx-2 my-3" @click="getUsers(1, selectedSpec,orderByNum==true,orderByVote)">
+      <button class="btn btn-bronze btn-outline-light mx-2 my-3" @click="getUsers(1, selectedSpec,orderByNum==true,orderByVote)">
         ordina per numero di reviews
       </button>
 
     <!-- BUTTON ORDER BY VOTE -->
-      <button class="btn btn-bronze mx-2 my-3" @click="getUsers(1, selectedSpec,orderByNum, orderByVote==true)">
+      <button class="btn btn-bronze btn-outline-light mx-2 my-3" @click="getUsers(1, selectedSpec,orderByNum, orderByVote==true)">
         ordina per media voti delle reviews
       </button>
     </div>
    
     <!-- LAWYERS -->
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
       <div class="col" v-for="lawyer in lawyers" :key='lawyer.id'>
         <div class="card my-3 p-3 text-center">
 
@@ -41,18 +41,20 @@
             <div class="my-3">
 
               <!-- REVIEW NUMBER -->
-              <div v-if="lawyer.reviews" class="badge rounded-pill text-white position-relative mx-1">
+              <div v-if="lawyer.reviews" class="mt-1 badge rounded-pill text-white position-relative mx-1">
                 <span>{{getNumberOfReview(lawyer.reviews)}}</span> Reviews
               </div>
 
-              <div v-if="lawyer.reviews.length >= 1" class="badge rounded-pill text-white position-relative mx-1">
-                Voto medio: <span>{{getVoteReview(lawyer.reviews).toFixed(1)}}</span>
+              <div v-if="lawyer.reviews.length >= 1" class="mt-1 badge rounded-pill text-white position-relative mx-1">
+                Voto: <span>{{getVoteReview(lawyer.reviews).toFixed(1)}}</span>
               </div>
 
             </div>
             
-            <h5 class="card-title">{{ lawyer.name }} {{lawyer.surname}}</h5>
+            <h5 class="card-title ">{{ lawyer.name }} </h5>
+            <h5 class="card-title text-truncate">{{lawyer.surname}} </h5>
             <p  v-if="lawyer.services"  class="card-text">{{ truncate(lawyer.services,150)}}</p>
+            <div v-else class="emptydiv" ></div>
             <router-link :to="{name: 'lawyer-detail', params: { slug: lawyer.slug }}" class="btn btn-blue">
               Dettagli
             </router-link>
@@ -195,11 +197,14 @@ export default {
     color: #b69d73;
   }
 
+    .emptydiv{
+      height: 108px;
+    }
 
   .card{
     background-color: rgba(119, 119, 119, 0.9);
     color: #ddd;
-    height:483px;
+    // height:483px;
 
     & h5 {
       color: $lawblue;

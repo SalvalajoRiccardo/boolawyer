@@ -178,7 +178,7 @@
             {{-- Rigth part --}}
             <div class="col-lg-4 col-12">
 
-              <div class="form-group focused">
+              <div class="form-group focused py-2 border-top">
                 <label class="form-control-label" for="input-phone">CV</label>
                 <input name="cv" id="input-cv" class="form-control-file" placeholder="Insert cv" value="{{$user->cv}}" type="file" @error('cv') is-invalid @enderror>
                 @error('cv')

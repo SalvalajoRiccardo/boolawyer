@@ -261,17 +261,19 @@ export default {
           transform: translateY(0);}
   }
 
-  body {
-    background-image: 
-    linear-gradient(to right, 
-      rgba(44, 64, 101, 0.4) 0%,
-      rgba(182,157,115,0.4) 100%),
-    url('/images/pexels-photo-8755742.jpeg');
-    background-size: cover;
-    background-position: top;
-    font-family: "Times New Roman", Times, serif;
+  // body {
+  //   background-image: 
+  //   linear-gradient(to right, 
+  //     rgba(44, 64, 101, 0.4) 0%,
+  //     rgba(182,157,115,0.4) 100%),
+  //   url('/images/pexels-photo-8755742.jpeg');
+  //   background-size: cover;
+  //   background-position: top;
+  //   font-family: "Times New Roman", Times, serif;
     
-  }
+  // }
+
+  
 
   .my-bg{
     background-color: rgba(221, 221, 221,0.9);
