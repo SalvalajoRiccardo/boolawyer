@@ -29,7 +29,7 @@
               
               <!-- parte dei services -->
               <p v-if="lawyer.services" class="card-text p-4"> {{ lawyer.services }}</p>
-              <small v-else class="m-4 pb-4">services: L'utente non ha ancora aggiunto le sue prestazioni, <br> invia un messaggio per richiedere ulteriori informazioni</small>
+              <small v-else class="d-block m-4">services: L'utente non ha ancora aggiunto le sue prestazioni, <br> invia un messaggio per richiedere ulteriori informazioni</small>
 
                <!-- SPECIALIZATIONS -->
                 <div  v-if="lawyer.specializations">
