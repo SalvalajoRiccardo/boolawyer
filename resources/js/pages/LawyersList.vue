@@ -15,12 +15,12 @@
     <!-- FILTER BOTTON PER NUMBER AVERAGE_VOTE OF REVIEWS -->
     <div class="row justify-content-center my-3">
       <!-- BUTTON ORDER BY NUMBER -->
-      <button class="btn btn-bronze mx-2 my-3" @click="getUsers(1, selectedSpec,orderByNum==true,orderByVote)">
+      <button class="btn btn-bronze btn-outline-light mx-2 my-3" @click="getUsers(1, selectedSpec,orderByNum==true,orderByVote)">
         ordina per numero di reviews
       </button>
 
     <!-- BUTTON ORDER BY VOTE -->
-      <button class="btn btn-bronze mx-2 my-3" @click="getUsers(1, selectedSpec,orderByNum, orderByVote==true)">
+      <button class="btn btn-bronze btn-outline-light mx-2 my-3" @click="getUsers(1, selectedSpec,orderByNum, orderByVote==true)">
         ordina per media voti delle reviews
       </button>
     </div>
@@ -53,6 +53,7 @@
             
             <h5 class="card-title">{{ lawyer.name }} {{lawyer.surname}}</h5>
             <p  v-if="lawyer.services"  class="card-text">{{ truncate(lawyer.services,150)}}</p>
+            <div v-else class="emptydiv" ></div>
             <router-link :to="{name: 'lawyer-detail', params: { slug: lawyer.slug }}" class="btn btn-blue">
               Dettagli
             </router-link>
@@ -193,11 +194,14 @@ export default {
     color: #b69d73;
   }
 
+    .emptydiv{
+      height: 108px;
+    }
 
   .card{
     background-color: rgba(119, 119, 119, 0.9);
     color: #ddd;
-    height:483px;
+    // height:483px;
 
     & h5 {
       color: $lawblue;
