@@ -2174,7 +2174,7 @@ module.exports = {
 /*! exports provided: _args, _development, _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _spec, _where, author, browser, bugs, bundlesize, dependencies, description, devDependencies, homepage, jsdelivr, keywords, license, main, name, repository, scripts, typings, unpkg, version, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_args\":[[\"axios@0.21.4\",\"C:\\\\Users\\\\utente\\\\Desktop\\\\boolean\\\\mamp_public\\\\boolawyer\"]],\"_development\":true,\"_from\":\"axios@0.21.4\",\"_id\":\"axios@0.21.4\",\"_inBundle\":false,\"_integrity\":\"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==\",\"_location\":\"/axios\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"axios@0.21.4\",\"name\":\"axios\",\"escapedName\":\"axios\",\"rawSpec\":\"0.21.4\",\"saveSpec\":null,\"fetchSpec\":\"0.21.4\"},\"_requiredBy\":[\"#DEV:/\"],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz\",\"_spec\":\"0.21.4\",\"_where\":\"C:\\\\Users\\\\utente\\\\Desktop\\\\boolean\\\\mamp_public\\\\boolawyer\",\"author\":{\"name\":\"Matt Zabriskie\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"dependencies\":{\"follow-redirects\":\"^1.14.0\"},\"description\":\"Promise based HTTP client for the browser and node.js\",\"devDependencies\":{\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.3.0\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^23.0.0\",\"grunt-karma\":\"^4.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^4.0.2\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^6.3.2\",\"karma-chrome-launcher\":\"^3.1.0\",\"karma-firefox-launcher\":\"^2.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^4.3.6\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.8\",\"karma-webpack\":\"^4.0.2\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^8.2.1\",\"sinon\":\"^4.5.0\",\"terser-webpack-plugin\":\"^4.2.3\",\"typescript\":\"^4.0.5\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^4.44.2\",\"webpack-dev-server\":\"^3.11.0\"},\"homepage\":\"https://axios-http.com\",\"jsdelivr\":\"dist/axios.min.js\",\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"axios\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/axios/axios.git\"},\"scripts\":{\"build\":\"NODE_ENV=production grunt build\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"examples\":\"node ./examples/server.js\",\"fix\":\"eslint --fix lib/**/*.js\",\"postversion\":\"git push && git push --tags\",\"preversion\":\"npm test\",\"start\":\"node ./sandbox/server.js\",\"test\":\"grunt test\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\"},\"typings\":\"./index.d.ts\",\"unpkg\":\"dist/axios.min.js\",\"version\":\"0.21.4\"}");
+module.exports = JSON.parse("{\"_args\":[[\"axios@0.21.4\",\"D:\\\\Boolean\\\\Esercizi\\\\mamp_public\\\\boolawyer\"]],\"_development\":true,\"_from\":\"axios@0.21.4\",\"_id\":\"axios@0.21.4\",\"_inBundle\":false,\"_integrity\":\"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==\",\"_location\":\"/axios\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"axios@0.21.4\",\"name\":\"axios\",\"escapedName\":\"axios\",\"rawSpec\":\"0.21.4\",\"saveSpec\":null,\"fetchSpec\":\"0.21.4\"},\"_requiredBy\":[\"#DEV:/\"],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz\",\"_spec\":\"0.21.4\",\"_where\":\"D:\\\\Boolean\\\\Esercizi\\\\mamp_public\\\\boolawyer\",\"author\":{\"name\":\"Matt Zabriskie\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"dependencies\":{\"follow-redirects\":\"^1.14.0\"},\"description\":\"Promise based HTTP client for the browser and node.js\",\"devDependencies\":{\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.3.0\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^23.0.0\",\"grunt-karma\":\"^4.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^4.0.2\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^6.3.2\",\"karma-chrome-launcher\":\"^3.1.0\",\"karma-firefox-launcher\":\"^2.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^4.3.6\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.8\",\"karma-webpack\":\"^4.0.2\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^8.2.1\",\"sinon\":\"^4.5.0\",\"terser-webpack-plugin\":\"^4.2.3\",\"typescript\":\"^4.0.5\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^4.44.2\",\"webpack-dev-server\":\"^3.11.0\"},\"homepage\":\"https://axios-http.com\",\"jsdelivr\":\"dist/axios.min.js\",\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"axios\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/axios/axios.git\"},\"scripts\":{\"build\":\"NODE_ENV=production grunt build\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"examples\":\"node ./examples/server.js\",\"fix\":\"eslint --fix lib/**/*.js\",\"postversion\":\"git push && git push --tags\",\"preversion\":\"npm test\",\"start\":\"node ./sandbox/server.js\",\"test\":\"grunt test\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\"},\"typings\":\"./index.d.ts\",\"unpkg\":\"dist/axios.min.js\",\"version\":\"0.21.4\"}");
 
 /***/ }),
 
@@ -2900,6 +2900,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_MessageForm_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/MessageForm.vue */ "./resources/js/components/MessageForm.vue");
 /* harmony import */ var _components_ReviewForm_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ReviewForm.vue */ "./resources/js/components/ReviewForm.vue");
+//
+//
 //
 //
 //
@@ -7628,7 +7630,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".my_img_box[data-v-8ae83716] {\n  height: 420px;\n  overflow: hidden;\n}\n.my_img_box img[data-v-8ae83716] {\n  height: 100%;\n}\n.my_card_header[data-v-8ae83716] {\n  background-color: #666666;\n}\n.my_card_body[data-v-8ae83716] {\n  background-color: rgba(141, 141, 141, 0.8);\n}\n.card[data-v-8ae83716] {\n  background-color: rgba(119, 119, 119, 0.8);\n  color: #ddd;\n}\n.card h5[data-v-8ae83716] {\n  color: #b69d73;\n  font-weight: 600;\n  letter-spacing: 2px;\n}\n.card .rounded-pill[data-v-8ae83716] {\n  background-color: #2c4065;\n  padding: 8px;\n}\n.card .modal h5[data-v-8ae83716] {\n  color: #2c4065;\n}\n.forms[data-v-8ae83716] {\n  padding: 50px 0;\n}", ""]);
+exports.push([module.i, ".my_img_box[data-v-8ae83716] {\n  background-color: #ddd;\n  height: 420px;\n  overflow: hidden;\n}\n.my_img_box img[data-v-8ae83716] {\n  height: 100%;\n}\n.my_card_header[data-v-8ae83716] {\n  background-color: #666666;\n}\n.my_card_body[data-v-8ae83716] {\n  background-color: rgba(141, 141, 141, 0.8);\n  max-height: 420px;\n  overflow: auto;\n}\n.card[data-v-8ae83716] {\n  background-color: rgba(119, 119, 119, 0.8);\n  color: #ddd;\n}\n.card h5[data-v-8ae83716] {\n  color: #b69d73;\n  font-weight: 600;\n  letter-spacing: 2px;\n}\n.card .rounded-pill[data-v-8ae83716] {\n  background-color: #2c4065;\n  padding: 8px;\n}\n.card .modal h5[data-v-8ae83716] {\n  color: #2c4065;\n}\n.forms[data-v-8ae83716] {\n  padding: 50px 0;\n}", ""]);
 
 // exports
 
@@ -45178,151 +45180,163 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container mt-3" }, [
-    _c("div", { staticClass: "row" }, [
-      _c(
-        "div",
-        { staticClass: "col-12 col-md-6 col-lg-4 my_img_box text-center p-0" },
-        [
-          _vm.lawyer.photo
-            ? _c("img", {
-                attrs: { src: _vm.lawyer.photo, alt: _vm.lawyer.name }
-              })
-            : _vm._e()
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-12 col-md-6 col-lg-8 my_card_body p-0" }, [
-        _c("h5", { staticClass: "card-title card-header my_card_header" }, [
-          _vm._v(
-            " " + _vm._s(_vm.lawyer.name) + "  " + _vm._s(_vm.lawyer.surname)
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "card-text pt-4 px-4 d-block" }, [
-          _c("i", { staticClass: "bi bi-house-door" }),
-          _vm._v(" : " + _vm._s(_vm.lawyer.address))
-        ]),
-        _vm._v(" "),
-        _vm.lawyer.phone
-          ? _c("p", { staticClass: "card-text px-4 d-block" }, [
-              _c("i", { staticClass: "bi bi-telephone" }),
-              _vm._v(" : " + _vm._s(_vm.lawyer.phone))
-            ])
-          : _c("small", { staticClass: "d-block m-4" }, [
-              _vm._v(
-                "phone: L'utente non ha ancora aggiunto il suo numero di cellulare, "
-              ),
-              _c("br"),
-              _vm._v(
-                " invia un messaggio per richiedere ulteriori informazioni"
-              )
-            ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "card-text px-4 d-block" }, [
-          _c("i", { staticClass: "bi bi-envelope" }),
-          _vm._v(" : " + _vm._s(_vm.lawyer.email))
-        ]),
-        _vm._v(" "),
-        _vm.lawyer.services
-          ? _c("p", { staticClass: "card-text p-4" }, [
-              _vm._v(" " + _vm._s(_vm.lawyer.services))
-            ])
-          : _c("small", { staticClass: "d-block m-4" }, [
-              _vm._v(
-                "services: L'utente non ha ancora aggiunto le sue prestazioni, "
-              ),
-              _c("br"),
-              _vm._v(
-                " invia un messaggio per richiedere ulteriori informazioni"
-              )
-            ]),
-        _vm._v(" "),
-        _vm.lawyer.specializations
-          ? _c(
-              "div",
-              _vm._l(_vm.lawyer.specializations, function(
-                specialization,
-                index
-              ) {
-                return _c(
-                  "h4",
-                  { key: index, staticClass: "badge rounded-pill mx-4" },
-                  [_vm._v(_vm._s(specialization.name))]
-                )
-              }),
-              0
-            )
-          : _vm._e(),
-        _vm._v(" "),
-        _vm.lawyer.cv
-          ? _c(
-              "button",
-              {
-                staticClass: "btn btn-blue m-4",
-                attrs: {
-                  type: "button",
-                  "data-bs-toggle": "modal",
-                  "data-bs-target": "#exampleModal"
-                }
-              },
-              [_vm._v("\n              Visualizza CV\n            ")]
-            )
-          : _c("small", { staticClass: "d-block m-4" }, [
-              _vm._v(
-                "CV: L'utente non ha ancora aggiunto il suo CV, invia un messaggio per richiedere ulteriori informazioni"
-              )
-            ]),
-        _vm._v(" "),
+    _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "row" }, [
         _c(
           "div",
           {
-            staticClass: "modal fade",
-            attrs: {
-              id: "exampleModal",
-              tabindex: "-1",
-              "aria-labelledby": "exampleModalLabel",
-              "aria-hidden": "true"
-            }
+            staticClass: "col-12 col-md-6 col-lg-4 my_img_box text-center p-0"
           },
           [
-            _c("div", { staticClass: "modal-dialog" }, [
-              _c("div", { staticClass: "modal-content" }, [
-                _c("div", { staticClass: "modal-header" }, [
-                  _c(
-                    "h5",
-                    {
-                      staticClass: "modal-title",
-                      attrs: { id: "exampleModalLabel" }
-                    },
-                    [_vm._v(_vm._s(_vm.lawyer.name + " " + _vm.lawyer.surname))]
+            _vm.lawyer.photo
+              ? _c("img", {
+                  attrs: { src: _vm.lawyer.photo, alt: _vm.lawyer.name }
+                })
+              : _vm._e()
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "col-12 col-md-6 col-lg-8 my_card_body p-0 " },
+          [
+            _c("h5", { staticClass: "card-title card-header my_card_header" }, [
+              _vm._v(
+                " " + _vm._s(_vm.lawyer.name) + " " + _vm._s(_vm.lawyer.surname)
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "card-text pt-4 px-4 d-block" }, [
+              _c("i", { staticClass: "bi bi-house-door" }),
+              _vm._v(" : " + _vm._s(_vm.lawyer.address))
+            ]),
+            _vm._v(" "),
+            _vm.lawyer.phone
+              ? _c("p", { staticClass: "card-text px-4 d-block" }, [
+                  _c("i", { staticClass: "bi bi-telephone" }),
+                  _vm._v(" : " + _vm._s(_vm.lawyer.phone))
+                ])
+              : _c("small", { staticClass: "d-block m-4" }, [
+                  _vm._v(
+                    "phone: L'utente non ha ancora aggiunto il suo numero di cellulare, "
                   ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn-close",
-                      attrs: {
-                        type: "button",
-                        "data-bs-dismiss": "modal",
-                        "aria-label": "Close"
-                      }
-                    },
-                    [_vm._v("X")]
+                  _c("br"),
+                  _vm._v(
+                    " invia un messaggio per richiedere ulteriori informazioni"
                   )
                 ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "modal-body" }, [
-                  _vm.lawyer.cv
-                    ? _c("img", {
-                        staticClass: "card-img-top",
-                        attrs: { src: _vm.lawyer.cv }
-                      })
-                    : _vm._e()
+            _vm._v(" "),
+            _c("p", { staticClass: "card-text px-4 d-block" }, [
+              _c("i", { staticClass: "bi bi-envelope" }),
+              _vm._v(" : " + _vm._s(_vm.lawyer.email))
+            ]),
+            _vm._v(" "),
+            _vm.lawyer.services
+              ? _c("p", { staticClass: "card-text p-4" }, [
+                  _vm._v(" " + _vm._s(_vm.lawyer.services))
+                ])
+              : _c("small", { staticClass: "d-block m-4" }, [
+                  _vm._v(
+                    "services: L'utente non ha ancora aggiunto le sue prestazioni, "
+                  ),
+                  _c("br"),
+                  _vm._v(
+                    " invia un messaggio per richiedere ulteriori informazioni"
+                  )
                 ]),
-                _vm._v(" "),
-                _vm._m(0)
-              ])
-            ])
+            _vm._v(" "),
+            _vm.lawyer.specializations
+              ? _c(
+                  "div",
+                  _vm._l(_vm.lawyer.specializations, function(
+                    specialization,
+                    index
+                  ) {
+                    return _c(
+                      "h4",
+                      { key: index, staticClass: "badge rounded-pill mx-4" },
+                      [_vm._v(_vm._s(specialization.name))]
+                    )
+                  }),
+                  0
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.lawyer.cv
+              ? _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-blue m-4",
+                    attrs: {
+                      type: "button",
+                      "data-bs-toggle": "modal",
+                      "data-bs-target": "#exampleModal"
+                    }
+                  },
+                  [_vm._v("\n              Visualizza CV\n            ")]
+                )
+              : _c("small", { staticClass: "d-block m-4" }, [
+                  _vm._v(
+                    "CV: L'utente non ha ancora aggiunto il suo CV, invia un messaggio per richiedere ulteriori informazioni"
+                  )
+                ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "modal fade",
+                attrs: {
+                  id: "exampleModal",
+                  tabindex: "-1",
+                  "aria-labelledby": "exampleModalLabel",
+                  "aria-hidden": "true"
+                }
+              },
+              [
+                _c("div", { staticClass: "modal-dialog" }, [
+                  _c("div", { staticClass: "modal-content" }, [
+                    _c("div", { staticClass: "modal-header" }, [
+                      _c(
+                        "h5",
+                        {
+                          staticClass: "modal-title",
+                          attrs: { id: "exampleModalLabel" }
+                        },
+                        [
+                          _vm._v(
+                            _vm._s(_vm.lawyer.name + " " + _vm.lawyer.surname)
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn-close",
+                          attrs: {
+                            type: "button",
+                            "data-bs-dismiss": "modal",
+                            "aria-label": "Close"
+                          }
+                        },
+                        [_vm._v("X")]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "modal-body" }, [
+                      _vm.lawyer.cv
+                        ? _c("img", {
+                            staticClass: "card-img-top",
+                            attrs: { src: _vm.lawyer.cv }
+                          })
+                        : _vm._e()
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(0)
+                  ])
+                ])
+              ]
+            )
           ]
         )
       ])
@@ -61694,8 +61708,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\utente\Desktop\boolean\mamp_public\boolawyer\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\utente\Desktop\boolean\mamp_public\boolawyer\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Boolean\Esercizi\mamp_public\boolawyer\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Boolean\Esercizi\mamp_public\boolawyer\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

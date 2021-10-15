@@ -3,15 +3,16 @@
 
       <!-- START CARD -->
 
-      <div class="row">
+    <div class="card">
+            <div class="row">
         <div class="col-12 col-md-6 col-lg-4 my_img_box text-center p-0">
           <!-- IMAGE PROFILE -->
           <img v-if="lawyer.photo" :src="lawyer.photo" :alt="lawyer.name">
 
         </div>
-        <div class="col-12 col-md-6 col-lg-8 my_card_body p-0">
+        <div class="col-12 col-md-6 col-lg-8 my_card_body p-0 ">
            <!-- Parte nome e cognome -->
-              <h5 class="card-title card-header my_card_header"> {{ lawyer.name }}  {{ lawyer.surname }}</h5>
+              <h5 class="card-title card-header my_card_header"> {{ lawyer.name }} {{ lawyer.surname }}</h5>
 
               <!-- parte dell'address -->
               <p class="card-text pt-4 px-4 d-block"><i class="bi bi-house-door"></i> : {{ lawyer.address }}</p>
@@ -58,6 +59,7 @@
                 </div>
         </div>
       </div>
+    </div>
      
       
           
@@ -119,6 +121,8 @@ export default {
   $notwhite: #ddd;
 
   .my_img_box{
+
+    background-color: #ddd;
     height:420px;
     overflow: hidden;
     img{
@@ -131,7 +135,9 @@ export default {
   }
 
   .my_card_body{
-    background-color: rgba(141, 141, 141, 0.8)
+    background-color: rgba(141, 141, 141, 0.8);
+    max-height: 420px;
+    overflow: auto;
   }
 
   .card{
