@@ -26,7 +26,7 @@
     </div>
    
     <!-- LAWYERS -->
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
       <div class="col" v-for="lawyer in lawyers" :key='lawyer.id'>
         <div class="card my-3 p-3 text-center">
 
@@ -41,17 +41,18 @@
             <div class="my-3">
 
               <!-- REVIEW NUMBER -->
-              <div v-if="lawyer.reviews" class="badge rounded-pill text-white position-relative mx-1">
+              <div v-if="lawyer.reviews" class="mt-1 badge rounded-pill text-white position-relative mx-1">
                 <span>{{getNumberOfReview(lawyer.reviews)}}</span> Reviews
               </div>
 
-              <div v-if="lawyer.reviews.length >= 1" class="badge rounded-pill text-white position-relative mx-1">
-                Voto medio: <span>{{getVoteReview(lawyer.reviews).toFixed(1)}}</span>
+              <div v-if="lawyer.reviews.length >= 1" class="mt-1 badge rounded-pill text-white position-relative mx-1">
+                Voto: <span>{{getVoteReview(lawyer.reviews).toFixed(1)}}</span>
               </div>
 
             </div>
             
-            <h5 class="card-title">{{ lawyer.name }} {{lawyer.surname}}</h5>
+            <h5 class="card-title ">{{ lawyer.name }} </h5>
+            <h5 class="card-title text-truncate">{{lawyer.surname}} </h5>
             <p  v-if="lawyer.services"  class="card-text">{{ truncate(lawyer.services,150)}}</p>
             <div v-else class="emptydiv" ></div>
             <router-link :to="{name: 'lawyer-detail', params: { slug: lawyer.slug }}" class="btn btn-blue">
