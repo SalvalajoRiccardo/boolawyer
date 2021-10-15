@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container overflow-hidden">
     {{-- <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -22,11 +22,11 @@
 
     {{-- MESSAGES/REVIEWS PER MONTHS --}}
     <div class="row py-3 text-center">
-        <div class="col-12 col-md-6 p-3">
+        <div class="col-12 col-md-6 p-3 chart-container">
             <h4 class="py-2">Messaggi ricevuti per mese</h4>
             <canvas id="MessageChart" class="rounded shadow my_canvas"></canvas>
         </div>
-        <div class="col-12 col-md-6 p-3 text-center">
+        <div class="col-12 col-md-6 p-3 text-center chart-container">
             <h4 class="py-2">Recensioni ricevute per mese</h4>
             <canvas id="ReviewChart" class="rounded shadow my_canvas"></canvas>
         </div>
@@ -35,12 +35,12 @@
 
     {{-- MESSAGES/REVIEWS PER YEARS --}}
     <div class="row py-3">
-        <div class="col-12 col-md-6 p-3">
+        <div class="col-12 col-md-6 p-3 chart-container">
             <h4 class="py-2">Messaggi ricevuti per anno</h4>
             <canvas id="MessageChartYear" class="rounded shadow my_canvas"></canvas>
         </div>
 
-        <div class="col-12 col-md-6 p-3">
+        <div class="col-12 col-md-6 p-3 chart-container">
             <h4 class="py-2">Recensioni ricevute per anno</h4>
             <canvas id="ReviewChartYear" class="rounded shadow my_canvas"></canvas>
         </div>

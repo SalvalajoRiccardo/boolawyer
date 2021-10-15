@@ -31,8 +31,8 @@
     <!-- includes jQuery -->
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div id="app">
+<body >
+    <div id="app" class="overflow-hidden">
         <nav class="navbar navbar-expand-md navbar-dark my_navbar shadow-sm">
             <div class="container">
                 <div class="my_logo mx-2">
