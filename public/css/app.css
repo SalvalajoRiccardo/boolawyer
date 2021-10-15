@@ -11079,3 +11079,11 @@ a.text-dark:focus {
   height: 200px;
 }
 
+.chart-container {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  height: 80vh;
+  width: 80vw;
+}
+

@@ -2,19 +2,15 @@
     <div class="container mt-3">
 
       <!-- START CARD -->
-      <div class="card p-0" >
-        <div class="row g-0 align-items-center">
 
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 my_img_box text-center p-0">
           <!-- IMAGE PROFILE -->
-          <div class="col-md-4">
-            <img v-if="lawyer.photo" :src="lawyer.photo" :alt="lawyer.name" class="img-fluid rounded-start">
-          </div>
+          <img v-if="lawyer.photo" :src="lawyer.photo" :alt="lawyer.name">
 
-          <!-- ALL PROFILE INFO -->
-          <div class="col-md-8 mb-0">
-            <div class="card-body my_card_body px-0 pt-0">
-
-              <!-- Parte nome e cognome -->
+        </div>
+        <div class="col-12 col-md-6 col-lg-8 my_card_body p-0">
+           <!-- Parte nome e cognome -->
               <h5 class="card-title card-header my_card_header"> {{ lawyer.name }}  {{ lawyer.surname }}</h5>
 
               <!-- parte dell'address -->
@@ -60,13 +56,12 @@
                     </div>
                   </div>
                 </div>
-
-                  
-            </div>
-          </div>
-          
         </div>
       </div>
+     
+      
+          
+     
       <!-- END CARD -->
 
       <div class="forms">
@@ -122,6 +117,14 @@ export default {
   $lawbronze: #b69d73;
   $lawred: #83354c;
   $notwhite: #ddd;
+
+  .my_img_box{
+    height:420px;
+    overflow: hidden;
+    img{
+      height: 100%;
+    }
+  }
 
   .my_card_header{
     background-color:rgb(102, 102, 102) ;
